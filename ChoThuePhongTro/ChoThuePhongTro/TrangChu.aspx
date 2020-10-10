@@ -124,12 +124,15 @@
         </div>
         <div id="maincontent" class="auto-style7" style="margin: auto; position: static">
             <br />
-            <div id="TimKiem" class="auto-style3" style="margin: auto; padding-top: 10px">
-                Tĩnh,Thành Phố:<asp:DropDownList ID="DropDownList4" runat="server">
+            <div id="TimKiem" class="auto-style3" style="margin: auto; padding-top: 10px; font-size: medium;">
+                <strong>Tĩnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server">
+                    <asp:ListItem>Bình Dương</asp:ListItem>
                 </asp:DropDownList>
-&nbsp;&nbsp; Quận,Huyện:<asp:DropDownList ID="DropDownList2" runat="server">
+&nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="DropDownList2" runat="server">
+                    <asp:ListItem>TP Thủ Dầu Một</asp:ListItem>
                 </asp:DropDownList>
-&nbsp;&nbsp; Phường,Xã:<asp:DropDownList ID="DropDownList3" runat="server">
+&nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="DropDownList3" runat="server">
+                    <asp:ListItem>Phường Tân An</asp:ListItem>
                 </asp:DropDownList>
 &nbsp;
                 <asp:Button ID="Button1" runat="server" Text="Tìm Kiếm" />
