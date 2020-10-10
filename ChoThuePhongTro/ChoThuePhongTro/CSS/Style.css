@@ -4,29 +4,30 @@
     font-family:Verdana;
     font-size:80%;
     background:#9bccd2;
-    height: 620px;
+    height: 990px;
 }
 #menutop{
-    height:30px;
+    height:35px;
     background:#000;
     position:fixed;
     width:100%;
-    top:0;
-    left:0;
+    top:113px;
+    left:-1px;
     padding:0;
-    margin:0;
+    margin:0 0 0px 0;
 }
 #menu{
-    width:1000px;
-    margin:0 auto;
+    width:918px;
+    margin:0px auto 0 auto;
     padding:0;
+    height: 32px;
 }
 #menu ul{
     list-style:none;
     margin:0;
     padding-top:7px;
     padding-left:0;
-
+    width: 907px;
 }
 #menu ul li{
     float:left;
@@ -44,12 +45,14 @@
     text-decoration: underline;
 }
 #maincontent{
-    width:1000px;
-    margin:30px auto;
+    width:879px;
+    margin:30px auto 30px 0px;
+    height: 628px;
+    text-align: left;
 }
 #rightcontent{
     float:right;
-    width:330px;
+    width:227px;
     background:#fff;
     border:2px solid #0a3c42;
     box-shadow:5px 5px 5px 5px #808080;
@@ -59,7 +62,7 @@
 }
 #content {
     float: left;
-    width: 650px;
+    width: 421px;
     background: #fff;
     border: 2px solid #0a3c42;
     box-shadow: 5px 5px 5px 5px #808080;
@@ -129,4 +132,7 @@
     color:#fff;
     padding:15px;
     text-align:center
+}
+#left{
+    float:left;
 }
