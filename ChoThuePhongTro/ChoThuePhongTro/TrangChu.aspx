@@ -13,8 +13,8 @@
             position: static;
             width: 100%;
             left: -1px;
-            top: 0px;
-            height: 34px;
+            top: 113px;
+            height: 60px;
         }
         .auto-style5 {
             margin-right: 0px;
@@ -23,19 +23,13 @@
         .auto-style6 {
             height: 112px;
         }
-        .auto-style7 {
-            height: 654px;
-            text-align: center;
-            position: static;
-            margin-top: 0px;
-        }
         .auto-style8 {
             width: 1060px;
             margin-left: 361px;
             position: static;
             left: 162px;
             top: 144px;
-            height: 1129px;
+            height: 1177px;
         }
         .auto-style10 {
             height: 221px;
@@ -45,6 +39,7 @@
         }
         .auto-style12 {
             height: 32px;
+            width: 1037px;
         }
         .auto-style13 {
             color: #0000FF;
@@ -53,8 +48,10 @@
             width: 1034px;
         }
         .auto-style3 {
-            height: 36px;
-            width: 1361px;
+            height: 27px;
+            width: 957px;
+            border-radius: 7px;
+            box-shadow: 5px 5px 5px 5px #808080;
         }
         .auto-style15 {
             width: 994px;
@@ -105,7 +102,7 @@
                 <asp:Image ID="Image1" runat="server" Height="110px" ImageUrl="~/Images/logo.png" Width="206px" />
         <div id="menutop" style="margin: 0px; background-color: #0066CC; position: static;" class="auto-style4">
             <div id="menu" class="auto-style12">
-                <ul style="font-size: 13px">
+                <ul style="font-size: 15px" class="auto-style14">
                     <li><a href="#">Trang Chủ</a></li>
                     <li><a href="#">Cho thuê phòng trọ</a></li>
                     <li><a href="#">Tìm người ở ghép</a></li>
@@ -121,82 +118,79 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div id="maincontent" class="auto-style7" style="margin: auto; position: static">
             <br />
-            <div id="TimKiem" class="auto-style3" style="margin: auto; padding-top: 10px; font-size: medium;">
-                <strong>Tĩnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server">
-                    <asp:ListItem>Bình Dương</asp:ListItem>
-                </asp:DropDownList>
-&nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="DropDownList2" runat="server">
-                    <asp:ListItem>TP Thủ Dầu Một</asp:ListItem>
-                </asp:DropDownList>
-&nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="DropDownList3" runat="server">
-                    <asp:ListItem>Phường Tân An</asp:ListItem>
-                </asp:DropDownList>
+            <div id="content" class="auto-style8" style="margin-top: 30px">
+                <div id="TimKiem" class="auto-style3" style="margin: 10px auto auto auto; padding-top: 10px; font-size: medium; background-color: #0099CC; padding-bottom: 10px;">
+                    <strong>Tĩnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" Height="25px" Width="120px">
+                        <asp:ListItem>Bình Dương</asp:ListItem>
+                    </asp:DropDownList>
+&nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="DropDownList2" runat="server" Height="25px" Width="120px">
+                        <asp:ListItem>TP Thủ Dầu Một</asp:ListItem>
+                    </asp:DropDownList>
+&nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="DropDownList3" runat="server" Height="25px" Width="120px">
+                        <asp:ListItem>Phường Tân An</asp:ListItem>
+                    </asp:DropDownList>
 &nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Tìm Kiếm" />
-
-                    
+                    <asp:Button ID="Button1" runat="server" Text="Tìm Kiếm" Height="25px" Width="120px" />
                     <div id="content0">
                     </div>
-
-                    
-            </div>
-                    <div id="content" class="auto-style8">
-                        <h1>&nbsp;</h1>
-                        <h1>Cho thuê phòng trọ, cho thuê nhà trọ, tìm phòng trọ</h1>
-        <div id="ndcontent" class="auto-style11">
-            <div id="left" class="auto-style14">
-        	<ul>
-            	<li class="auto-style15">
-                    <a href="#"><img src="Images/1.jpg" class="auto-style24"/></a>
-                    <a href="#"<h2>PHÒNG TRỌ MỚI, SẠCH SẼ-MÁY LẠNH-TIỆN NGHI</h2></a>
-                        <p class="auto-style13">Diện tích:</p>
-                        <p class="auto-style13">Địa chỉ:</p>
-                        <p class="auto-style13">Giá:</p>
-                </li>
-                <li class="auto-style16">
-                    <a href="#"><img src="Images/2.jpg" class="auto-style23"/></a>
-                    <a href="#"<h2>CHÍNH CHỦ CHO THUÊ PHÒNG NỘI THẤT GẦN SÂN BAY.</h2>
-                        <p>Diện tích:</p>
-                        <p>Địa chỉ:</p>
-                        <p>Giá:</p>
-                    </a>
-                </li>
-                <li class="auto-style17">
-                    <a href="#"><img src="Images/3.jpg" class="auto-style22"/></a>
-                    <a href="#"<h2>CHO THUÊ PHÒNG TRỌ CAO CẤP, SẠCH SẼ, AN NINH-KDC CHÁNH NGHĨA-THÍCH HỢP VIÊN CHỨC,CÔNG NHÂN VIÊN, SINH VIÊN.</h2>
-                        <p>Diện tích:</p>
-                        <p>Địa chỉ:</p>
-                        <p>Giá:</p>
-                    </a>
-                </li>
-                <li class="auto-style18">
-                    <a href="#"><img src="Images/4.jpg" class="auto-style21"/></a>
-                    <a href="#"<h2>PHÒNG TRỌ SÁT BÊN TRƯỜNG ĐH CÔNG NGHIỆP TPHCM.</h2>
-                        <p>Diện tích:</p>
-                        <p>Địa chỉ:</p>
-                        <p>Giá:</p>
-                    </a>
-                </li>
-                <li class="auto-style19">
-                    <a href="#"><img src="Images/5.jpg" class="auto-style20"/></a>
-                    <a href="#"<h2>CHO THUÊ PHÒNG MỚI XÂY, AN NINH 205/56A THOẠI NGỌC HẦU, QUẬN TÂN PHÚ.</h2>
-                        <p>Diện tích:</p>
-                        <p>Địa chỉ:</p>
-                        <p>Giá:</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                </div>
+                <h1>&nbsp;</h1>
+                <h1>Cho thuê phòng trọ, cho thuê nhà trọ, tìm phòng trọ</h1>
+                <div id="ndcontent" class="auto-style11">
+                    <div id="left" class="auto-style14">
+                        <ul>
+                            <li class="auto-style15"><a href="#">
+                                <img src="Images/1.jpg" class="auto-style24"/></a> <a href="#"<h2>PHÒNG TRỌ MỚI, SẠCH SẼ-MÁY LẠNH-TIỆN NGHI</h2>
+                                </a>
+                                <p class="auto-style13">
+                                    Diện tích:</p>
+                                <p class="auto-style13">
+                                    Địa chỉ:</p>
+                                <p class="auto-style13">
+                                    Giá:</p>
+                            </li>
+                            <li class="auto-style16"><a href="#">
+                                <img src="Images/2.jpg" class="auto-style23"/></a> <a href="#"<h2>CHÍNH CHỦ CHO THUÊ PHÒNG NỘI THẤT GẦN SÂN BAY.</h2>
+                                <p>
+                                    Diện tích:</p>
+                                <p>
+                                    Địa chỉ:</p>
+                                <p>
+                                    Giá:</p>
+                                </a></li>
+                            <li class="auto-style17"><a href="#">
+                                <img src="Images/3.jpg" class="auto-style22"/></a> <a href="#"<h2>CHO THUÊ PHÒNG TRỌ CAO CẤP, SẠCH SẼ, AN NINH-KDC CHÁNH NGHĨA-THÍCH HỢP VIÊN CHỨC,CÔNG NHÂN VIÊN, SINH VIÊN.</h2>
+                                <p>
+                                    Diện tích:</p>
+                                <p>
+                                    Địa chỉ:</p>
+                                <p>
+                                    Giá:</p>
+                                </a></li>
+                            <li class="auto-style18"><a href="#">
+                                <img src="Images/4.jpg" class="auto-style21"/></a> <a href="#"<h2>PHÒNG TRỌ SÁT BÊN TRƯỜNG ĐH CÔNG NGHIỆP TPHCM.</h2>
+                                <p>
+                                    Diện tích:</p>
+                                <p>
+                                    Địa chỉ:</p>
+                                <p>
+                                    Giá:</p>
+                                </a></li>
+                            <li class="auto-style19"><a href="#">
+                                <img src="Images/5.jpg" class="auto-style20"/></a> <a href="#"<h2>CHO THUÊ PHÒNG MỚI XÂY, AN NINH 205/56A THOẠI NGỌC HẦU, QUẬN TÂN PHÚ.</h2>
+                                <p>
+                                    Diện tích:</p>
+                                <p>
+                                    Địa chỉ:</p>
+                                <p>
+                                    Giá:</p>
+                                </a></li>
+                        </ul>
                     </div>
-
-                    
+                </div>
             </div>
-            </div>
-                <br />
-                <br />
+        </div>
                 <br />
                 <br />
                 <br />

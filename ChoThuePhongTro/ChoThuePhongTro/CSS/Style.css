@@ -10,14 +10,12 @@
     height:35px;
     background:#000;
     position:fixed;
-    width:100%;
     top:113px;
     left:-1px;
     padding:0;
     margin:0 0 0px 0;
 }
 #menu{
-    width:918px;
     margin:0px auto 0 auto;
     padding:0;
     height: 32px;
@@ -27,7 +25,6 @@
     margin:0;
     padding-top:7px;
     padding-left:0;
-    width: 907px;
 }
 #menu ul li{
     float:left;
