@@ -121,7 +121,7 @@
             <br />
             <div id="content" class="auto-style8" style="margin-top: 30px">
                 <div id="TimKiem" class="auto-style3" style="margin: 10px auto auto auto; padding-top: 10px; font-size: medium; background-color: #0099CC; padding-bottom: 10px;">
-                    <strong>Tĩnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" Height="25px" Width="120px">
+                    <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" Height="25px" Width="120px">
                         <asp:ListItem>Bình Dương</asp:ListItem>
                     </asp:DropDownList>
 &nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="DropDownList2" runat="server" Height="25px" Width="120px">
