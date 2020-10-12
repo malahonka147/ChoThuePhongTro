@@ -10,11 +10,11 @@
             height: 812px;
         }
         .auto-style4 {
-            position: static;
+            position: fixed;
             width: 100%;
             left: -1px;
             top: 113px;
-            height: 60px;
+            height: 58px;
         }
         .auto-style5 {
             margin-right: 0px;
@@ -38,8 +38,8 @@
             width: 1024px;
         }
         .auto-style12 {
-            height: 32px;
-            width: 1037px;
+            height: 44px;
+            width: 1085px;
         }
         .auto-style13 {
             color: #0000FF;
@@ -93,22 +93,40 @@
             width: 159px;
             height: 200px;
         }
+        .auto-style25 {
+            width: 1089px;
+            height: 30px;
+        }
+        .auto-style26 {
+            height: 146px;
+            position: static;
+        }
         </style>
 </head>
 <body>
     <form id="Home" runat="server" class="auto-style5">
         <div class="auto-style6">
-            <div id="logo" style="height: 110px; background-color: #FFFFFF; position: static;">
+            <div id="logo" style="background-color: #FFFFFF; " class="auto-style26">
                 <asp:Image ID="Image1" runat="server" Height="110px" ImageUrl="~/Images/logo.png" Width="206px" />
-        <div id="menutop" style="margin: 0px; background-color: #0066CC; position: static;" class="auto-style4">
+                <br />
+        <div id="menutop" style="background-color: #0000FF; position: static; height: 50px;" class="auto-style4">
             <div id="menu" class="auto-style12">
-                <ul style="font-size: 15px" class="auto-style14">
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Cho thuê phòng trọ</a></li>
-                    <li><a href="#">Tìm người ở ghép</a></li>
-                    <li><a href="#">Hướng dẫn</a></li>
-                    <li><a href="#">Nạp tiền</a></li>
-                    <li><a href="#">Bảng giá dịch vụ</a></li>
+                <ul style="margin: auto; font-size: 16px; padding-top: 15px;" class="auto-style25">
+                    <li>&nbsp;<asp:HyperLink ID="HyperLink8" runat="server">Trang chủ</asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink7" runat="server">Cho thuê phòng trọ</asp:HyperLink>
+                        &nbsp;</li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink6" runat="server">Tìm người ở ghép</asp:HyperLink>
+                        &nbsp;</li>
+                    <li>&nbsp;<asp:HyperLink ID="HyperLink5" runat="server">Hướng dẫn</asp:HyperLink>
+                    </li>
+                    <li></li>
+                    <li>
+                        <asp:HyperLink ID="HyperLink4" runat="server">Nạp tiền</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink3" runat="server">Bảng giá dịch vụ</asp:HyperLink>
+                    </li>
                     <li>
                         <asp:HyperLink ID="HyperLink1" runat="server">Đăng Nhập</asp:HyperLink>
                     </li>
@@ -119,7 +137,7 @@
                 </ul>
             </div>
             <br />
-            <div id="content" class="auto-style8" style="margin-top: 30px">
+            <div id="content" class="auto-style8" style="margin-top: 10px; position: static;">
                 <div id="TimKiem" class="auto-style3" style="margin: 10px auto auto auto; padding-top: 10px; font-size: medium; background-color: #0099CC; padding-bottom: 10px;">
                     <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" Height="25px" Width="120px">
                         <asp:ListItem>Bình Dương</asp:ListItem>
@@ -191,7 +209,6 @@
                 </div>
             </div>
         </div>
-                <br />
                 <br />
                 <br />
                 <br />

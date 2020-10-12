@@ -38,8 +38,8 @@
     font-weight:bold;
 }
 #menu ul li a:hover{
-    color: #fff000;
-    text-decoration: underline;
+    display:block;
+    background-color:darkblue;
 }
 #content {
     float: left;
