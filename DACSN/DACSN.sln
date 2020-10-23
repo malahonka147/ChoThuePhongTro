@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoThuePhongTro", "ChoThuePhongTro\ChoThuePhongTro.csproj", "{8330CA89-6CF0-42EA-AEDD-CC6E961A6980}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DACSN", "DACSN\DACSN.csproj", "{756B83C1-D3E8-4508-822A-6032A033E9CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8330CA89-6CF0-42EA-AEDD-CC6E961A6980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8330CA89-6CF0-42EA-AEDD-CC6E961A6980}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8330CA89-6CF0-42EA-AEDD-CC6E961A6980}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8330CA89-6CF0-42EA-AEDD-CC6E961A6980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756B83C1-D3E8-4508-822A-6032A033E9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756B83C1-D3E8-4508-822A-6032A033E9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756B83C1-D3E8-4508-822A-6032A033E9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756B83C1-D3E8-4508-822A-6032A033E9CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

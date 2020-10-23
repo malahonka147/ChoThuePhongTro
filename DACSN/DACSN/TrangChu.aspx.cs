@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ChoThuePhongTro
+namespace DACSN
 {
     public partial class TrangChu : System.Web.UI.Page
     {
