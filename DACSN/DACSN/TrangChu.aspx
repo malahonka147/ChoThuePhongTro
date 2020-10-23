@@ -12,7 +12,7 @@
     <div>
         <header>
 		<div id="logo">
-            <img src="Images/logo.png" />
+            <img class="hinhlogo" src="Images/Logo.png" />
 		</div>
 		<div id="dn">
 			<a href="Dangnhap.html">Đăng Nhập</a> | <a href="Dangky.html">Đăng kí</a>

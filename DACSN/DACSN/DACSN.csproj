@@ -99,6 +99,7 @@
     <Content Include="Images\3.jpg" />
     <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
+    <Content Include="Images\Logo.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -112,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Images\logo.png" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Style.css" />
