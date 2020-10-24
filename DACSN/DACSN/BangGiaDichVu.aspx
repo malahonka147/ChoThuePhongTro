@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="BangGiaDichVu.aspx.cs" Inherits="DACSN.BangGiaDichVu" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="huongdan">
-     <table>
+     <table class="bgdv">
                     <thead>
                         <tr>
                             <th style="width: 181px">Loại tin</th>
