@@ -327,6 +327,6 @@ div#right{
     border-collapse:collapse;
     border-spacing:0;
 }
-.bgdv,.bgdv>tbody>tr>td{
+.bgdv,.bgdv>tbody>tr>td,.bgdv>thead>tr>th{
     border: 3px solid #000;
 }
