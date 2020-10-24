@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="TrangChu.aspx.cs" Inherits="DACSN.TrangChu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="TimPhongTro.aspx.cs" Inherits="DACSN.TimPhongTro" %>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <aside id="left">
         <div>
@@ -25,7 +25,7 @@
         </div>
     </aside>
     <section>
-        <div id="TimKiem">
+         <div id="TimKiem">
             <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" CssClass="drop" Height="25px" Width="120px">
                 <asp:ListItem>Bình Dương</asp:ListItem>
             </asp:DropDownList>
