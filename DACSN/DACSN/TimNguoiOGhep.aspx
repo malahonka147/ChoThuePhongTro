@@ -43,7 +43,7 @@
                         <img class="HinhNT" src="TimNguoiOGhep/1.jpg" />
                     </div>
                     <div id="right">
-                        <h3 class="TieuDe"><a href="Chitiesanpham.html">Tìm bạn nữ ở ghép phòng mới xây</a></h3>
+                        <h3 class="TieuDe"><a href="ChiTietSanPham.aspx">Tìm bạn nữ ở ghép phòng mới xây</a></h3>
 					    <p class="contentp">Đơn giá:<span class="contentp2">1.5 Triệu/Thắng</span></p>
                         <p class="contentp">Diện tích: <span class="contentp2">30 mét vuông</span></p>
                         <p class="contentp">Địa Chỉ: <span class="contentp2">Bùi Đình Túy, Phường 24, Q.Bình Thạnh, Hồ Chí Minh</span></p>
