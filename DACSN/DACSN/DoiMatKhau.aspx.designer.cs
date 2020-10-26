@@ -10,6 +10,6 @@
 namespace DACSN {
     
     
-    public partial class ChiTietSanPham {
+    public partial class DoiMatKhau {
     }
 }

@@ -26,67 +26,49 @@
         </div>
     </aside>
     <section>
-        <div id="TimKiem">
-            <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" CssClass="drop" Height="25px" Width="120px">
-                <asp:ListItem>Bình Dương</asp:ListItem>
-            </asp:DropDownList>
-            &nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="DropDownList2" runat="server" CssClass="drop" Height="25px" Width="120px">
-                <asp:ListItem>TP Thủ Dầu Một</asp:ListItem>
-            </asp:DropDownList>
-            &nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="DropDownList3" runat="server" CssClass="drop" Height="25px" Width="120px">
-                <asp:ListItem>Phường Tân An</asp:ListItem>
-            </asp:DropDownList>
-            &nbsp;
-            <asp:Button ID="Button1" runat="server" CssClass="btntimkiem" Height="25px" Text="Tìm Kiếm" Width="120px" />
+        <div>
+            <h3 style="color: #E13427; font-weight: bold; font-size: 24px; margin-bottom: 15px;">Cho Thuê Nhà Trọ Mặt tiền đường 42 cống lở - p15 - Quận tân bình ( gần cầu tham lương )</h3>
         </div>
         <div>
             <h1>Phòng VIP</h1>
         </div>
-        <div>
-            <table>
+        <div style="margin-top: 15px">
+            <table class="bgdv">
                 <tbody>
                     <tr>
-                        <td>Địa chỉ:</td>
-                        <td colspan="3">111/7</td>
+                        <td style="width: 167px">Địa chỉ:</td>
+                        <td colspan="3" style="text-align: justify">Đường 42 cống lở - p15 - Quận tân bình ( gần cầu tham lương )</td>
                     </tr>
                     <tr>
-                        <td>Khu vực</td>
-                        <td colspan="3">...</td>
+                        <td style="width: 167px">Mã tin</td>
+                        <td style="width: 166px; text-align: justify;">#313223</td>
+                        <td style="width: 162px">Người đăng:</td>
+                        <td style="width: 190px">danh910366</td>
                     </tr>
                     <tr>
-                        <td>Loại rao tin:</td>
-                        <td colspan="3">...</td>
+                        <td style="height: 50px; width: 167px">Đối tượng:</td>
+                        <td style="height: 50px; width: 166px; text-align: justify;">Tất cả</td>
+                        <td style="height: 50px; width: 162px">Điện thoại:</td>
+                        <td style="height: 50px; width: 190px">0909789888</td>
                     </tr>
                     <tr>
-                        <td>Mã tin</td>
-                        <td>#313223</td>
-                        <td>Người đăng:</td>
-                        <td>danh910366</td>
+                        <td style="width: 167px">Ngày cập nhật:</td>
+                        <td style="width: 166px; text-align: justify;">25/10/20 17:30</td>
+                        <td style="width: 162px">Diện tích:</td>
+                        <td style="width: 190px">22m2 đến 40m2</td>
                     </tr>
                     <tr>
-                        <td>Đối tượng:</td>
-                        <td>Tất cả</td>
-                        <td>Điện thoại:</td>
-                        <td>ghi sdt vào</td>
-                    </tr>
-                    <tr>
-                        <td>Ngày cập nhật:</td>
-                        <td>25/10/20 17:30</td>
-                        <td>Diện tích:</td>
-                        <td>Ghi diện tích vào</td>
-                    </tr>
-                    <tr>
-                        <td>Ngày hết hạn:</td>
-                        <td>28/10/20 17:30</td>
-                        <td>Giá cho thuê:</td>
-                        <td>Ghi giá </td>
+                        <td style="width: 167px">Ngày hết hạn:</td>
+                        <td style="width: 166px; text-align: justify;">28/10/20 17:30</td>
+                        <td style="width: 162px">Giá cho thuê:</td>
+                        <td style="width: 190px">3.5 triệu/tháng </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <br>
         <br>
-        <div>
+        <div class="huongdan">
             <span><strong>Thông tin mô tả</strong></span>
             <p>Cho Thuê Nhà Trọ Mặt tiền đường 42 cống lở - p15 - Quận tân bình ( gần cầu tham lương )</p>
             <p>Lợi Thế Cao Ốc Phòng trọ CMC Building</p>
@@ -112,12 +94,9 @@
         <br />
         <br />
         <br />
-        <div><h3>Hình ảnh</h3></div>
+        <div><h3 style="font-size: 24px; font-weight: bold">Hình ảnh</h3></div>
         <br />
         <br />
-        <script src="SlideShow.js">
-
-        </script>
         <div class="slideshow-container">
   <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
@@ -150,6 +129,7 @@
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+        <script src="SlideShow.js"></script>
     </section>
 </asp:Content>
 
