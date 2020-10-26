@@ -99,6 +99,7 @@
     <Content Include="ChiTietSanPham.aspx" />
     <Content Include="DangKi.aspx" />
     <Content Include="DangNhap.aspx" />
+    <Content Include="DoiMatKhau.aspx" />
     <Content Include="GioiThieu.aspx" />
     <Content Include="HuongDan.aspx" />
     <Content Include="Images\1.jpg" />
@@ -173,6 +174,13 @@
     </Compile>
     <Compile Include="DangNhap.aspx.designer.cs">
       <DependentUpon>DangNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoiMatKhau.aspx.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.aspx.designer.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
     </Compile>
     <Compile Include="GioiThieu.aspx.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>

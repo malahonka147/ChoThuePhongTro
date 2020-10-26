@@ -63,7 +63,7 @@
                                 <td colspan ="2"align ="middle"><input class="dn" type="submit" value="Đăng Nhập" onClick="return KiemTra()"></td>
                               </tr>
                               <tr>
-                                <td colspan="2" align ="right" type="submit"><a href="DoiMatKhau.html">Đổi Mật Khẩu</a></td>
+                                <td colspan="2" align ="right" type="submit"><a href="DoiMatKhau.aspx">Đổi Mật Khẩu</a></td>
                               </tr>
                       </table>
                     </form>
