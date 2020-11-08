@@ -77,6 +77,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -95,13 +103,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BangGiaDichVu.aspx" />
-    <Content Include="ChiTietSanPham.aspx" />
-    <Content Include="DangKi.aspx" />
-    <Content Include="DangNhap.aspx" />
-    <Content Include="DoiMatKhau.aspx" />
-    <Content Include="GioiThieu.aspx" />
-    <Content Include="HuongDan.aspx" />
+    <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\10.jpg" />
     <Content Include="Images\2.jpg" />
@@ -112,13 +114,25 @@
     <Content Include="Images\7.jpg" />
     <Content Include="Images\8.jpg" />
     <Content Include="Images\9.jpg" />
-    <Content Include="Images\Logo.png" />
+    <Content Include="BangGiaDichVu.aspx" />
+    <Content Include="Images\CTPT-1.jpg" />
+    <Content Include="Images\CTPT-2.jpg" />
+    <Content Include="Images\CTPT-3.jpg" />
+    <Content Include="Images\CTPT-4.jpg" />
+    <Content Include="DangKi.aspx" />
+    <Content Include="DangNhap.aspx" />
+    <Content Include="DoiMatKhau.aspx" />
+    <Content Include="GioiThieu.aspx" />
+    <Content Include="HuongDan.aspx" />
+    <Content Include="logo.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SlideShow.js" />
     <Content Include="Template.Master" />
+    <Content Include="Templates2.Master" />
+    <Content Include="app.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -132,21 +146,24 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Style.css" />
     <Content Include="TimNguoiOGhep.aspx" />
-    <Content Include="TimNguoiOGhep\1.jpg" />
-    <Content Include="TimNguoiOGhep\10.jpg" />
-    <Content Include="TimNguoiOGhep\2.jpg" />
-    <Content Include="TimNguoiOGhep\3.jpg" />
-    <Content Include="TimNguoiOGhep\4.jpg" />
-    <Content Include="TimNguoiOGhep\5.jpg" />
-    <Content Include="TimNguoiOGhep\6.jpg" />
-    <Content Include="TimNguoiOGhep\7.jpg" />
-    <Content Include="TimNguoiOGhep\8.jpg" />
-    <Content Include="TimNguoiOGhep\9.jpg" />
     <Content Include="TimPhongTro.aspx" />
+    <Content Include="Images\TMOG2.jpg" />
+    <Content Include="Images\TNOG-1.jpg" />
+    <Content Include="Images\TNOG-2.jpg" />
+    <Content Include="Images\TNOG1.jpg" />
+    <Content Include="Images\TNOG10.jpg" />
+    <Content Include="Images\TNOG3.jpg" />
+    <Content Include="Images\TNOG4.jpg" />
+    <Content Include="Images\TNOG5.jpg" />
+    <Content Include="Images\TNOG6.jpg" />
+    <Content Include="Images\TNOG7.jpg" />
+    <Content Include="Images\TNOG8.jpg" />
+    <Content Include="Images\TNOG9.jpg" />
     <Content Include="TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\XLDL.cs" />
     <Compile Include="BangGiaDichVu.aspx.cs">
       <DependentUpon>BangGiaDichVu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,12 +171,12 @@
     <Compile Include="BangGiaDichVu.aspx.designer.cs">
       <DependentUpon>BangGiaDichVu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ChiTietSanPham.aspx.cs">
-      <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
+    <Compile Include="ChiTietPhongTro.aspx.cs">
+      <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ChiTietSanPham.aspx.designer.cs">
-      <DependentUpon>ChiTietSanPham.aspx</DependentUpon>
+    <Compile Include="ChiTietPhongTro.aspx.designer.cs">
+      <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
     </Compile>
     <Compile Include="DangKi.aspx.cs">
       <DependentUpon>DangKi.aspx</DependentUpon>
@@ -206,6 +223,13 @@
     </Compile>
     <Compile Include="Template.Master.designer.cs">
       <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Templates2.Master.cs">
+      <DependentUpon>Templates2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Templates2.Master.designer.cs">
+      <DependentUpon>Templates2.Master</DependentUpon>
     </Compile>
     <Compile Include="TimNguoiOGhep.aspx.cs">
       <DependentUpon>TimNguoiOGhep.aspx</DependentUpon>
@@ -265,6 +289,11 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>2.0</SsdtUnitTestVersion>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

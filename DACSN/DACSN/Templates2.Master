@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Templates2.master.cs" Inherits="DACSN.Templates2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+           <div>
+                <header>
+		        <div id="logo">
+                    <img class="hinhlogo" src="Images/Logo.png" />
+		        </div>
+		        <div id="dn">
+			        <a href="DangNhap.aspx">Đăng Nhập</a> | <a href="DangKi.aspx">Đăng kí</a>
+		        </div>
+	        </header>
+	        <nav>
+    	        <div id="subnav">
+                    <ul>
+                        <li><a href="TrangChu.aspx"><b>TRANG CHỦ</b></a></li>
+                        <li><a href="TimPhongTro.aspx"><b>TÌM PHÒNG TRỌ</b></a></li>
+                        <li><a href="TimNguoiOGhep.aspx"><b>TÌM NGƯỜI Ở GHÉP</b></a></li>
+                        <li><a href="HuongDan.aspx"><b>HƯỚNG DẪN</b></a></li>
+                        <li><a href="BangGiaDichVu.aspx"><b>BẢNG GIÁ DỊCH VỤ</b></a></li>
+                        <li id="Cuoi"><a href="GioiThieu.aspx"><b>GỚI THIỆU</b></a></li>
+                    </ul>
+               </div>
+	        </nav>
+
+	        <div id="body">
+
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+			        <section>
+            	         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="2">
+                            <ItemTemplate>
+                                 <div class="content">
+                                     <div id="left">
+                                          <a href="ChiTietSanPham.aspx"><asp:Image ID="Image1" CssClass="HinhNT" runat="server" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' /></a>
+                                     </div>
+                                    <div id="right">
+                                        <p class="TieuDe"><a href="ChiTietSanPham.aspx"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></a></p>
+					                    <p class="contentp">Đơn giá:<span class="contentp2"><asp:Label ID="GiaChoThueLabel" runat="server" Text='<%# Eval("GiaChoThue") %>' /></span></p>
+                                        <p class="contentp">Diện tích: <span class="contentp2"> <asp:Label ID="DienTichLabel" runat="server" Text='<%# Eval("DienTich") %>' /></span></p>
+                                        <p class="contentp">Địa Chỉ: <span class="contentp2"><asp:Label ID="DiaChiLabel" runat="server" Text='<%# Eval("DiaChi") %>' /></span></p>
+                                    </div>
+                               </div>
+                            </ItemTemplate>
+                      </asp:DataList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh] FROM [NhaTroChoThue]"></asp:SqlDataSource>
+                   
+			        </section>
+                </asp:ContentPlaceHolder>
+	        </div>
+
+	        <footer>
+		        <p>2020 - Phòng Trọ Sinh Viên</p>
+		        <p>Website được phát triển để sử dụng tìm kiếm nhà trọ.</p>
+		        <p>Email: abc.thudaumotuniversity@gmail.com</p>
+	        </footer>
+    </div>
+    </form>
+</body>
+</html>

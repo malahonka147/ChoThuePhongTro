@@ -62,12 +62,14 @@ create table LoaiTK
 
 create table DanhGia
 (
+	MaDG varchar(10),
 	MaKH varchar(10)not null,
-	TenTK nvarchar(50) not null,
+	MaNhaTro varchar(10),
 	DanhGia nvarchar(2000)
-	constraint PK_MaKH primary key (MaKH)
+	constraint PK_MaDG primary key (MaDG)
 	--drop table DanhGia
 )
+
 alter table NhaTroChoThue 
 	ADD  CONSTRAINT FK_KHACHHANG_NhaTroChoThue FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
 alter table KhachHang
@@ -76,6 +78,11 @@ alter table NguoiQuanLi
 	ADD  CONSTRAINT FK_NguoiQuanLi_LoaiTK FOREIGN KEY(MaLTK)REFERENCES LoaiTK (MaLTK)
 alter table DanhGia
 	ADD  CONSTRAINT FK_DanhGia_KhachHang FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
+alter table DanhGia
+	ADD  CONSTRAINT FK_DanhGia_NhaTroChoThue FOREIGN KEY(MaNhaTro)REFERENCES NhaTroChoThue (MaNhaTro)
+
+insert into LoaiTK values(0,'Admin')
+insert into LoaiTK values(1,'KhachHang')
 
 
 insert into KhachHang values('KH01',1,N'Trần Khải Nhi','012345785','tknhi@gmail.com','d123456','tknhi')
@@ -150,37 +157,41 @@ Chi phí dịch vụ mỗi tháng:
 - Wifi + cáp + Thang máy + máy giặt đầy đủ',3500000,25,'CTPT-2.jpg',31,N'Cho thuê phòng trọ cao cấp,sạch sẽ, an ninh')
 
 insert into NhaTroChoThue values('NT05','KH05',N'TP.Hồ Chi Minh',N'Quận Tân Bình',N'Phường 13',N'Đường Cộng Hòa','Số 622/10',N'Số 622/10,Đường Cộng Hòa,phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','098623546',N'Thông tin mô tả:
-Phòng đầy đủ nội thất.
-Toilet riêng.
-Từ giấc tự do
-Khóa vân tay
-Bảo vệ 24/24
-Free wifi
-Xách vali vào là ở
-Có bếp
-Cửa sổ lớn',4500000,20,'CTPT-3.jpg',5,N'Phòng trọ mới 100%, siêu đẹp')
+-Phòng đầy đủ nội thất.
+-Toilet riêng.
+-Từ giấc tự do
+-Khóa vân tay
+-Bảo vệ 24/24
+-Free wifi
+-Xách vali vào là ở
+-Có bếp
+-Cửa sổ lớn',4500000,20,'CTPT-3.jpg',5,N'Phòng trọ mới 100%, siêu đẹp')
 insert into NhaTroChoThue values('NT06','KH06',N'TP.Hồ Chi Minh',N'Quận Phú Nhuận',N'Phường 3',N'Đường Phan Xích Long','Số 441/2',N'Số 123,Đường Phan Xích Long,phường 3,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012564546',N'Thông tin mô tả:
-Nhà mặt tiền Quận Tân Bình
-Có nhu cầu cho Thuê tầng 1 : 2 phòng ngủ và 1 WC thích hợp cho gia đình lớn hoặc nhân viên công sở
-Khu vực gần sân bay, thuận tiện đi lại
-Giờ giấc tự do
-Bên dưới là tiệm giặt sấy với giá ưu đãi cho người thuê',3000000,60,'CTPT-4.jpg',48,N'Phòng trọ đầy đủ tiện nghi Đường Phan Xích Long')
+- Nhà mặt tiền Quận Tân Bình
+-Có nhu cầu cho Thuê tầng 1 : 2 phòng ngủ và 1 WC thích hợp cho gia đình lớn hoặc nhân viên công sở
+-Khu vực gần sân bay, thuận tiện đi lại
+-Giờ giấc tự do
+-Bên dưới là tiệm giặt sấy với giá ưu đãi cho người thuê',3000000,60,'CTPT-4.jpg',48,N'Phòng trọ đầy đủ tiện nghi Đường Phan Xích Long')
 
 insert into NguoiQuanLi values('AD01','admin1','123','admin01@gmail.com','0124584866',0)
 insert into NguoiQuanLi values('AD02','admin2','456','admin02@gmail.com','0125445735',0)
 insert into NguoiQuanLi values('AD03','admin3','789','admin03@gmail.com','0122891464',0)
 insert into NguoiQuanLi values('AD04','admin4','123456','admin04@gmail.com','0943486643',0)
 
-insert into LoaiTK values(0,'Admin')
-insert into LoaiTK values(1,'KhachHang')
 
+insert into DanhGia values('DG01','KH01','NT01',N'Nhà trọ này thoáng mát')
+insert into DanhGia values('DG02','KH02','NT02',N'Phòng trọ có Wifi không')
+insert into DanhGia values('DG03','KH03','NT06',N'Khu này có bảo vệ chặt chẽ không, sinh hoạt ra sao.')
+insert into DanhGia values('DG04','KH04','NT03',N'Có đầy đủ tiện nghi không.')
+insert into DanhGia values('DG05','KH05','NT01',N'Nhà trọ này có kệ bếp hay bàn làm việc không')
+insert into DanhGia values('DG06','KH06','NT02',N'Nhà trọ sạch sẽ yên tĩnh')
+insert into DanhGia values('DG07','KH07','NT05',N'Nhà trọ rất sạch sẽ, thoải mái giờ giấc.')
+insert into DanhGia values('DG08','KH08','NT06',N'Nhà trọ hơi bụi.')
+insert into DanhGia values('DG09','KH09','NT03',N'Phòng đầy đủ tiện nghi, rất thích.')
 
-insert into DanhGia values('KH01',N'Trần Khải Nhi',N'Nhà trọ này thoáng mát')
-insert into DanhGia values('KH02',N'Nguyễn Tiến Luân',N'Phòng trọ có Wifi không')
-insert into DanhGia values('KH03',N'Đặng Quốc Hòa',N'Khu này có bảo vệ chặt chẽ không, sinh hoạt ra sao.')
-insert into DanhGia values('KH04',N'Ngô Ngọc Ngân',N'Có đầy đủ tiện nghi không.')
-insert into DanhGia values('KH05',N'Trần Thị Thu Trang',N'Nhà trọ này có kệ bếp hay bàn làm việc không')
-insert into DanhGia values('KH06',N'Nguyễn Thiên Thanh',N'Nhà trọ sạch sẽ yên tĩnh')
-insert into DanhGia values('KH07',N'Trần Thị Hải Yến',N'Nhà trọ rất sạch sẽ, thoải mái giờ giấc.')
-insert into DanhGia values('KH08',N'Nguyễn Thị Thanh Mai',N'Nhà trọ hơi bụi.')
-insert into DanhGia values('KH09',N'Nguyễn Thành Danh',N'Phòng đầy đủ tiện nghi, rất thích.')
+Create Proc ChiTietNhaTro
+@MaNT varchar(10)
+as 
+select TenKH,SDTNguoiChoThue,DiaChi,MoTa,GiaChoThue,DienTich,TieuDe
+from KhachHang kh,NhaTroChoThue nt,DanhGia dg
+where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH and dg.MaNhaTro=nt.MaNhaTro

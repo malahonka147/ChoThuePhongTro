@@ -119,23 +119,23 @@
 	}
 	aside#left>div>ul{
 		padding-left:10px;
-		font-size:14px;
 		font-family:Arial;
 	}
-	aside#left>div>ul>li{
-		height:50px;
+.aside{
+        height:auto;
+        margin:5px;
 		list-style-position:inside;
-		list-style-image:url();
-		padding-left:5px;	
+		list-style-image:url();	
         font-weight:bold;
         padding-left:2px;
         padding-right:2px;
+        font-size:18px;
 	}
-	aside#left>div>ul>li a{
+.aside a {
 		color:#206ab5;
 		text-decoration:none;
 	}
-	aside#left>div>ul>li a:hover{
+.aside a:hover{
 		color:darkblue;
 	}
 #TimKiem{
@@ -146,7 +146,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	color: white;
-	height: 30px;
+	height: 40px;
 	padding-top: 5px;
 }
 
@@ -173,11 +173,12 @@ footer>p{
  }
 .content{
     float:left;
-    width:48%;
-    margin-top: 5px;
-    margin-left:5px;
-    margin-right: 1%;
-    margin-bottom: 15px;
+    width:440px;
+    height:160px;
+    margin-top: 3px;
+    margin-left:3px;
+    margin-right:5px;
+    margin-bottom: 5px;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #206ab5;
@@ -186,6 +187,9 @@ footer>p{
 .HinhNT{
     width: 140px;
     height: 140px;
+}
+.TieuDe{
+    font-size:18px;
 }
 .SlideShow{
     width:600px;
@@ -204,7 +208,6 @@ div#left, div#right {
 .contentp2{
     color:#900;
 }
-
 .TieuDe a{
     text-decoration:none;
     font-weight:bold;
@@ -223,19 +226,15 @@ div#left, div#right {
 	padding:15px;
 
 }
-table tr
+.bgdv tr
 {
 	height:50px;
 }
-table tr td
-{
-	font-size: 24px;
-}
-table a
+.bgdv a
 {
 	color:black;;
 }
-table a:hover
+.bgdv a:hover
 {
 	color:darkblue;	
 }
@@ -441,4 +440,24 @@ div#right{
     to {
         opacity: 1
     }
+}
+#gvTinMoiDang{
+    border-collapse:collapse;
+    border-color:#edeaea;
+    height:auto;
+    margin:5px;
+	list-style-position:inside;
+	list-style-image:url();	
+    font-weight:bold;
+    padding-left:2px;
+    padding-right:2px;
+    font-size:18px;
+}
+#gvTinMoiDang a{
+    color:#206ab5;
+	text-decoration:none;
+}
+#gvTinMoiDang a:hover
+{
+    color:darkblue;
 }
