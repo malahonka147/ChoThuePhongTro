@@ -17,7 +17,7 @@
                 <ItemTemplate>
                       <div class="content">
                          <div id="left">
-                              <asp:HyperLink ID="HyperLink5" runat="server" ImageHeight="140px" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' ImageWidth="140px" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>'>HyperLink</asp:HyperLink>
+                              <asp:HyperLink ID="HyperLink5" runat="server" ImageHeight="140px" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' ImageWidth="140px" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("HinhAnh") %>'></asp:HyperLink>
                          </div>
                         <div id="right">
                             <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink></a>
@@ -29,7 +29,7 @@
                    </div>
                 </ItemTemplate>
             </asp:DataList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [DiaChi], [TieuDe], [HinhAnh], [DienTich], [GiaChoThue], [MaNhaTro] FROM [NhaTroChoThue] WHERE ([LoaiNT] = @LoaiNT)">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaNhaTro], [DiaChi], [HinhAnh], [GiaChoThue], [DienTich], [TieuDe] FROM [NhaTroChoThue] WHERE ([LoaiNT] = @LoaiNT)">
                 <SelectParameters>
                     <asp:Parameter DefaultValue="Tìm Người Ở Ghép" Name="LoaiNT" Type="String" />
                 </SelectParameters>
