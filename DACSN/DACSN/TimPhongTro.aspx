@@ -20,7 +20,7 @@
                               <asp:HyperLink ID="HyperLink6" runat="server" ImageHeight="140px" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' ImageWidth="140px" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>'>HyperLink</asp:HyperLink>
                          </div>
                         <div id="right">
-                            <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("HinhAnh") %>'></asp:HyperLink></a>
+                            <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink></a>
 					            
 					        <p class="contentp">Đơn giá:<span class="contentp2"><asp:Label ID="GiaChoThueLabel" runat="server" Text='<%# Eval("GiaChoThue") %>' />/Tháng</span></p>
                             <p class="contentp">Diện tích: <span class="contentp2"> <asp:Label ID="DienTichLabel" runat="server" Text='<%# Eval("DienTich") %>' /> mét vuông</span></p>
