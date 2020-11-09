@@ -70,6 +70,13 @@ create table DanhGia
 	--drop table DanhGia
 )
 
+create table HinhAnhChiTietNhaTro
+(
+	MaNhaTro varchar(10),
+	MaKH varchar(10),
+	HinhAnh nvarchar(50)
+)
+
 alter table NhaTroChoThue 
 	ADD  CONSTRAINT FK_KHACHHANG_NhaTroChoThue FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
 alter table KhachHang
@@ -80,6 +87,10 @@ alter table DanhGia
 	ADD  CONSTRAINT FK_DanhGia_KhachHang FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
 alter table DanhGia
 	ADD  CONSTRAINT FK_DanhGia_NhaTroChoThue FOREIGN KEY(MaNhaTro)REFERENCES NhaTroChoThue (MaNhaTro)
+alter table HinhAnhChiTietNhaTro
+	ADD  CONSTRAINT FK_HinhAnhCTNhaTro_NhaTroChoThue FOREIGN KEY(MaNhaTro)REFERENCES NhaTroChoThue (MaNhaTro)
+alter table HinhAnhChiTietNhaTro
+	ADD  CONSTRAINT FK_HinhAnhCTNhaTro_KhachHang FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
 
 insert into LoaiTK values(0,'Admin')
 insert into LoaiTK values(1,'KhachHang')
@@ -172,6 +183,49 @@ insert into NhaTroChoThue values('NT06','KH06',N'TP.Hồ Chi Minh',N'Quận Phú
 -Khu vực gần sân bay, thuận tiện đi lại
 -Giờ giấc tự do
 -Bên dưới là tiệm giặt sấy với giá ưu đãi cho người thuê',3000000,60,'CTPT-4.jpg',48,N'Phòng trọ đầy đủ tiện nghi Đường Phan Xích Long')
+insert into NhaTroChoThue values('NT07','KH07',N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường Binh Chuẩn',N'Đường Bình Chuẩn 62','',N'Đường Bình Chuẩn 62,phường Binh Chuẩn,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','092578956',N'Thông tin mô tả:
+Nhà trọ mới xây, đường rộng xe ô tô vào thoải mái, gần trường mầm non ngôi sao sáng, gần chợ hài mỹ.
+Tổng diện tích là 32m2 ( 20m2 nền và 12m2 gác)
++ Vòi hoa sen, lavabo, bồn rửa chén, tủ treo đựng chén dĩa
++ Gác đúc, có trang bị đồ dùng
++ Sân chơi cho trẻ em ( xích đu, cầu tuộc cho trẻ em)
++ Camera an ninh và wifi 65Mbgs cực nhanh miễn phí
++ giờ giấc thoải mái
++ yên tĩnh, thoáng mát',1800000,32,'CTPT-5.jpg',48,N'Cho thuê nhà trọ mới xây, diện tích 32 m2, tọa lạc ở đường Bình Chuẩn 2, Thuận An, Bình Dương')
+insert into NhaTroChoThue values('NT08','KH08',N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường An Phú',N'Đường số 743','Số 193A/2',N'Số 193A/2,Đường số 743,Phường An Phú,Huyện Thuận An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','096279956',N'Thông tin mô tả:
+Cần cho thuê phòng rộng đẹp thoáng mát.
++ Nhà thoáng đẹp, Camera an ninh 24/24.
+* Địa chỉ: 193A/2, khu phố 1B, đường DT 743, phường An Phú, TX. Thuận An, Bình Dương...
+* Tiêu chuẩn: Phòng đẹp, wifi, giờ giấc tự do, chỗ để xe an toàn.
+* Diện tích: 15m2/phòng.
+* Giá: 950.000đ/tháng trệt, 850.000đ/tháng lầu.',950000,15,'CTPT-6.jpg',45,N'Phòng trọ 15m2, phường An Phú, Thị Xã Thuận An, Bình Dương')
+
+insert into NhaTroChoThue values('NT08','KH08',N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường Bình An',N'Đường Thống Nhất','',N'Đường Thống Nhất,Phường Bình An,Huyện Dĩ An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','0925787956',N'Thông tin mô tả:
+Tọa lạc trong Khu dân cư đô thị Bình Nguyên
+Cách Hồ Bơi Bình Nguyên 50m
+Cách làng đại học Quốc Gia khoảng 1km
+Cách chợ 1km
+Cách trường đại học Bách Khoa 2Km
+Cách Suối tiên khoảng 3km
+Phòng sạch đẹp, diện tích khoảng 18m2, có thể nấu ăn, chỗ để xe riêng, không gian rộng rãi, thoáng mát, phù hợp cho sinh viên học gần Làng đại học, khu vực Bình Dương, Thủ Đức hoặc người đi làm.',1200000,18,'CTPT-7.jpg',45,N'Cho thuê phòng trọ Khu DCM Bình Nguyên_Gần đại học Quốc Gia')
+insert into NhaTroChoThue values('NT09','KH09',N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'Đường Đào Trinh Nhất','Số 42',N'Số 42, Đường Đào Trinh Nhất,Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','0378787956',N'Thông tin mô tả:
+cần tìm người share chung căn hộ phú đông premier
+căn hộ 2pn 68m2, nội thất, miễn phí quản lý, miễn phí hồ bơi nước ấm
+giá share là 3tr/tháng
+liên hệ xem nhà',3000000,68,'TNOG-3.jpg',53,N'Cần người share căn hộ Phú Đông Premier')
+insert into NhaTroChoThue values('NT10','KH08',N'TP.Thủ Dầu Một',N'',N'Phường Định Hòa',N'Đường DX069','',N', Đường DX069,Phường Định Hòa,,TP.Thủ Dầu Một',N'Tìm người ở ghép','037762876',N'Thông tin mô tả:
+Tìm 1 bạn nam ở ghép, nhà trọ ngay NGÃ TƯ SỞ SAO
+- Tình trạng: full nội thất bai gồm: tủ lạnh, máy lạnh, máy giặt, máy nước nóng, TV, bếp,...
+- Địa chỉ: đường DX069, Định Hoà, sát bên ngã tư sở sao
+- An ninh: có camera 24/7, ra vào cổng có thẻ từ
+- Giá: 1,5tr/người',1500000,20,'TNOG-4.jpg',12,N'Tìm NAM ở ghép nhà trọ full nội thất ngay Ngã Tư Sở Sao')
+insert into NhaTroChoThue values('NT11','KH08',N'TP.Thủ Dầu Một',N'Huyện Bến Cát',N'Phường Mỹ Phước',N'Đường Mỹ Phước 2','Số B14',N',Số B14, Đường Mỹ Phước 2,Phường Mỹ Phước,Huyện Bến Cát,TP.Thủ Dầu Một',N'Tìm người ở ghép','083762876',N'Thông tin mô tả:
+Hiện tại mình đang ở 1 mình nên còn dư 3 phòng ngủ,nên mình cần thêm 3 4 bạn ở cùng cho vui,đầy đủ tiện nghi hết ,sách đồ vào là ở,giá 1 người mình lấy 1 triệu3 bao điện nước wifi ,còn lại các thứ nhà mình có sẵn cả rất thỏi máy các bạn ko cần sâm gì.phù hợp cho anh chị mới lên đi làm công nhân chuẩn bị thuê nhà',1300000,96,'TNOG-5.jpg',12,N'Cần 3 hay 4 người ở ghép nhà liên kề 1 trệt 1 lầu')
+insert into NhaTroChoThue values('NT12','KH05',N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'','',N'Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','083713876',N'Thông tin mô tả:
+Căn hộ chung cư có 2 phòng, 1 phòng đã có 1 nữ, cần tìm 1 nữ ở phòng còn lại. (Yêu cầu nhỏ: sạch sẽ, gọn gàng, yên tĩnh). Giờ giấc tự do
+Căn hộ đầy đủ tiện nghi: tủ lạnh, máy giặt, 2 phòng vệ sinh, lavabo, bếp núc đầy đủ. Bạn chỉ việc xách ba lô đến ở. Dưới chung cư có chợ, Vinmart, Bách Hóa Xanh, đồ ăn bán với giá cực kỳ rẻ, muốn mua gì cũng có. Điên nước tính giá nhà nước, Wifi: 90K/tháng, Phí giữ xe: 70K/tháng (tổng hết tầm 200K đổ lại)
+Đi Ngã tư Thủ Đức mất 10 phút, đi trung tâm quận 1 40 phút, đi Sân bay TSN 30 phút, nằm sát đường Phạm Văn Đồng nên đi rất thuận tiện, ít kẹt xe.
+Gía cả thuê có thể thương lượng cho người có thiện chí ở.',2250000,55,'TNOG-6.jpg',12,N'Tìm 1 nữ ở ghép tại chung cư An Bình')
 
 insert into NguoiQuanLi values('AD01','admin1','123','admin01@gmail.com','0124584866',0)
 insert into NguoiQuanLi values('AD02','admin2','456','admin02@gmail.com','0125445735',0)
@@ -189,14 +243,15 @@ insert into DanhGia values('DG07','KH07','NT05',N'Nhà trọ rất sạch sẽ, 
 insert into DanhGia values('DG08','KH08','NT06',N'Nhà trọ hơi bụi.')
 insert into DanhGia values('DG09','KH09','NT03',N'Phòng đầy đủ tiện nghi, rất thích.')
 
-drop proc ChiTietNhaTro
+insert into HinhAnhChiTietNhaTro values('NT01','KH01','CTPT-4.jpg')
+insert into HinhAnhChiTietNhaTro values('NT01','KH01','CTPT-3.jpg')
+insert into HinhAnhChiTietNhaTro values('NT01','KH01','CTPT-1.jpg')
+--drop Proc ChiTietNhaTro
 Create Proc ChiTietNhaTro
 @MaNT varchar(10)
 as 
 select TenKH,SDTNguoiChoThue,DiaChi,MoTa,GiaChoThue,DienTich,TieuDe
-from  KhachHang kh
-                        INNER JOIN
-                         NhaTroChoThue nt ON  kh.MaKH=nt.MaKH
-where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH 
-exec ChiTietNhaTro @MaNT='NT03'
-select * from NhaTroChoThue where MaNhaTro='NT03'
+from KhachHang kh,NhaTroChoThue nt,DanhGia dg
+where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH
+group by TenKH
+exec ChiTietNhaTro @MaNT='NT02'
