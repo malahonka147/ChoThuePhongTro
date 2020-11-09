@@ -17,7 +17,7 @@
                 <ItemTemplate>
                      <div class="content">
                          <div id="left">
-                              <a href="ChiTietPhongTro.aspx"><asp:Image ID="Image1" CssClass="HinhNT" runat="server" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' /></a>
+                              <asp:HyperLink ID="HyperLink5" runat="server" ImageHeight="140px" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' ImageWidth="140px" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>'>HyperLink</asp:HyperLink>
                          </div>
                         <div id="right">
                             <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink></a>
