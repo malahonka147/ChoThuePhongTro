@@ -189,9 +189,14 @@ insert into DanhGia values('DG07','KH07','NT05',N'Nhà trọ rất sạch sẽ, 
 insert into DanhGia values('DG08','KH08','NT06',N'Nhà trọ hơi bụi.')
 insert into DanhGia values('DG09','KH09','NT03',N'Phòng đầy đủ tiện nghi, rất thích.')
 
+drop proc ChiTietNhaTro
 Create Proc ChiTietNhaTro
 @MaNT varchar(10)
 as 
 select TenKH,SDTNguoiChoThue,DiaChi,MoTa,GiaChoThue,DienTich,TieuDe
-from KhachHang kh,NhaTroChoThue nt,DanhGia dg
-where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH and dg.MaNhaTro=nt.MaNhaTro
+from  KhachHang kh
+                        INNER JOIN
+                         NhaTroChoThue nt ON  kh.MaKH=nt.MaKH
+where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH 
+exec ChiTietNhaTro @MaNT='NT03'
+select * from NhaTroChoThue where MaNhaTro='NT03'

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates2.Master" AutoEventWireup="true" CodeBehind="ChiTietPhongTro.aspx.cs" Inherits="DACSN.ChiTietPhongTro" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="1">
+         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
           <ItemTemplate>
         <div>
             <h3 style="color: #E13427; font-weight: bold; font-size: 24px; margin-bottom: 15px;"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></h3>
@@ -40,7 +40,11 @@
 
                 </ItemTemplate>
             </asp:DataList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT KhachHang.TenKH, NhaTroChoThue.DiaChi, NhaTroChoThue.SDTNguoiChoThue, NhaTroChoThue.MoTa, NhaTroChoThue.GiaChoThue, NhaTroChoThue.DienTich, NhaTroChoThue.TieuDe FROM DanhGia INNER JOIN KhachHang ON DanhGia.MaKH = KhachHang.MaKH INNER JOIN NhaTroChoThue ON DanhGia.MaNhaTro = NhaTroChoThue.MaNhaTro AND KhachHang.MaKH = NhaTroChoThue.MaKH"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="ChiTietNhaTro" SelectCommandType="StoredProcedure">
+                <SelectParameters>
+                    <asp:QueryStringParameter Name="MaNT" QueryStringField="MaNT" Type="String" />
+                </SelectParameters>
+         </asp:SqlDataSource>
                    
         <br />
         <br />

@@ -20,16 +20,16 @@
                               <a href="ChiTietPhongTro.aspx"><asp:Image ID="Image1" CssClass="HinhNT" runat="server" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' /></a>
                          </div>
                         <div id="right">
-                            <p class="TieuDe"><a href="ChiTietPhongTro.aspx"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></a></p>
+                            <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink></a>
+					            
 					        <p class="contentp">Đơn giá:<span class="contentp2"><asp:Label ID="GiaChoThueLabel" runat="server" Text='<%# Eval("GiaChoThue") %>' />/Tháng</span></p>
                             <p class="contentp">Diện tích: <span class="contentp2"> <asp:Label ID="DienTichLabel" runat="server" Text='<%# Eval("DienTich") %>' /> mét vuông</span></p>
                             <p class="contentp">Địa Chỉ: <span class="contentp2"><asp:Label ID="DiaChiLabel" runat="server" Text='<%# Eval("DiaChi") %>' /></span></p>
                         </div>
                    </div>
-
                 </ItemTemplate>
             </asp:DataList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh] FROM [NhaTroChoThue] WHERE ([LoaiNT] = @LoaiNT)">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaNhaTro], [TieuDe], [DienTich], [GiaChoThue], [DiaChi], [HinhAnh] FROM [NhaTroChoThue] WHERE ([LoaiNT] = @LoaiNT)">
                 <SelectParameters>
                     <asp:Parameter DefaultValue="Phòng Trọ Cho Thuê" Name="LoaiNT" Type="String" />
                 </SelectParameters>

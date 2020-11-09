@@ -27,7 +27,7 @@
                         <li><a href="TimNguoiOGhep.aspx"><b>TÌM NGƯỜI Ở GHÉP</b></a></li>
                         <li><a href="HuongDan.aspx"><b>HƯỚNG DẪN</b></a></li>
                         <li><a href="BangGiaDichVu.aspx"><b>BẢNG GIÁ DỊCH VỤ</b></a></li>
-                        <li id="Cuoi"><a href="GioiThieu.aspx"><b>GỚI THIỆU</b></a></li>
+                        <li id="Cuoi"><a href="GioiThieu.aspx"><b>GIỚI THIỆU</b></a></li>
                     </ul>
                </div>
 	        </nav>

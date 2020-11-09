@@ -20,7 +20,7 @@
                               <a href="ChiTietPhongTro.aspx"><asp:Image ID="Image1" CssClass="HinhNT" runat="server" ImageUrl='<%# "~/Images/"+Eval("HinhAnh","{0}") %>' /></a>
                          </div>
                         <div id="right">
-                            <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/ChiTietNhaTro.asp.net?MaNT="+Eval("MaNhaTro") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink></a>
+                            <p class="TieuDe"><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink></a>
 					            
 					        <p class="contentp">Đơn giá:<span class="contentp2"><asp:Label ID="GiaChoThueLabel" runat="server" Text='<%# Eval("GiaChoThue") %>' />/Tháng</span></p>
                             <p class="contentp">Diện tích: <span class="contentp2"> <asp:Label ID="DienTichLabel" runat="server" Text='<%# Eval("DienTich") %>' /> mét vuông</span></p>
