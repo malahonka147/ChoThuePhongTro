@@ -32,7 +32,6 @@
             </table>
         </div>
         <br>
-        <br>
         <div class="huongdan">
             <asp:Label ID="MoTaLabel" runat="server" Text='<%# Eval("MoTa") %>' />
         </div>
