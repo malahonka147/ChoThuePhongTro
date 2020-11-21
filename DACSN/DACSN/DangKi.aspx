@@ -61,112 +61,75 @@
 				        <th colspan="2">ĐĂNG KÝ THÀNH VIÊN</th>
 			        </tr>
 			        <tr>
-				        <td>
+				        <td style="width: 388px">
 					        <fieldset>
 						        <legend><b>Thông tin đăng nhập</b></legend>
 						        <table>
 							        <tr>
 								        <td>Họ và tên:</td>
-								        <td><input id="hoten" type="text" name="txtHoTen"></td>
-							        </tr>
-							        <tr>
-								        <td>Ngày sinh:</td>
-								        <td><select name="Ngay">
-										        <option value="01" selected>01</option>
-										        <option value="02" >02</option>
-										        <option value="03" >03</option>
-										        <option value="04" >04</option>
-										        <option value="05" >05</option>
-										        <option value="06" >06</option>
-										        <option value="07" >07</option>
-										        <option value="08" >08</option>
-										        <option value="09" >09</option>
-										        <option value="10" >10</option>
-										        <option value="11" >11</option>
-										        <option value="12" >12</option>
-										        <option value="13" >13</option>
-										        <option value="14" >14</option>
-										        <option value="15" >15</option>
-										        <option value="16" >16</option>
-										        <option value="17" >17</option>
-										        <option value="18" >18</option>
-										        <option value="19" >19</option>
-										        <option value="20" >20</option>
-										        <option value="21" >21</option>
-										        <option value="22" >22</option>
-										        <option value="23" >23</option>
-										        <option value="24" >24</option>
-										        <option value="25" >25</option>
-										        <option value="26" >26</option>
-										        <option value="27" >27</option>
-										        <option value="28" >28</option>
-										        <option value="29" >29</option>
-										        <option value="30" >30</option>
-										        <option value="31" >31</option>
-									        </select>
-								        Tháng:<select name="Thang">
-										        <option value="01" selected>01</option>
-										        <option value="02" >02</option>
-										        <option value="03" >03</option>
-										        <option value="04" >04</option>
-										        <option value="05" >05</option>
-										        <option value="06" >06</option>
-										        <option value="07" >07</option>
-										        <option value="08" >08</option>
-										        <option value="09" >09</option>
-										        <option value="10" >10</option>
-										        <option value="11" >11</option>
-										        <option value="12" >12</option>
-									        </select>
-								        Năm:<input id="nam" type="text" size ="4" name="txtNam"></td>
-							        </tr>
-							        <tr>
-								        <td>Giới tính:</td>
-								        <td><input type="radio" value="Nam" checked>Nam<input type="radio" value="Nữ">Nữ</td>
-							        </tr>
-							        <tr>
-								        <td>Địa chỉ:</td>
 								        <td>
-                                            <asp:TextBox ID="txtDiaChi" runat="server" CssClass="diachi" TextMode="MultiLine"></asp:TextBox>
+                                            <asp:TextBox ID="txtHoTen" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvHoTen" runat="server" ControlToValidate="txtHoTen" ErrorMessage="Họ và tên không hợp lệ!">*</asp:RequiredFieldValidator>
                                         </td>
 							        </tr>
 							        <tr>
 								        <td>Điện thoại:</td>
-								        <td><input type="tel" ></td>
+								        <td>
+                                            <asp:TextBox ID="txtDienthoai" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvDienThoai" runat="server" ControlToValidate="txtDienthoai" ErrorMessage="Số điện thoại không hợp lệ!">*</asp:RequiredFieldValidator>
+                                        </td>
 							        </tr>
 							        <tr>
 								        <td>Email:</td>
-								        <td><input id="email" type="email" name="txtEmail" required></td>
+								        <td>
+                                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                                            <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email không hợp lệ!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
+                                        </td>
 							        </tr>
 						        </table>
 					        </fieldset>
 				        </td>
 			        <tr>
-				        <td>
+				        <td style="width: 388px">
 					        <fieldset>
 						        <legend><b>Thông tin đăng nhập</b></legend>
 						        <table>
 							        <tr>
 								        <td>Tên đăng nhập:</td>
-								        <td><input id="tendangnhap" type="text" name="txtTenDangNhap"></td>
+								        <td style="width: 228px">
+                                            <asp:TextBox ID="txtTenTK" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvTenDN" runat="server" ControlToValidate="txtTenTK" ErrorMessage="Tên tài khoản không hợp lệ!">*</asp:RequiredFieldValidator>
+                                        </td>
 							        </tr>
 							        <tr>
 								        <td>Mật khẩu:</td>
-								        <td><input id="matkhau" type="password" name="txtMatKhau"></td>
+								        <td style="width: 228px">
+                                            <asp:TextBox ID="txtMatKhau" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ControlToValidate="txtMatKhau" ErrorMessage="Mật khâu không hợp lệ!">*</asp:RequiredFieldValidator>
+                                        </td>
 							        </tr>
 							        <tr>
 								        <td>Nhập lại mật khẩu:</td>
-								        <td><input id="nhaplaimatkhau" type="password" name="txtNhapLaiMatKhau"></td>
+								        <td style="width: 228px">
+                                            <asp:TextBox ID="txtNhapLaiMatKhau" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:CompareValidator ID="cvNhapLaiMatKhau" runat="server" ControlToCompare="txtMatKhau" ControlToValidate="txtNhapLaiMatKhau" ErrorMessage="Mật khẩu nhập lại không khớp!">*</asp:CompareValidator>
+                                        </td>
 							        </tr>
 						
 						        </table>
 					        </fieldset>
-				        <td>
+				        <td style="width: 93px">
 			        </tr>
               <tr>
-                <td align="middle">
-                  <input class="btn" type="submit" value="Đăng Ký" onClick="return KiemTra()">
-                  <input class="btn" type="reset" value ="Hủy" /></td>
+                <td align="middle" style="width: 388px">
+                  &nbsp;<asp:Button ID="btnDangKy" runat="server" CssClass="btn" OnClick="btnDangKy_Click" Text="Đăng ký" />
+                    <br />
+                    <div style="text-align: left">
+                        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                    </div>
+                    <br />
+                    <asp:Label ID="lbThongBaoLoi" runat="server"></asp:Label>
+                  </td>
               </tr>
             </table>
          </div>

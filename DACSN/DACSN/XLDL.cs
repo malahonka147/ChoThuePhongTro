@@ -1,46 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
-using System.Data.SqlClient;
 using System.Data;
-namespace DACSN.App_Code
+using System.Data.SqlClient;
+using System.Configuration;
+namespace DACSN
 {
-    public class XLDL
+    internal class XLDL
     {
         public static string strCon = "Data Source=.;Initial Catalog=QLNhaTro;Integrated Security=True";
-        public static DataTable GetData(string LenhSQL)
+        public static DataTable GetData(string lenhSQL)
         {
             SqlConnection sqlCon = new SqlConnection(strCon);
             try
             {
-                SqlDataAdapter sqlDa = new SqlDataAdapter(LenhSQL, sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter(lenhSQL, sqlCon);
                 DataTable dt = new DataTable();
                 sqlDa.Fill(dt);
                 return dt;
-
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public static void Execute(string LenhSQL)
+        public static void Excute(string lenhSQL)
         {
             using (SqlConnection sqlCon = new SqlConnection(strCon))
             {
                 sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand(LenhSQL, sqlCon);
+                SqlCommand sqlCmd = new SqlCommand(lenhSQL, sqlCon);
                 sqlCmd.ExecuteNonQuery();
                 sqlCon.Close();
             }
         }
-        public static string GetValue(string LenhSQL)
+        public static string GetValue(string lenhSQL)
         {
             using (SqlConnection sqlCon = new SqlConnection(strCon))
             {
                 sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand(LenhSQL, sqlCon);
-                string value = sqlCmd.ExecuteNonQuery().ToString();
+                SqlCommand sqlCmd = new SqlCommand(lenhSQL, sqlCon);
+                string value = sqlCmd.ExecuteScalar().ToString();
                 sqlCon.Close();
                 return (value);
             }

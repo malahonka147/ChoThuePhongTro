@@ -21,7 +21,11 @@
                     <img class="hinhlogo" src="Images/Logo.png" />
 		        </div>
 		        <div id="dn">
-			        <a href="DangNhap.aspx">Đăng Nhập</a> | <a href="DangKi.aspx">Đăng kí</a>
+			        <a id ="aDangNhap" runat="server" href="DangNhap.aspx">Đăng nhập</a>
+                    <asp:Label ID="lbTenDN" runat="server" Text="Tên đăng nhập"></asp:Label>
+                    <a>|</a>
+                    <a id="aDangKy" runat="server" href="DangKi.aspx">Đăng ký</a>
+                    <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton>
 		        </div>
 	        </header>
 	        <nav>

@@ -195,7 +195,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\XLDL.cs" />
+    <Compile Include="XLDL.cs" />
     <Compile Include="BangGiaDichVu.aspx.cs">
       <DependentUpon>BangGiaDichVu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

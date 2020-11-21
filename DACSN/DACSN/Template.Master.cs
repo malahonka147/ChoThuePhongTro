@@ -11,7 +11,28 @@ namespace DACSN
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["TenTK"] != null)
+            {
+                aDangNhap.Visible = false;
+                aDangKy.Visible = false;
+                lbTenDN.Visible = true;
+                lbTenDN.Text = "Xin chào: " + Session["TenTK"].ToString();
+                lbtDangXuat.Visible = true;
+            }
+            else
+            {
+                lbTenDN.Text = "";
+                lbTenDN.Visible = false;
+                lbtDangXuat.Visible = false;
+                aDangNhap.Visible = true;
+                aDangKy.Visible = true;
+            }
+        }
 
+        protected void lbtDangXuat_Click(object sender, EventArgs e)
+        {
+            Session["TenTK"] = null;
+            Response.Redirect("TrangChu.aspx");
         }
     }
 }
