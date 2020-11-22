@@ -26,6 +26,7 @@ namespace DACSN
                 if (dt.Rows.Count>0)
                 {
                     Session["TenTK"] = txtDangNhap.Text;
+                    Session["LoaiTK"] = 1;
                     Response.Redirect("~/TrangChu.aspx");
                 }
                 else
@@ -33,6 +34,7 @@ namespace DACSN
                     if(dt1.Rows.Count>0)
                     {
                         Session["TenDN"] = txtDangNhap.Text;
+                        Session["LoaiTK"] = 0;
                         Response.Redirect("~/Admin.aspx");
                     }
                     else

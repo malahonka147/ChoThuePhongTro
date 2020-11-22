@@ -62,9 +62,9 @@ create table LoaiTK
 
 create table DanhGia
 (
-	MaDG varchar(10),
-	MaKH INT,
+	MaDG INT IDENTITY(1,1),
 	MaNhaTro varchar(10),
+	TenKH nvarchar(50) null,
 	DanhGia nvarchar(2000)
 	constraint PK_MaDG primary key (MaDG)
 	--drop table DanhGia
@@ -82,8 +82,6 @@ alter table KhachHang
 	ADD  CONSTRAINT FK_KhachHang_LoaiTK FOREIGN KEY(MaLTK)REFERENCES LoaiTK (MaLTK)
 alter table NguoiQuanLi
 	ADD  CONSTRAINT FK_NguoiQuanLi_LoaiTK FOREIGN KEY(MaLTK)REFERENCES LoaiTK (MaLTK)
-alter table DanhGia
-	ADD  CONSTRAINT FK_DanhGia_KhachHang FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
 alter table DanhGia
 	ADD  CONSTRAINT FK_DanhGia_NhaTroChoThue FOREIGN KEY(MaNhaTro)REFERENCES NhaTroChoThue (MaNhaTro)
 alter table HinhAnhChiTietNhaTro
@@ -234,15 +232,15 @@ insert into NguoiQuanLi values('AD03','admin3','789','admin03@gmail.com','012289
 insert into NguoiQuanLi values('AD04','admin4','123456','admin04@gmail.com','0943486643',0)
 
 
-insert into DanhGia values('DG01',1,'NT01',N'Nhà trọ này thoáng mát')
-insert into DanhGia values('DG02',2,'NT02',N'Phòng trọ có Wifi không')
-insert into DanhGia values('DG03',3,'NT06',N'Khu này có bảo vệ chặt chẽ không, sinh hoạt ra sao.')
-insert into DanhGia values('DG04',4,'NT03',N'Có đầy đủ tiện nghi không.')
-insert into DanhGia values('DG05',5,'NT01',N'Nhà trọ này có kệ bếp hay bàn làm việc không')
-insert into DanhGia values('DG06',6,'NT02',N'Nhà trọ sạch sẽ yên tĩnh')
-insert into DanhGia values('DG07',7,'NT05',N'Nhà trọ rất sạch sẽ, thoải mái giờ giấc.')
-insert into DanhGia values('DG08',8,'NT06',N'Nhà trọ hơi bụi.')
-insert into DanhGia values('DG09',9,'NT03',N'Phòng đầy đủ tiện nghi, rất thích.')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT01',N'Lê Tùng Vân',N'Nhà trọ này thoáng mát')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT02',N'Nguyễn Trường Duy',N'Phòng trọ có Wifi không')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT06',N'Phan Phú Trọng',N'Khu này có bảo vệ chặt chẽ không, sinh hoạt ra sao.')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT03',N'Võ Thanh Bình',N'Có đầy đủ tiện nghi không.')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT01',N'Mạch Hoàng Minh Thảo',N'Nhà trọ này có kệ bếp hay bàn làm việc không')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT02',N'Lê Thị Riêng',N'Nhà trọ sạch sẽ yên tĩnh')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT05',N'Võ Thị Sáu',N'Nhà trọ rất sạch sẽ, thoải mái giờ giấc.')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT06',N'Phan Đình Tùng',N'Nhà trọ hơi bụi.')
+insert into DanhGia(MaNhaTro,TenKH,DanhGia) values('NT03',N'Phan Phú Ngĩa',N'Phòng đầy đủ tiện nghi, rất thích.')
 
 insert into HinhAnhChiTietNhaTro values('NT01','TNOG1.jpg')
 insert into HinhAnhChiTietNhaTro values('NT01','TNOG-1.jpg')

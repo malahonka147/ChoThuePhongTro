@@ -123,6 +123,7 @@
         font-size:18px;
 	}
 .aside a {
+        font-size:16px;
 		color:#206ab5;
 		text-decoration:none;
 	}
@@ -188,7 +189,7 @@ div#left, div#right {
 }
 .contentp{
     font-weight:bold;
-    font-size:16px;
+    font-size:14px;
     padding:3px;
     padding-left:0px;
 }
@@ -434,6 +435,7 @@ div#right{
 }
 .CTNT{
     margin:10px;
+    padding-top:5px;
 }
 .DGTenKH{
     float:left;
@@ -448,4 +450,19 @@ div#right{
 }
 div#DanhGia{
     padding-top:5px;
+    padding-bottom:15px;
+
+}
+div#formdg{
+    margin-top:5px;
+    height:50px;
+    width:500px;
+    padding: 8px 14px;
+    position: relative;
+    background: #8e9cad;
+    border-radius: 5px;
+}
+.lbCTNT{
+    margin-left:5px;
+    margin-right:5px;
 }

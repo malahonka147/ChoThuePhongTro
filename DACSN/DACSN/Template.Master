@@ -44,7 +44,7 @@
                                                 </li>
                                     </ItemTemplate>
                                     </asp:DataList>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [TieuDe], [MaNhaTro] FROM [NhaTroChoThue]"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT top 5 [TieuDe], [MaNhaTro] FROM [NhaTroChoThue] ORDER BY [MaNhaTro] DESC"></asp:SqlDataSource>
                           </ul>          
 					   </div>  
                       <div class="auto-style1">
