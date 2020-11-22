@@ -13,7 +13,11 @@ namespace DACSN
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string MaNT = Request.QueryString["MaNT"];
+            dlHinhChiTietNhaTro.DataSource = XLDL.GetData("select HinhAnh from HinhAnhChiTietNhaTro where MaNhaTro='" + MaNT+"'");
+            dlHinhChiTietNhaTro.DataBind();
+            dlDanhGia.DataSource = XLDL.GetData("SELECT DanhGia.DanhGia, DanhGia.MaNhaTro, KhachHang.TenKH FROM KhachHang INNER JOIN DanhGia ON KhachHang.MaKH = DanhGia.MaKH WHERE MaNhaTro='"+MaNT+"'");
+            dlDanhGia.DataBind();
         }
     }
 

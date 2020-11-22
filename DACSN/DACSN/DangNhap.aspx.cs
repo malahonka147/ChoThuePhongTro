@@ -22,14 +22,24 @@ namespace DACSN
             try
             {
                 DataTable dt = XLDL.GetData("select * from KhachHang where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
-                if(dt.Rows.Count>0)
+                DataTable dt1 = XLDL.GetData("select * from NguoiQuanLi where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
+                if (dt.Rows.Count>0)
                 {
                     Session["TenDN"] = txtDangNhap.Text;
                     Response.Redirect("~/TrangChu.aspx");
                 }
                 else
                 {
-                    lbThongBaoLoi.Text = "Tên đăng nhập hoặc mật khẩu không hợp lệ!";
+                    if(dt1.Rows.Count>0)
+                    {
+                        Session["TenDN"] = txtDangNhap.Text;
+                        Response.Redirect("~/Admin.aspx");
+                    }
+                    else
+                    {
+                        lbThongBaoLoi.Text = "Tên đăng nhập hoặc mật khẩu không hợp lệ!";
+                    }
+                    
                 }
             }
             catch

@@ -15,7 +15,7 @@ create table KhachHang
 	SDT varchar(12) null,
 	Email varchar(30) not null,
 	MatKhau varchar(20) not null,
-	TenTK varchar(15) not null
+	TenTK varchar(50) not null
 	CONSTRAINT PK_KhachHang PRIMARY KEY (MaKH)
 )
 --drop database QLNhaTro
@@ -192,7 +192,7 @@ Tổng diện tích là 32m2 ( 20m2 nền và 12m2 gác)
 + Sân chơi cho trẻ em ( xích đu, cầu tuộc cho trẻ em)
 + Camera an ninh và wifi 65Mbgs cực nhanh miễn phí
 + giờ giấc thoải mái
-+ yên tĩnh, thoáng mát',1800000,32,'CTPT-5.jpg',48,N'Cho thuê nhà trọ mới xây, diện tích 32 m2, tọa lạc ở đường Bình Chuẩn 2, Thuận An, Bình Dương')
++ yên tĩnh, thoáng mát',1800000,32,'CTPT-5.jpg',48,N'Cho thuê nhà trọ mới xây, tọa lạc ở đường Bình Chuẩn 2, Thuận An, Bình Dương')
 insert into NhaTroChoThue values('NT08',8,N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường An Phú',N'Đường số 743','Số 193A/2',N'Số 193A/2,Đường số 743,Phường An Phú,Huyện Thuận An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','096279956',N'Thông tin mô tả:
 Cần cho thuê phòng rộng đẹp thoáng mát.
 + Nhà thoáng đẹp, Camera an ninh 24/24.
@@ -297,13 +297,8 @@ insert into HinhAnhChiTietNhaTro values('NT013','TNOG6.jpg')
 Create Procedure ChiTietNhaTro
 @MaNT varchar(10)
 as 
-select TenKH,SDTNguoiChoThue,DiaChi,MoTa,GiaChoThue,DienTich,TieuDe
-from KhachHang kh,NhaTroChoThue nt,DanhGia dg
+select kh.TenKH,nt.SDTNguoiChoThue,nt.DiaChi,nt.MoTa,nt.GiaChoThue,nt.DienTich,nt.TieuDe
+from KhachHang kh,NhaTroChoThue nt
 where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH
-group by TenKH
 
 exec ChiTietNhaTro @MaNT='NT02'
-
---drop function fn_CreateMaKH
-
-select Top 1 MaKH from KhachHang order by MaKH Desc
