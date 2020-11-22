@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="DACSN.Template" %>
-
+<%@Register Src="~/UC/ucHeader.ascx" TagPrefix="UC" TagName="DangNhap"  %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,20 +14,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <UC:DangNhap runat="server"/>
     <div>
          <div>
-                <header>
-		        <div id="logo">
-                    <img class="hinhlogo" src="Images/Logo.png" />
-		        </div>
-		        <div id="dn">
-			        <a id ="aDangNhap" runat="server" href="DangNhap.aspx">Đăng nhập</a>
-                    <asp:Label ID="lbTenDN" runat="server" Text="Tên đăng nhập"></asp:Label>
-                    <a>|</a>
-                    <a id="aDangKy" runat="server" href="DangKi.aspx">Đăng ký</a>
-                    <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton>
-		        </div>
-	        </header>
 	        <nav>
     	        <div id="subnav">
                     <ul>

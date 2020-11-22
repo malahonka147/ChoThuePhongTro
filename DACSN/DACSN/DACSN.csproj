@@ -192,9 +192,17 @@
     <Content Include="Images\TNOG8.jpg" />
     <Content Include="Images\TNOG9.jpg" />
     <Content Include="TrangChu.aspx" />
+    <Content Include="UC\ucHeader.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UC\ucHeader.ascx.cs">
+      <DependentUpon>ucHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucHeader.ascx.designer.cs">
+      <DependentUpon>ucHeader.ascx</DependentUpon>
+    </Compile>
     <Compile Include="XLDL.cs" />
     <Compile Include="BangGiaDichVu.aspx.cs">
       <DependentUpon>BangGiaDichVu.aspx</DependentUpon>

@@ -25,7 +25,7 @@ namespace DACSN
                 DataTable dt1 = XLDL.GetData("select * from NguoiQuanLi where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
                 if (dt.Rows.Count>0)
                 {
-                    Session["TenDN"] = txtDangNhap.Text;
+                    Session["TenTK"] = txtDangNhap.Text;
                     Response.Redirect("~/TrangChu.aspx");
                 }
                 else
