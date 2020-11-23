@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace DACSN
 {
-    public partial class Template : System.Web.UI.MasterPage
+    public partial class CamOnDanhGia : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
