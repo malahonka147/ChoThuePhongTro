@@ -86,6 +86,7 @@
 	}
 	section{
 		width:900px;
+        max-width: 900px;
         height:800px;
         max-height:1500px;
 		padding-top:5px;
@@ -432,10 +433,6 @@ div#right{
 #gvTinMoiDang a:hover
 {
     color:darkblue;
-}
-.CTNT{
-    margin:10px;
-    padding-top:5px;
 }
 .DGTenKH{
     float:left;

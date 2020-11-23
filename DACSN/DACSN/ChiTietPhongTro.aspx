@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates2.Master" AutoEventWireup="true" CodeBehind="ChiTietPhongTro.aspx.cs" Inherits="DACSN.ChiTietPhongTro" %>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-     <div class="CTNT">
-         <asp:DataList ID="dlChiTietPhongTro" runat="server" DataSourceID="SqlDataSource1" Width="950px">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="ChiTietPhongTro.aspx.cs" Inherits="DACSN.ChiTietPhongTro" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+         <asp:DataList ID="dlChiTietPhongTro" runat="server" DataSourceID="SqlDataSource1" Width="900px">
           <ItemTemplate>
                     <h3 style="color: #E13427; font-weight: bold; font-size: 24px; margin-bottom: 15px; text-align: left;"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></h3>
                     <div style="margin-top: 15px">
@@ -40,7 +39,6 @@
 
                             </ItemTemplate>
                         </asp:DataList>
-         </div>
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="ChiTietNhaTro" SelectCommandType="StoredProcedure">
                             <SelectParameters>
                                 <asp:QueryStringParameter Name="MaNT" QueryStringField="MaNT" Type="String" />
@@ -69,10 +67,10 @@
         </div>
         <br>
         <script src="SlideShow.js"></script>
-         <div><p style="font-size: 18px; font-weight: bold;margin-left:10px;padding-left:145px"> Bình luận</p>
+         <div><p style="margin-left:10px;padding-left:145px" class="lbTenKH"> Đánh Giá&nbsp;</p>
      </div>
     <div id="DanhGia" style="text-align: left; width: 1009px">
-        <asp:DataList ID="dlDanhGia" runat="server" Width="670px" HorizontalAlign="Left" style="margin-left: 0px">
+        <asp:DataList ID="dlDanhGia" runat="server" Width="895px" HorizontalAlign="Left" style="margin-left: 0px">
             <ItemTemplate>
                 <div id="formdg">
                     <asp:Label ID="lbTenKH" runat="server" CssClass="DGTenKH" Text='<%# Eval("TenKH") %>'></asp:Label>
@@ -86,7 +84,7 @@
            <table style="width:84%;">
                <tr>
                    <td colspan="2" style="text-align: center; height: 22px;">
-                        <p style="font-size: 18px; font-weight: bold;margin-left:10px;padding-left: 40px; text-align: left;"> Viết bình luận</p>
+                        <p style="font-size: 18px; font-weight: bold;margin-left:10px;padding-left: 40px; text-align: left;"> Viết đánh giá</p>
                    </td>
                </tr>
                <tr>
@@ -100,7 +98,7 @@
                <tr>
                    <td style="height: 21px; width: 202px; text-align: right">Nội Dung:</td>
                    <td style="height: 21px; text-align: left">
-            <asp:TextBox ID="txtDanhGia" runat="server" TextMode="MultiLine" Width="604px" Height="61px" ></asp:TextBox>
+            <asp:TextBox ID="txtDanhGia" runat="server" TextMode="MultiLine" Width="437px" Height="61px" ></asp:TextBox>
                    </td>
                </tr>
                <tr>
@@ -116,4 +114,4 @@
            </table>
             <br />
     </div>
-        </asp:Content>
+</asp:Content>

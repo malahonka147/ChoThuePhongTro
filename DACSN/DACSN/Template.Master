@@ -1,21 +1,19 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="DACSN.Template" %>
 <%@Register Src="~/UC/ucHeader.ascx" TagPrefix="UC" TagName="DangNhap"  %>
+<%@ Register Src="~/UC/ucLeft.ascx" TagPrefix="UC" TagName="ucLeft" %>
+<%@ Register Src="~/UC/ucFooter.ascx" TagPrefix="UC" TagName="ucFooter" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
     <link href="Style.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style1 {
-            height: 140px;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
         <UC:DangNhap runat="server"/>
-    <div>
          <div>
 	        <nav>
     	        <div id="subnav">
@@ -32,30 +30,7 @@
 
 	        <div id="body">
 		        <article>
-                   
-			        <aside id="left">
-					   <div>
-                           <p>TIN MỚI ĐĂNG</p>
-                            <ul type="square">
-					        <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" Height="30px">
-                                    <ItemTemplate>
-						                        <li class="aside">
-                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink>
-                                                </li>
-                                    </ItemTemplate>
-                                    </asp:DataList>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT top 5 [TieuDe], [MaNhaTro] FROM [NhaTroChoThue] ORDER BY [MaNhaTro] DESC"></asp:SqlDataSource>
-                          </ul>          
-					   </div>  
-                      <div class="auto-style1">
-					        <p>CÓ THỂ BẠN QUAN TÂM</p>
-					        <ul type="square">
-						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink2" runat="server">Mẫu hợp đồng cho thuê phòng trọ</asp:HyperLink></li>
-						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink3" runat="server">Cẩn thận các kiểu lừa đảo khi thuê phòng trọ</asp:HyperLink></li>
-						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink4" runat="server">Kinh nghiệm thuê phòng trọ Sinh Viên</asp:HyperLink></li>
-					        </ul>
-                    </div>
-			        </aside>
+                    <UC:ucLeft runat="server" id="ucLeft" />
 			         <section>
                       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                           <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="2">
@@ -95,11 +70,7 @@
                      </section>
 		        </article>
 	        </div>
-
-	        <footer>
-		        <p>2020 - Phòng Trọ Sinh Viênhát triển để sử dụng tìm kiếm nhà trọ.</p>
-		        <p>Email: abc.thudaumotuniversity@gmail.com</p>
-	        </footer>
+             <UC:ucFooter runat="server" id="ucFooter" />
 
     </div>
     </form>

@@ -9,13 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <UC:DangNhap runat="server"/>
-    <div>
-           <div>
-                <header>
-		        
-		        
-	        </header>
+	                <UC:DangNhap ID="DangNhap1" runat="server" />
 	        <nav>
     	        <div id="subnav">
                     <ul>
