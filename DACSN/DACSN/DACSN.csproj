@@ -103,6 +103,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CamOnDanhGia.aspx" />
     <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\10.jpg" />
@@ -196,6 +197,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CamOnDanhGia.aspx.cs">
+      <DependentUpon>CamOnDanhGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CamOnDanhGia.aspx.designer.cs">
+      <DependentUpon>CamOnDanhGia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UC\ucHeader.ascx.cs">
       <DependentUpon>ucHeader.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

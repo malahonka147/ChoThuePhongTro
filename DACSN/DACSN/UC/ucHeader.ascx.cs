@@ -32,7 +32,7 @@ namespace DACSN.UC
         protected void lbtDangXuat_Click(object sender, EventArgs e)
         {
             Session["TenTK"] = null;
-            Response.Redirect("TrangChu.aspx");
+            Response.Redirect("~/TrangChu.aspx");
         }
     }
 }
