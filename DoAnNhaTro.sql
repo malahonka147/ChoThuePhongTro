@@ -35,7 +35,8 @@ create table NhaTroChoThue
 	GiaChoThue int not null,
 	DienTich int,
 	HinhAnh nvarchar(50) not null,
-	LuotXem int,
+	NgayDang smalldatetime,
+	NgayHetHan smalldatetime,
 	TieuDe nvarchar(100)
 	CONSTRAINT PK_NhaTroChoThue PRIMARY KEY (MaNhaTro)
 	--drop table NhaTroChoThue

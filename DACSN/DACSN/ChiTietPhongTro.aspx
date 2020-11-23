@@ -100,7 +100,7 @@
                <tr>
                    <td style="height: 21px; width: 202px; text-align: right">Nội Dung:</td>
                    <td style="height: 21px; text-align: left">
-            <asp:TextBox ID="txtDanhGia" runat="server" TextMode="MultiLine" Width="771px" Height="61px" ></asp:TextBox>
+            <asp:TextBox ID="txtDanhGia" runat="server" TextMode="MultiLine" Width="604px" Height="61px" ></asp:TextBox>
                    </td>
                </tr>
                <tr>

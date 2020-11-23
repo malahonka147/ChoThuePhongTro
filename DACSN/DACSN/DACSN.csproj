@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChiTietPhongTro.aspx" />
+    <Content Include="DangBai.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\10.jpg" />
     <Content Include="Images\2.jpg" />
@@ -196,6 +197,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangBai.aspx.cs">
+      <DependentUpon>DangBai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangBai.aspx.designer.cs">
+      <DependentUpon>DangBai.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UC\ucHeader.ascx.cs">
       <DependentUpon>ucHeader.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

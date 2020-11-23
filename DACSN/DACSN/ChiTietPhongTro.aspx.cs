@@ -41,7 +41,7 @@ namespace DACSN
                     cmd.Parameters["@DanhGia"].Value = txtDanhGia.Text;
                     cmd.ExecuteNonQuery();
                     con.Close();
-                Response.Redirect("TrangChu.aspx");
+                Response.Redirect("~/ChiTietPhongTro.aspx?MaNT="+MaNT);
                 }
                 catch
                 {
