@@ -193,16 +193,32 @@
     <Content Include="Images\TNOG8.jpg" />
     <Content Include="Images\TNOG9.jpg" />
     <Content Include="TrangChu.aspx" />
+    <Content Include="UC\ucFooter.ascx" />
     <Content Include="UC\ucHeader.ascx" />
+    <Content Include="UC\ucLeft.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietPhongTro.aspx.cs">
+      <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChiTietPhongTro.aspx.designer.cs">
+      <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DangBai.aspx.cs">
       <DependentUpon>DangBai.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DangBai.aspx.designer.cs">
       <DependentUpon>DangBai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucFooter.ascx.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucFooter.ascx.designer.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
     </Compile>
     <Compile Include="UC\ucHeader.ascx.cs">
       <DependentUpon>ucHeader.ascx</DependentUpon>
@@ -211,6 +227,13 @@
     <Compile Include="UC\ucHeader.ascx.designer.cs">
       <DependentUpon>ucHeader.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UC\ucLeft.ascx.cs">
+      <DependentUpon>ucLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ucLeft.ascx.designer.cs">
+      <DependentUpon>ucLeft.ascx</DependentUpon>
+    </Compile>
     <Compile Include="XLDL.cs" />
     <Compile Include="BangGiaDichVu.aspx.cs">
       <DependentUpon>BangGiaDichVu.aspx</DependentUpon>
@@ -218,13 +241,6 @@
     </Compile>
     <Compile Include="BangGiaDichVu.aspx.designer.cs">
       <DependentUpon>BangGiaDichVu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ChiTietPhongTro.aspx.cs">
-      <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ChiTietPhongTro.aspx.designer.cs">
-      <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
     </Compile>
     <Compile Include="DangKi.aspx.cs">
       <DependentUpon>DangKi.aspx</DependentUpon>
