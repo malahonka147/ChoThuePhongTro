@@ -105,6 +105,7 @@
   <ItemGroup>
     <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="DangBai.aspx" />
+    <Content Include="HopDongThueNhaTro.aspx" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\10.jpg" />
     <Content Include="Images\2.jpg" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="DangBai.aspx.designer.cs">
       <DependentUpon>DangBai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HopDongThueNhaTro.aspx.cs">
+      <DependentUpon>HopDongThueNhaTro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HopDongThueNhaTro.aspx.designer.cs">
+      <DependentUpon>HopDongThueNhaTro.aspx</DependentUpon>
     </Compile>
     <Compile Include="UC\ucFooter.ascx.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>
