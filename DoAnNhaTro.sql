@@ -105,7 +105,7 @@ INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(10,1,N'Phạm Thị Nga','012345785','ptnga@gmail.com','d123456','ptnga')
 SET IDENTITY_INSERT [dbo].[KhachHang] OFF
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (1,N'TP.Hồ Chi Minh',N'Quận 1',N'Phường Phạm Ngũ Lão',N'Đường Trần Hưng Đạo','Số 120/43/10',N'Số 120/43/10 Đường Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, TP.Hồ Chí Minh',N'Tìm người ở ghép','01223546',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (1,N'TP.Hồ Chi Minh',N'Quận 1',N'Phường Phạm Ngũ Lão',N'Đường Trần Hưng Đạo',N'Số 120/43/10',N'Số 120/43/10 Đường Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, TP.Hồ Chí Minh',N'Tìm người ở ghép','01223546',N'Thông tin mô tả:
 KÍ TÚC XÁ MỚI CHO CÁC CÔ NÀNG MỘNG MƠ ĐÂY NÈ
 ĐẶC BIỆT NHẤT NÈ : GIÁ 1tr5 MIỄN PHÍ ĐIỆN , NƯỚC , WIFI ????
 TỪNG NGÓC NGÁCH TRONG NHÀ ĐỀU ĐƯỢC DECOR TẬN TÂM VÀ XINH XĨU
@@ -114,7 +114,7 @@ Rất gần các trường đại học thuận tiện cho việc di chuyển. B
 Phòng full nội thất,được nấu ăn, view sân thượng xịn lắm .!
 Đặc biệt phòng không chung chủ, giờ giấc tự do. Camera xịn xò hơn con mắt của mấy bà hàng xóm luôn á nhaaaa.',1500000,30,'TNOG-1.jpg','01/23/2021','01/30/2021',N'Nhà trọ cho thuê mới xây')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (2,N'TP.Hồ Chi Minh',N'quận Tân Bình',N'',N'Đường Trường Chinh','Số 45',N'Số 45,Đường Trường Chinh,quận Tân Bình,TP.Hồ Chi Minh',N'Tìm người ở ghép','01298725',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (2,N'TP.Hồ Chi Minh',N'quận Tân Bình',N'',N'Đường Trường Chinh',N'Số 45',N'Số 45,Đường Trường Chinh,quận Tân Bình,TP.Hồ Chi Minh',N'Tìm người ở ghép','01298725',N'Thông tin mô tả:
 Xin chào !
 - Mình muốn tìm một nữ ở ghép. Vì đi làm cũng nhiều, ít ở phòng. Nên muốn tìm một bạn vừa san sẻ tiền phòng. Vừa ở cùng bầu bạn cho vui ạ !
 - Phòng kiểu căn hộ, đầy đủ nội thất, tiện nghi, chỉ cần dọn vào ở là xong ạ. Phòng tách bạch góc bếp và giường ngủ, nhà tắm riêng, rộng. Phòng có tủ lạnh, điều hoà, máy giặt, máy nóng lạnh, bàn ăn, bàn trang điểm, giường nệm, tủ quần áo, kệ sách, kệ giày, bếp, lò nướng, ...
@@ -127,7 +127,7 @@ Các bạn xem hình và đến xem trực tiếp nha.
 - Phòng gần Vincom, trung tâm nên di chuyển rất dễ dàng. Xung quanh tạp hoá, quán xá, cafe. Phòng gần biển nên tiện đi bộ, chạy bộ, ra biển dạo mát nè.
 - Mình thì đọc sách nên có khá nhiều sách. Nên bạn nào cũng yêu sách như mình thì tha hồ đọc nhé.Mình thi thoảng nấu ăn nếu rãnh. Đồ gia dụng gần như đầy đủ .',2200000,45,'TNOG-2.jpg','12/15/2020','12/22/2020',N'Nhà trọ sạch sẽ ở Tân Bình')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (3,N'TP.Hồ Chi Minh',N'quận Bình Thạnh',N'An Lạc A',N'Đường số 2','Số 15/25',N'Số 15/25,Đường số 2,phường An Lạc A,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012546846',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (3,N'TP.Hồ Chi Minh',N'quận Bình Thạnh',N'An Lạc A',N'Đường số 2'N'Số 15/25',N'Số 15/25,Đường số 2,phường An Lạc A,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012546846',N'Thông tin mô tả:
 * ĐỊA CHỈ: Số 145,Đường số 11,Phường 13,TP.Hồ Chi Minh
 - Gần sân bay
 - Gần Lotte Cộng Hòa
@@ -146,7 +146,7 @@ INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,D
 - Điện: 3.500 đ/kw - Nước: 100.000 đ/người/tháng
 >> >Nhanh chân để sở hữu căn phòng tiện nghi, giá cả phải chăng nhé!!!',4000000,22,'CTPT-1.jpg','05/02/2021','05/09/2021',N'Nhà trọ gần trường ĐH Công Nghiệp')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (4,N'TP.Hồ Chi Minh',N'Quận 6',N'Phường 13',N'Đường số 11','Số 145',N'Số 145,Đường số 11,Phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012947525',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (4,N'TP.Hồ Chi Minh',N'Quận 6',N'Phường 13',N'Đường số 11',N'Số 145',N'Số 145,Đường số 11,Phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012947525',N'Thông tin mô tả:
 Cho thuê phòng trọ Có gác, giá tốt
 Phòng đầy đủ tiện nghi cao cấp, mới xây hoàn toàn 100%, môi trường ở an ninh, văn minh, sạch sẽ có máy lạnh, thang máy
 Được tận hưởng các tiện ích, dịch vụ cao cấp :
@@ -165,7 +165,7 @@ Chi phí dịch vụ mỗi tháng:
 - Điện: 3.5 nghìn/KWH.
 - Wifi + cáp + Thang máy + máy giặt đầy đủ',3500000,25,'CTPT-2.jpg','12/15/2020','12/22/2020',N'Cho thuê phòng trọ cao cấp,sạch sẽ, an ninh')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (5,N'TP.Hồ Chi Minh',N'Quận Tân Bình',N'Phường 13',N'Đường Cộng Hòa','Số 622/10',N'Số 622/10,Đường Cộng Hòa,phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','098623546',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (5,N'TP.Hồ Chi Minh',N'Quận Tân Bình',N'Phường 13',N'Đường Cộng Hòa',N'Số 622/10',N'Số 622/10,Đường Cộng Hòa,phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','098623546',N'Thông tin mô tả:
 -Phòng đầy đủ nội thất.
 -Toilet riêng.
 -Từ giấc tự do
@@ -176,7 +176,7 @@ INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,D
 -Có bếp
 -Cửa sổ lớn',4500000,20,'CTPT-3.jpg','12/11/2020','12/18/2020',N'Phòng trọ mới 100%, siêu đẹp')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (6,N'TP.Hồ Chi Minh',N'Quận Phú Nhuận',N'Phường 3',N'Đường Phan Xích Long','Số 441/2',N'Số 123,Đường Phan Xích Long,phường 3,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012564546',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (6,N'TP.Hồ Chi Minh',N'Quận Phú Nhuận',N'Phường 3',N'Đường Phan Xích Long',N'Số 441/2',N'Số 123,Đường Phan Xích Long,phường 3,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012564546',N'Thông tin mô tả:
 - Nhà mặt tiền Quận Tân Bình
 -Có nhu cầu cho Thuê tầng 1 : 2 phòng ngủ và 1 WC thích hợp cho gia đình lớn hoặc nhân viên công sở
 -Khu vực gần sân bay, thuận tiện đi lại
@@ -193,7 +193,7 @@ Tổng diện tích là 32m2 ( 20m2 nền và 12m2 gác)
 + giờ giấc thoải mái
 + yên tĩnh, thoáng mát',1800000,32,'CTPT-5.jpg','10/25/2020','01/02/2021',N'Cho thuê nhà trọ mới xây, tọa lạc ở đường Bình Chuẩn 2, Thuận An, Bình Dương')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (8,N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường An Phú',N'Đường số 743','Số 193A/2',N'Số 193A/2,Đường số 743,Phường An Phú,Huyện Thuận An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','096279956',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (8,N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường An Phú',N'Đường số 743',N'Số 193A/2',N'Số 193A/2,Đường số 743,Phường An Phú,Huyện Thuận An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','096279956',N'Thông tin mô tả:
 Cần cho thuê phòng rộng đẹp thoáng mát.
 + Nhà thoáng đẹp, Camera an ninh 24/24.
 * Địa chỉ: 193A/2, khu phố 1B, đường DT 743, phường An Phú, TX. Thuận An, Bình Dương...
@@ -210,13 +210,13 @@ Cách trường đại học Bách Khoa 2Km
 Cách Suối tiên khoảng 3km
 Phòng sạch đẹp, diện tích khoảng 18m2, có thể nấu ăn, chỗ để xe riêng, không gian rộng rãi, thoáng mát, phù hợp cho sinh viên học gần Làng đại học, khu vực Bình Dương, Thủ Đức hoặc người đi làm.',1200000,18,'CTPT-7.jpg','12/10/2020','12/19/2020',N'Cho thuê phòng trọ Khu DCM Bình Nguyên_Gần đại học Quốc Gia')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (9,N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'Đường Đào Trinh Nhất','Số 42',N'Số 42, Đường Đào Trinh Nhất,Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','0378787956',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (9,N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'Đường Đào Trinh Nhất',N'Số 42',N'Số 42, Đường Đào Trinh Nhất,Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','0378787956',N'Thông tin mô tả:
 cần tìm người share chung căn hộ phú đông premier
 căn hộ 2pn 68m2, nội thất, miễn phí quản lý, miễn phí hồ bơi nước ấm
 giá share là 3tr/tháng
 liên hệ xem nhà',3000000,68,'TNOG-3.jpg','12/26/2020','12/02/2020',N'Cần người share căn hộ Phú Đông Premier')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (7,N'TP.Thủ Dầu Một',N'Huyện Bến Cát',N'Phường Mỹ Phước',N'Đường Mỹ Phước 2','Số B14',N',Số B14, Đường Mỹ Phước 2,Phường Mỹ Phước,Huyện Bến Cát,TP.Thủ Dầu Một',N'Tìm người ở ghép','083762876',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (7,N'TP.Thủ Dầu Một',N'Huyện Bến Cát',N'Phường Mỹ Phước',N'Đường Mỹ Phước 2',N'Số B14',N',Số B14, Đường Mỹ Phước 2,Phường Mỹ Phước,Huyện Bến Cát,TP.Thủ Dầu Một',N'Tìm người ở ghép','083762876',N'Thông tin mô tả:
 Hiện tại mình đang ở 1 mình nên còn dư 3 phòng ngủ,nên mình cần thêm 3 4 bạn ở cùng cho vui,đầy đủ tiện nghi hết ,sách đồ vào là ở,giá 1 người mình lấy 1 triệu3 bao điện nước wifi ,còn lại các thứ nhà mình có sẵn cả rất thỏi máy các bạn ko cần sâm gì.phù hợp cho anh chị mới lên đi làm công nhân chuẩn bị thuê nhà',1300000,96,'TNOG-5.jpg','12/01/2020','12/08/2020',N'Cần 3 hay 4 người ở ghép nhà liên kề 1 trệt 1 lầu')
 
 INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (10,N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'','',N'Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','083713876',N'Thông tin mô tả:
@@ -288,8 +288,6 @@ insert into HinhAnhChiTietNhaTro values(11,'TNOG-4-6.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG-5.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG-5-8.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG5.jpg')
-insert into HinhAnhChiTietNhaTro values(13,'TNOG-6.jpg')
-insert into HinhAnhChiTietNhaTro values(13,'TNOG6.jpg')
 --drop Proc ChiTietNhaTro
 Create Procedure ChiTietNhaTro
 @MaNT varchar(10)

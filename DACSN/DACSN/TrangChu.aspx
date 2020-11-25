@@ -13,7 +13,7 @@
             &nbsp;
             <asp:Button ID="Button1" runat="server" CssClass="btntimkiem" Height="25px" Text="Tìm Kiếm" Width="120px" />
         </div>             
-            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="2">
+            <asp:DataList ID="dlPhongTro" runat="server" RepeatColumns="2">
                 <ItemTemplate>
                      <div class="content">
                          <div id="left">
@@ -29,7 +29,12 @@
                    </div>
                 </ItemTemplate>
             </asp:DataList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue]"></asp:SqlDataSource>
-   </asp:Content>                
+            <asp:GridView ID="gvTest" runat="server" AutoGenerateColumns="False" DataKeyNames="MaNhaTro">
+                                    <Columns>
+                                        <asp:BoundField HeaderText="MaNhaTro" InsertVisible="False" ReadOnly="True" SortExpression="MaNhaTro" />
+                                        <asp:BoundField DataField="NgayHetHan" HeaderText="NgayHetHan" SortExpression="NgayHetHan" />
+                                    </Columns>
+                                </asp:GridView>
+            </asp:Content>                
 
 
