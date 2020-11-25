@@ -1,5 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="ChiTietPhongTro.aspx.cs" Inherits="DACSN.ChiTietPhongTro" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <script language="javascript">
+	        function KiemTra()
+	        {
+		        var hoTen=document.getElementById("txtTenKH");
+		        if(hoTen.value=="")
+		        {
+			        alert("Vui lòng nhập họ tên!!");
+			        hoTen.focus();
+			        return false;
+		        }
+	        }
+	</script>
          <asp:DataList ID="dlChiTietPhongTro" runat="server" DataSourceID="SqlDataSource1" Width="900px">
           <ItemTemplate>
                     <h3 style="color: #E13427; font-weight: bold; font-size: 24px; margin-bottom: 15px; text-align: left;"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></h3>
@@ -92,7 +104,6 @@
                         Họ Tên:</td>
                    <td style="text-align: left">
                         <asp:TextBox ID="txtTenKH" runat="server" Width="258px"></asp:TextBox>
-                       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTenKH" ErrorMessage="Vui lòng nhập tên trước khi bình luận!"></asp:RequiredFieldValidator>
                    </td>
                </tr>
                <tr>
@@ -103,7 +114,7 @@
                </tr>
                <tr>
                    <td colspan="2">
-            <asp:Button ID="btnBinhLuan" runat="server" Text="Bình Luận" OnClick="btnBinhLuan_Click" Height="36px" Width="97px" />    
+            <asp:Button ID="btnBinhLuan" runat="server" Text="Bình Luận" OnClick="btnBinhLuan_Click" Height="36px" Width="97px" OnClientClick="return KiemTra()" />    
                    </td>
                </tr>
                <tr>

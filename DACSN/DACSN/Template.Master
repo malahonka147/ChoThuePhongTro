@@ -71,7 +71,6 @@
 		        </article>
 	        </div>
              <UC:ucFooter runat="server" id="ucFooter" />
-
     </div>
     </form>
 </body>

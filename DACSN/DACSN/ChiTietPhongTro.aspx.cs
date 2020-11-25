@@ -22,29 +22,36 @@ namespace DACSN
 
         protected void btnBinhLuan_Click(object sender, EventArgs e)
         {
-            try
+            if(txtTenKH.Text!="")
             {
-                string MaNT = Request.QueryString["MaNT"];
-                SqlConnection con = new SqlConnection(XLDL.strCon);
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.Connection = con;
-                cmd.CommandText = @"insert into DanhGia(MaNhaTro,TenKH,DanhGia) values(@MaNT,@TenKH,@DanhGia)";
-                cmd.Parameters.Add("@MaNT", SqlDbType.VarChar, 10);
-                cmd.Parameters["@MaNT"].Value = MaNT;
-                cmd.Parameters.Add("@TenKH", SqlDbType.NVarChar, 50);
-                cmd.Parameters["@TenKH"].Value = txtTenKH.Text;
-                cmd.Parameters.Add("@DanhGia", SqlDbType.NVarChar, 2000);
-                cmd.Parameters["@DanhGia"].Value = txtDanhGia.Text;
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Redirect("~/ChiTietPhongTro.aspx?MaNT=" + MaNT);
-            }
-            catch
+                try
+                {
+                    string MaNT = Request.QueryString["MaNT"];
+                    SqlConnection con = new SqlConnection(XLDL.strCon);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.CommandText = @"insert into DanhGia(MaNhaTro,TenKH,DanhGia) values(@MaNT,@TenKH,@DanhGia)";
+                    cmd.Parameters.Add("@MaNT", SqlDbType.VarChar, 10);
+                    cmd.Parameters["@MaNT"].Value = MaNT;
+                    cmd.Parameters.Add("@TenKH", SqlDbType.NVarChar, 50);
+                    cmd.Parameters["@TenKH"].Value = txtTenKH.Text;
+                    cmd.Parameters.Add("@DanhGia", SqlDbType.NVarChar, 2000);
+                    cmd.Parameters["@DanhGia"].Value = txtDanhGia.Text;
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Redirect("~/ChiTietPhongTro.aspx?MaNT=" + MaNT);
+                }
+                catch
+                {
+                    lbThongBaoLoi.Text = "Thất Bại";
+                }
+            }else
             {
-                lbThongBaoLoi.Text = "Thất Bại";
+                lbThongBaoLoi.Text = "Vui lòng nhập tên khách hàng trước khi đánh giá";
             }
+            
         }
     }
 }

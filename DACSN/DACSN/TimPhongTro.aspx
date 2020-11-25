@@ -13,7 +13,7 @@
             &nbsp;
             <asp:Button ID="Button1" runat="server" CssClass="btntimkiem" Height="25px" Text="Tìm Kiếm" Width="120px" />
         </div>
-         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="2">
+         <asp:DataList ID="dlPhongTro" runat="server" RepeatColumns="2">
                 <ItemTemplate>
                      <div class="content">
                          <div id="left">
@@ -29,10 +29,15 @@
                    </div>
                 </ItemTemplate>
             </asp:DataList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaNhaTro], [TieuDe], [DienTich], [GiaChoThue], [DiaChi], [HinhAnh] FROM [NhaTroChoThue] WHERE ([LoaiNT] = @LoaiNT)">
-                <SelectParameters>
-                    <asp:Parameter DefaultValue="Phòng Trọ Cho Thuê" Name="LoaiNT" Type="String" />
-                </SelectParameters>
-         </asp:SqlDataSource>
+         <br />
+            <div style="text-align: center; width: 900px;">
+                <asp:Button ID="btnTrangDau" runat="server" Text="Trang Đầu" Height="30px" OnClick="btnTrangDau_Click" Width="100px" />
+                <asp:Button ID="btnTruoc" runat="server" Text="Trước" Height="30px" OnClick="btnTruoc_Click" Width="50px" />
+                <asp:TextBox ID="txtTrang" runat="server" Width="30px" Height="30px" ReadOnly="True"></asp:TextBox>
+                <asp:Button ID="btnSau" runat="server" Text="Sau" Height="30px" OnClick="btnSau_Click" Width="50px" />
+                <asp:Button ID="btnTrangCuoi" runat="server" Text="Trang Cuối" Height="30px" OnClick="btnTrangCuoi_Click" Width="100px" />
+            </div>
+            <br />
+
 </asp:Content>
 
