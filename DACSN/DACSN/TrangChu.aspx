@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="TrangChu.aspx.cs" Inherits="DACSN.TrangChu" %>
         <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
             <div id="TimKiem">
-            <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="DropDownList4" runat="server" CssClass="drop" Height="25px" Width="120px">
+            <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="drpTinhThanh" runat="server" CssClass="drop" Height="25px" Width="120px">
                 <asp:ListItem>Bình Dương</asp:ListItem>
             </asp:DropDownList>
-            &nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="DropDownList2" runat="server" CssClass="drop" Height="25px" Width="120px">
+            &nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="drbQuanHuyen" runat="server" CssClass="drop" Height="25px" Width="120px">
                 <asp:ListItem>TP Thủ Dầu Một</asp:ListItem>
             </asp:DropDownList>
-            &nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="DropDownList3" runat="server" CssClass="drop" Height="25px" Width="120px">
+            &nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="drpPhuongXa" runat="server" CssClass="drop" Height="25px" Width="120px">
                 <asp:ListItem>Phường Tân An</asp:ListItem>
             </asp:DropDownList>
             &nbsp;
@@ -29,12 +29,16 @@
                    </div>
                 </ItemTemplate>
             </asp:DataList>
-            <asp:GridView ID="gvTest" runat="server" AutoGenerateColumns="False" DataKeyNames="MaNhaTro">
-                                    <Columns>
-                                        <asp:BoundField HeaderText="MaNhaTro" InsertVisible="False" ReadOnly="True" SortExpression="MaNhaTro" />
-                                        <asp:BoundField DataField="NgayHetHan" HeaderText="NgayHetHan" SortExpression="NgayHetHan" />
-                                    </Columns>
-                                </asp:GridView>
+
+            <br />
+            <div style="text-align: center; width: 900px;">
+                <asp:Button ID="btnTrangDau" runat="server" Text="Trang Đầu" Height="30px" OnClick="btnTrangDau_Click" Width="100px" />
+                <asp:Button ID="btnTruoc" runat="server" Text="Trước" Height="30px" OnClick="btnTruoc_Click" Width="50px" />
+                <asp:TextBox ID="txtTrang" runat="server" Width="30px" Height="30px" ReadOnly="True"></asp:TextBox>
+                <asp:Button ID="btnSau" runat="server" Text="Sau" Height="30px" OnClick="btnSau_Click" Width="50px" />
+                <asp:Button ID="btnTrangCuoi" runat="server" Text="Trang Cuối" Height="30px" OnClick="btnTrangCuoi_Click" Width="100px" />
+            </div>
+            <br />
             </asp:Content>                
 
 

@@ -77,6 +77,26 @@ create table HinhAnhChiTietNhaTro
 	HinhAnh nvarchar(50)
 	--drop table HinhAnhChiTietNhaTro
 )
+create table TinhThanh
+(
+	MaTinh int identity(1,1),
+	TenTinh nvarchar(20)
+	constraint PK_MaTinh primary key (MaTinh)
+)
+create table QuanHuyen
+(
+	MaQH int identity(1,1),
+	MaTinh int,
+	TenQH nvarchar(20)
+	constraint PK_MaQH primary key (MaQH)
+)
+create table PhuongXa
+(
+	MaPX int identity(1,1),
+	MaQH int,
+	TenPhuongXa nvarchar(20)
+	constraint PK_MaPX primary key (MaPX)
+)
 
 alter table NhaTroChoThue 
 	ADD  CONSTRAINT FK_KHACHHANG_NhaTroChoThue FOREIGN KEY(MaKH)REFERENCES KhachHang (MaKH)
@@ -88,6 +108,10 @@ alter table DanhGia
 	ADD  CONSTRAINT FK_DanhGia_NhaTroChoThue FOREIGN KEY(MaNhaTro)REFERENCES NhaTroChoThue (MaNhaTro)
 alter table HinhAnhChiTietNhaTro
 	ADD  CONSTRAINT FK_HinhAnhCTNhaTro_NhaTroChoThue FOREIGN KEY(MaNhaTro)REFERENCES NhaTroChoThue (MaNhaTro)
+alter table PhuongXa
+	ADD  CONSTRAINT FK_PhuongXa_QuanHuyen FOREIGN KEY(MaQH)REFERENCES QuanHuyen (MaQH)
+alter table QuanHuyen
+	ADD  CONSTRAINT FK_QuanHuyen_TinhThanh FOREIGN KEY(MaTinh)REFERENCES TinhThanh (MaTinh)
 
 insert into LoaiTK values(0,'Admin')
 insert into LoaiTK values(1,'KhachHang')
@@ -183,7 +207,7 @@ INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,D
 -Giờ giấc tự do
 -Bên dưới là tiệm giặt sấy với giá ưu đãi cho người thuê',3000000,60,'CTPT-4.jpg','12/28/2020','01/04/2021',N'Phòng trọ đầy đủ tiện nghi Đường Phan Xích Long')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (7,N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường Binh Chuẩn',N'Đường Bình Chuẩn 62','',N'Đường Bình Chuẩn 62,phường Binh Chuẩn,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','092578956',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (7,N'Tỉnh Bình Dương',N'Huyện Thuận An',N'Phường Binh Chuẩn',N'Đường Bình Chuẩn 62','',N'Đường Bình Chuẩn 62,phường Binh Chuẩn,Tỉnh Bình Dương',N'Phòng trọ cho thuê','092578956',N'Thông tin mô tả:
 Nhà trọ mới xây, đường rộng xe ô tô vào thoải mái, gần trường mầm non ngôi sao sáng, gần chợ hài mỹ.
 Tổng diện tích là 32m2 ( 20m2 nền và 12m2 gác)
 + Vòi hoa sen, lavabo, bồn rửa chén, tủ treo đựng chén dĩa
@@ -193,7 +217,7 @@ Tổng diện tích là 32m2 ( 20m2 nền và 12m2 gác)
 + giờ giấc thoải mái
 + yên tĩnh, thoáng mát',1800000,32,'CTPT-5.jpg','10/25/2020','01/02/2021',N'Cho thuê nhà trọ mới xây, tọa lạc ở đường Bình Chuẩn 2, Thuận An, Bình Dương')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (8,N'TP.Thủ Dầu Một',N'Huyện Thuận An',N'Phường An Phú',N'Đường số 743',N'Số 193A/2',N'Số 193A/2,Đường số 743,Phường An Phú,Huyện Thuận An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','096279956',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (8,N'Tỉnh Bình Dương',N'Huyện Thuận An',N'Phường An Phú',N'Đường số 743',N'Số 193A/2',N'Số 193A/2,Đường số 743,Phường An Phú,Huyện Thuận An,Tỉnh Bình Dương',N'Phòng trọ cho thuê','096279956',N'Thông tin mô tả:
 Cần cho thuê phòng rộng đẹp thoáng mát.
 + Nhà thoáng đẹp, Camera an ninh 24/24.
 * Địa chỉ: 193A/2, khu phố 1B, đường DT 743, phường An Phú, TX. Thuận An, Bình Dương...
@@ -201,7 +225,7 @@ Cần cho thuê phòng rộng đẹp thoáng mát.
 * Diện tích: 15m2/phòng.
 * Giá: 950.000đ/tháng trệt, 850.000đ/tháng lầu.',950000,15,'CTPT-6.jpg','12/01/2020','12/08/2020',N'Phòng trọ 15m2, phường An Phú, Thị Xã Thuận An, Bình Dương')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (9,N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường Bình An',N'Đường Thống Nhất','',N'Đường Thống Nhất,Phường Bình An,Huyện Dĩ An,TP.Thủ Dầu Một',N'Phòng trọ cho thuê','0925787956',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (9,N'Tỉnh Bình Dương',N'Huyện Dĩ An',N'Phường Bình An',N'Đường Thống Nhất','',N'Đường Thống Nhất,Phường Bình An,Huyện Dĩ An,Tỉnh Bình Dương',N'Phòng trọ cho thuê','0925787956',N'Thông tin mô tả:
 Tọa lạc trong Khu dân cư đô thị Bình Nguyên
 Cách Hồ Bơi Bình Nguyên 50m
 Cách làng đại học Quốc Gia khoảng 1km
@@ -210,16 +234,16 @@ Cách trường đại học Bách Khoa 2Km
 Cách Suối tiên khoảng 3km
 Phòng sạch đẹp, diện tích khoảng 18m2, có thể nấu ăn, chỗ để xe riêng, không gian rộng rãi, thoáng mát, phù hợp cho sinh viên học gần Làng đại học, khu vực Bình Dương, Thủ Đức hoặc người đi làm.',1200000,18,'CTPT-7.jpg','12/10/2020','12/19/2020',N'Cho thuê phòng trọ Khu DCM Bình Nguyên_Gần đại học Quốc Gia')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (9,N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'Đường Đào Trinh Nhất',N'Số 42',N'Số 42, Đường Đào Trinh Nhất,Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','0378787956',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (9,N'Tỉnh Bình Dương',N'Huyện Dĩ An',N'Phường An Bình',N'Đường Đào Trinh Nhất',N'Số 42',N'Số 42, Đường Đào Trinh Nhất,Phường An Bình,Huyện Dĩ An,Tỉnh Bình Dương',N'Tìm người ở ghép','0378787956',N'Thông tin mô tả:
 cần tìm người share chung căn hộ phú đông premier
 căn hộ 2pn 68m2, nội thất, miễn phí quản lý, miễn phí hồ bơi nước ấm
 giá share là 3tr/tháng
 liên hệ xem nhà',3000000,68,'TNOG-3.jpg','12/26/2020','12/02/2020',N'Cần người share căn hộ Phú Đông Premier')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (7,N'TP.Thủ Dầu Một',N'Huyện Bến Cát',N'Phường Mỹ Phước',N'Đường Mỹ Phước 2',N'Số B14',N',Số B14, Đường Mỹ Phước 2,Phường Mỹ Phước,Huyện Bến Cát,TP.Thủ Dầu Một',N'Tìm người ở ghép','083762876',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (7,N'Tỉnh Bình Dương',N'Huyện Bến Cát',N'Phường Mỹ Phước',N'Đường Mỹ Phước 2',N'Số B14',N',Số B14, Đường Mỹ Phước 2,Phường Mỹ Phước,Huyện Bến Cát,Tỉnh Bình Dương',N'Tìm người ở ghép','083762876',N'Thông tin mô tả:
 Hiện tại mình đang ở 1 mình nên còn dư 3 phòng ngủ,nên mình cần thêm 3 4 bạn ở cùng cho vui,đầy đủ tiện nghi hết ,sách đồ vào là ở,giá 1 người mình lấy 1 triệu3 bao điện nước wifi ,còn lại các thứ nhà mình có sẵn cả rất thỏi máy các bạn ko cần sâm gì.phù hợp cho anh chị mới lên đi làm công nhân chuẩn bị thuê nhà',1300000,96,'TNOG-5.jpg','12/01/2020','12/08/2020',N'Cần 3 hay 4 người ở ghép nhà liên kề 1 trệt 1 lầu')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (10,N'TP.Thủ Dầu Một',N'Huyện Dĩ An',N'Phường An Bình',N'','',N'Phường An Bình,Huyện Dĩ An,TP.Thủ Dầu Một',N'Tìm người ở ghép','083713876',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (10,N'Tỉnh Bình Dương',N'Huyện Dĩ An',N'Phường An Bình',N'','',N'Phường An Bình,Huyện Dĩ An,Tỉnh Bình Dương',N'Tìm người ở ghép','083713876',N'Thông tin mô tả:
 Căn hộ chung cư có 2 phòng, 1 phòng đã có 1 nữ, cần tìm 1 nữ ở phòng còn lại. (Yêu cầu nhỏ: sạch sẽ, gọn gàng, yên tĩnh). Giờ giấc tự do
 Căn hộ đầy đủ tiện nghi: tủ lạnh, máy giặt, 2 phòng vệ sinh, lavabo, bếp núc đầy đủ. Bạn chỉ việc xách ba lô đến ở. Dưới chung cư có chợ, Vinmart, Bách Hóa Xanh, đồ ăn bán với giá cực kỳ rẻ, muốn mua gì cũng có. Điên nước tính giá nhà nước, Wifi: 90K/tháng, Phí giữ xe: 70K/tháng (tổng hết tầm 200K đổ lại)
 Đi Ngã tư Thủ Đức mất 10 phút, đi trung tâm quận 1 40 phút, đi Sân bay TSN 30 phút, nằm sát đường Phạm Văn Đồng nên đi rất thuận tiện, ít kẹt xe.
@@ -288,6 +312,33 @@ insert into HinhAnhChiTietNhaTro values(11,'TNOG-4-6.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG-5.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG-5-8.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG5.jpg')
+
+insert into TinhThanh(TenTinh) values(N'Bình Dương')
+insert into TinhThanh(TenTinh) values(N'Bình Phước')
+insert into TinhThanh(TenTinh) values(N'Đồng Nai')
+insert into TinhThanh(TenTinh) values(N'TP.Hồ Chí Minh')
+insert into TinhThanh(TenTinh) values(N'Biên Hòa')
+
+insert into QuanHuyen(MaTinh,TenQH) values(1,'TP.Thủ Dầu Một')
+insert into QuanHuyen(MaTinh,TenQH) values(1,'Huyện Bến Cát')
+insert into QuanHuyen(MaTinh,TenQH) values(1,'Huyện Dĩ An')
+insert into QuanHuyen(MaTinh,TenQH) values(1,'Huyện Thuận An')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận Tân Bình')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận Phú Nhuận')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 1')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 2')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 3')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 4')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 5')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 6')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 7')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 8')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 9')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 10')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 11')
+insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 12')
+
+insert into PhuongXa(MaQH,TenPhuongXa) values()
 --drop Proc ChiTietNhaTro
 Create Procedure ChiTietNhaTro
 @MaNT varchar(10)
