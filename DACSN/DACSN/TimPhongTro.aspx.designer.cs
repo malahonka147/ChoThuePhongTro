@@ -13,40 +13,40 @@ namespace DACSN {
     public partial class TimPhongTro {
         
         /// <summary>
-        /// DropDownList4 control.
+        /// drpTinhThanh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
+        protected global::System.Web.UI.WebControls.DropDownList drpTinhThanh;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// drpQuanHuyen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList drpQuanHuyen;
         
         /// <summary>
-        /// DropDownList3 control.
+        /// drpPhuongXa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList drpPhuongXa;
         
         /// <summary>
-        /// Button1 control.
+        /// btnTimKiem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnTimKiem;
         
         /// <summary>
         /// dlPhongTro control.

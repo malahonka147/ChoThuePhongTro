@@ -1,17 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="TrangChu.aspx.cs" Inherits="DACSN.TrangChu" %>
         <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
             <div id="TimKiem">
-            <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="drpTinhThanh" runat="server" CssClass="drop" Height="25px" Width="120px">
-                <asp:ListItem>Bình Dương</asp:ListItem>
+            <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="drpTinhThanh" runat="server" CssClass="drop" Height="25px" Width="120px" AutoPostBack="True" OnSelectedIndexChanged="drpTinhThanh_SelectedIndexChanged">
             </asp:DropDownList>
-            &nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="drbQuanHuyen" runat="server" CssClass="drop" Height="25px" Width="120px">
-                <asp:ListItem>TP Thủ Dầu Một</asp:ListItem>
+            &nbsp;&nbsp; <strong>Quận,Huyện:</strong><asp:DropDownList ID="drpQuanHuyen" runat="server" CssClass="drop" Height="25px" Width="120px" AutoPostBack="True" OnSelectedIndexChanged="drpQuanHuyen_SelectedIndexChanged">
             </asp:DropDownList>
             &nbsp;&nbsp;<strong> Phường,Xã:</strong><asp:DropDownList ID="drpPhuongXa" runat="server" CssClass="drop" Height="25px" Width="120px">
-                <asp:ListItem>Phường Tân An</asp:ListItem>
             </asp:DropDownList>
             &nbsp;
-            <asp:Button ID="Button1" runat="server" CssClass="btntimkiem" Height="25px" Text="Tìm Kiếm" Width="120px" />
+            <asp:Button ID="btnTimKiem" runat="server" CssClass="btntimkiem" Height="25px" Text="Tìm Kiếm" Width="120px" OnClick="btnTimKiem_Click" />
         </div>             
             <asp:DataList ID="dlPhongTro" runat="server" RepeatColumns="2">
                 <ItemTemplate>
