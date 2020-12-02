@@ -21,10 +21,11 @@ namespace DACSN
         {
             try
             {
-                DataTable dt = XLDL.GetData("select * from KhachHang where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
+                DataTable dt = XLDL.GetData("select MaKH from KhachHang where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
                 DataTable dt1 = XLDL.GetData("select * from NguoiQuanLi where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
                 if (dt.Rows.Count>0)
                 {
+                    Session["MaKH"] = dt.Rows[0][0];
                     Session["TenTK"] = txtDangNhap.Text;
                     Session["LoaiTK"] = 1;
                     Response.Redirect("~/TrangChu.aspx");

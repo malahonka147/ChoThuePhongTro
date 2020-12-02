@@ -167,6 +167,7 @@
     <Content Include="Template.Master" />
     <Content Include="Templates2.Master" />
     <Content Include="app.config" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="UC\ucLeft.ascx.designer.cs">
       <DependentUpon>ucLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="XLDL.cs" />
     <Compile Include="BangGiaDichVu.aspx.cs">
