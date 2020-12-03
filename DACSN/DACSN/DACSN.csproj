@@ -101,8 +101,13 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebApplication2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Danger\Downloads\Compressed\noidia_c\WebApplication2\Bin\WebApplication2.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CamOn.aspx" />
     <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="DangBai.aspx" />
     <Content Include="HopDongThueNhaTro.aspx" />
@@ -201,6 +206,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CamOn.aspx.cs">
+      <DependentUpon>CamOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CamOn.aspx.designer.cs">
+      <DependentUpon>CamOn.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietPhongTro.aspx.cs">
       <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -334,6 +346,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

@@ -174,8 +174,8 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="txtSoNgay" runat="server" AutoPostBack="True"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSoNgay" Display="Dynamic" ErrorMessage="Số ngày không được để trống" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtSoNgay" ErrorMessage="Số ngày phải là số nguyên &gt;0" ForeColor="Red" Type="Integer" MaximumValue="999" MinimumValue="0"></asp:RangeValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSoNgay" Display="Dynamic" ErrorMessage="Số ngày không được để trống" ForeColor="Red" style="font-weight: normal"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtSoNgay" ErrorMessage="Số ngày phải là số nguyên &gt;0" ForeColor="Red" Type="Integer" MaximumValue="999" MinimumValue="0" style="font-weight: normal"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -187,6 +187,12 @@
             </table>
                 
          </div>
+        <div>
+            <div>
+                <input id="rbOnePay" runat="server" type="radio" name="rbHinhThucThanhToan" /><label for="rbOnePay"> Thanh toán bằng ATM</label>
+            </div>
+            
+        </div>
         <div class="auto-style5" style="text-align: center">     
             <asp:Button ID="btnDangBai" class="snip1582" runat="server" Text="Đăng Bài" OnClick="btnDangBai_Click" style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" />
          </div>
