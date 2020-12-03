@@ -10,7 +10,7 @@
 namespace DACSN {
     
     
-    public partial class DangBai {
+    public partial class ChinhSuaBaiDang {
         
         /// <summary>
         /// dlTTKH control.
@@ -22,31 +22,31 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.DataList dlTTKH;
         
         /// <summary>
-        /// drpTinhThanh control.
+        /// txtTinhThanh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpTinhThanh;
+        protected global::System.Web.UI.WebControls.TextBox txtTinhThanh;
         
         /// <summary>
-        /// drpQuanHuyen control.
+        /// txtQuanHuyen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpQuanHuyen;
+        protected global::System.Web.UI.WebControls.TextBox txtQuanHuyen;
         
         /// <summary>
-        /// drpPhuongXa control.
+        /// txtPhuongXa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpPhuongXa;
+        protected global::System.Web.UI.WebControls.TextBox txtPhuongXa;
         
         /// <summary>
         /// txtDuong control.
@@ -182,60 +182,6 @@ namespace DACSN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator5;
-        
-        /// <summary>
-        /// fuCTNT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuCTNT;
-        
-        /// <summary>
-        /// txtSoNgay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoNgay;
-        
-        /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
-        /// RangeValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator3;
-        
-        /// <summary>
-        /// lbThanhTien control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbThanhTien;
-        
-        /// <summary>
-        /// rbOnePay control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbOnePay;
         
         /// <summary>
         /// btnDangBai control.

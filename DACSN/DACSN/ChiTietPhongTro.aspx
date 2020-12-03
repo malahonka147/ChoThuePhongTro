@@ -79,8 +79,7 @@
         </div>
         <br>
         <script src="SlideShow.js"></script>
-         <div><p style="margin-left:10px;padding-left:145px" class="lbTenKH"> Đánh Giá&nbsp;</p>
-     </div>
+   
     <div id="DanhGia" style="text-align: left; width: 1009px">
         <asp:DataList ID="dlDanhGia" runat="server" Width="895px" HorizontalAlign="Left" style="margin-left: 0px">
             <ItemTemplate>

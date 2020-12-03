@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates2.Master" AutoEventWireup="true" CodeBehind="DangBai.aspx.cs" Inherits="DACSN.DangBai" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates2.Master" AutoEventWireup="true" CodeBehind="ChinhSuaBaiDang.aspx.cs" Inherits="DACSN.ChinhSuaBaiDang" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <aside id="left">
+     <aside id="left">
     <div>
         <p>Bảng Chức Năng</p>
         <asp:DataList ID="dlTTKH" runat="server">
@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/SuaThongTinCaNhan.aspx?Ma="+Eval("MaKH") %>' ForeColor="Black">Sửa thông tin cá nhân</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaKH","~/QuanLiThongTinCaNhan.aspx?MaKH={0}") %>' ForeColor="Black">Sửa thông tin cá nhân</asp:HyperLink>
                         </td>
                     </tr>
                   
@@ -33,19 +33,17 @@
     </div>
    </aside>
     <section>
-        <div class="border-bottom">
-                 <h1 class="h1">Đăng tin mới</h1>
+       <div class="border-bottom">
+                 <h1 class="h1">
+                     Đăng tin mới</h1>
          </div>
         <div style="text-align: left; height: 65px; vertical-align: middle;">
             <strong><span style="font-size: 16px">
             <br />
-            Tỉnh,Thành Phố:</span></strong><asp:DropDownList ID="drpTinhThanh" runat="server" CssClass="dropDangBai" Height="30px" Width="180px" AutoPostBack="True" OnSelectedIndexChanged="drpTinhThanh_SelectedIndexChanged" style="font-size: 16px">
-            </asp:DropDownList>
-            <strong><span style="font-size: 16px">Quận,Huyện:</span></strong><asp:DropDownList ID="drpQuanHuyen" runat="server" CssClass="dropDangBai" Height="30px" Width="180px" AutoPostBack="True" OnSelectedIndexChanged="drpQuanHuyen_SelectedIndexChanged" style="font-size: 16px">
-            </asp:DropDownList>
-            <strong><span style="font-size: 16px"> Phường,Xã:</span></strong><asp:DropDownList ID="drpPhuongXa" runat="server" CssClass="dropDangBai" Height="30px" Width="180px" style="font-size: 16px" AutoPostBack="True">
-            </asp:DropDownList>
-            <span style="font-size: 16px">&nbsp;
+            Tỉnh,Thành Phố:</span><asp:TextBox ID="txtTinhThanh" runat="server" Height="30px" ReadOnly="True" Width="180px"></asp:TextBox>
+            <span style="font-size: 16px">Quận,Huyện:</span><asp:TextBox ID="txtQuanHuyen" runat="server" Height="30px" ReadOnly="True" Width="180px"></asp:TextBox>
+            <span style="font-size: 16px"> Phường,Xã:</span></strong><span style="font-size: 16px">&nbsp;
+            <asp:TextBox ID="txtPhuongXa" runat="server" Height="30px" ReadOnly="True" Width="180px"></asp:TextBox>
             </span>
         </div>   
         <div>
@@ -144,58 +142,11 @@
                 </table>
             
         </div>
-         <div>
-                 <h3 class="h1">Hình ảnh</h3>
-         </div>
-        <div>
-                 
-           <table class="dangbai" style="width:100%;">     
-                <tr>
-                    <td>
-                        <strong>Chọn hình chi tiết nhà trọ:</strong></td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:FileUpload ID="fuCTNT" runat="server" Width="444px" AllowMultiple="True" />
-                    </td>
-                </tr>
-            </table>
-                 
-         </div>
-        <div>
-                 <h3 class="h1">Chọn hình thức đăng tin:</h3>
-         </div>
-          <div>
-                
-            <table style="width:100%;">
-                <tr>
-                    <td class="auto-style6">Số ngày đăng (2000đ/1):</td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:TextBox ID="txtSoNgay" runat="server" AutoPostBack="True"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSoNgay" Display="Dynamic" ErrorMessage="Số ngày không được để trống" ForeColor="Red" style="font-weight: normal"></asp:RequiredFieldValidator>
-                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtSoNgay" ErrorMessage="Số ngày phải là số nguyên &gt;0" ForeColor="Red" Type="Integer" MaximumValue="999" MinimumValue="0" style="font-weight: normal"></asp:RangeValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Thành tiền:
-                        <asp:Label ID="lbThanhTien" runat="server" ForeColor="Red"></asp:Label>
-                        <span style="color: red">/đồng</span></td>
-                </tr>
-            </table>
-                
-         </div>
-        <div>
-            <div>
-                <input id="rbOnePay" runat="server" type="radio" name="rbHinhThucThanhToan" /><label for="rbOnePay"> Thanh toán bằng ATM</label>
-            </div>
-            
-        </div>
         <div class="auto-style5" style="text-align: center">     
             <asp:Button ID="btnDangBai" class="snip1582" runat="server" Text="Đăng Bài" OnClick="btnDangBai_Click" style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" />
          </div>
+
+        
     </section>
 
 </asp:Content>

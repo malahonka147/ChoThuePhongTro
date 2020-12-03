@@ -26,50 +26,52 @@ namespace DACSN
                     dlTTKH.DataSource = dt;
                     dlTTKH.DataBind();
                     txtThongTinLienHe.Text = dt.Rows[0][2].ToString();
-                    if (txtSoNgay.Text != "")
-                    {
-                        int s = int.Parse(txtSoNgay.Text) * 2000;
-                        lbThanhTien.Text = s.ToString();
-
-                    }
-                    else
-                    {
-                        lbThanhTien.Text = "0";
-                    }
-
-
-                    if (drpTinhThanh.SelectedItem.Text == "Tất cả")
-                    {
-                        txtDiaChiChinhXac.Text = "";
-                    }
-                    else
-                    {
-                        if (drpQuanHuyen.SelectedItem.Text == "Quận/Huyện" || drpQuanHuyen.SelectedItem.Text == "Tất cả")
-                        {
-                            txtDiaChiChinhXac.Text = drpTinhThanh.SelectedItem.Text;
-                        }
-                        else
-                        {
-                            if (drpPhuongXa.SelectedItem.Text == "Phường/Xã")
-                            {
-                                txtDiaChiChinhXac.Text = drpQuanHuyen.SelectedItem.Text + "," + txtDiaChiChinhXac.Text;
-                            }
-                            else if (drpPhuongXa.SelectedItem.Text != "Tất cả")
-                            {
-                                txtDiaChiChinhXac.Text = txtSoNha.Text + "," + txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
-
-                            }
-                        }
-
-                    }
+                    
                 }
-            } else
+                if (txtSoNgay.Text != "")
+                {
+                    int s = int.Parse(txtSoNgay.Text) * 2000;
+                    lbThanhTien.Text = s.ToString();
+
+                }
+                else
+                {
+                    lbThanhTien.Text = "0";
+                }
+
+
+                if (drpTinhThanh.SelectedItem.Text == "Tất cả")
+                {
+                    txtDiaChiChinhXac.Text = "";
+                }
+                else
+                {
+                    if (drpQuanHuyen.SelectedItem.Text == "Quận/Huyện" || drpQuanHuyen.SelectedItem.Text == "Tất cả")
+                    {
+                        txtDiaChiChinhXac.Text = drpTinhThanh.SelectedItem.Text;
+                    }
+                    else
+                    {
+                        if (drpPhuongXa.SelectedItem.Text == "Phường/Xã")
+                        {
+                            txtDiaChiChinhXac.Text = drpQuanHuyen.SelectedItem.Text + "," + txtDiaChiChinhXac.Text;
+                        }
+                        else if (drpPhuongXa.SelectedItem.Text != "Tất cả")
+                        {
+                            txtDiaChiChinhXac.Text = txtSoNha.Text + "," + txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
+
+                        }
+                    }
+
+                }
+
+
+            }
+            else
             {
                 Response.Redirect("~/DangNhap.aspx");
             }
-
-           
-
+       
         }
         protected void drpTinhThanh_Load()
         {
@@ -145,6 +147,7 @@ namespace DACSN
 
         protected void btnDangBai_Click(object sender, EventArgs e)
         {
+
             HttpFileCollection _HttpFileCollection = Request.Files;
             HttpPostedFile HttpPostedFile = _HttpFileCollection[0];
             int MaKH = int.Parse(Session["MaKH"].ToString());
