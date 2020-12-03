@@ -509,3 +509,40 @@ div#formdg{
     border-radius:3px;
     padding:10px;
 }
+table#TaiKhoan tr
+{
+	height:50px;
+}
+table#TaiKhoan tr td
+{
+    font-weight:bold;
+	font-size: 18px;
+}
+table#TaiKhoan a
+{
+    font-size:24px;
+	color:#000;
+}
+table#TaiKhoan a:hover
+{
+	color:darkblue;	
+}
+
+table#TaiKhoan tr th
+{
+	font-size:30px;
+}
+table#TaiKhoan input[type=text]
+{
+	height:30px;
+	background-repeat:no-repeat;
+	background-position:10px;	
+    border-radius:5px;
+}
+table#TaiKhoan input[type=password]
+{
+	height:30px;
+	background-repeat:no-repeat;
+	background-position:10px;
+    border-radius:5px;	
+}

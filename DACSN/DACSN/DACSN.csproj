@@ -104,7 +104,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AD\Admin.aspx" />
+    <Content Include="AD\ADSua\AdminSuaKhachHang.aspx" />
+    <Content Include="AD\ADSua\ADSuaNhaTro.aspx" />
+    <Content Include="AD\ADSua\ADSuaPhuongXa.aspx" />
+    <Content Include="AD\ADSua\ADSuaQuanHuyen.aspx" />
+    <Content Include="AD\ADSua\ADSuaQuanTriVien.aspx" />
+    <Content Include="AD\ADSua\AdSuaTinhThanh.aspx" />
     <Content Include="AD\KhachHang.aspx" />
+    <Content Include="AD\NhaTro.aspx" />
     <Content Include="AD\PhuongXa.aspx" />
     <Content Include="AD\QuanHuyen.aspx" />
     <Content Include="AD\QuanTriVien.aspx" />
@@ -238,12 +245,61 @@
     <Compile Include="AD\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="AD\ADSua\AdminSuaKhachHang.aspx.cs">
+      <DependentUpon>AdminSuaKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ADSua\AdminSuaKhachHang.aspx.designer.cs">
+      <DependentUpon>AdminSuaKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaNhaTro.aspx.cs">
+      <DependentUpon>ADSuaNhaTro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaNhaTro.aspx.designer.cs">
+      <DependentUpon>ADSuaNhaTro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaPhuongXa.aspx.cs">
+      <DependentUpon>ADSuaPhuongXa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaPhuongXa.aspx.designer.cs">
+      <DependentUpon>ADSuaPhuongXa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaQuanHuyen.aspx.cs">
+      <DependentUpon>ADSuaQuanHuyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaQuanHuyen.aspx.designer.cs">
+      <DependentUpon>ADSuaQuanHuyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaQuanTriVien.aspx.cs">
+      <DependentUpon>ADSuaQuanTriVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ADSua\ADSuaQuanTriVien.aspx.designer.cs">
+      <DependentUpon>ADSuaQuanTriVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ADSua\AdSuaTinhThanh.aspx.cs">
+      <DependentUpon>AdSuaTinhThanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ADSua\AdSuaTinhThanh.aspx.designer.cs">
+      <DependentUpon>AdSuaTinhThanh.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AD\KhachHang.aspx.cs">
       <DependentUpon>KhachHang.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AD\KhachHang.aspx.designer.cs">
       <DependentUpon>KhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\NhaTro.aspx.cs">
+      <DependentUpon>NhaTro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\NhaTro.aspx.designer.cs">
+      <DependentUpon>NhaTro.aspx</DependentUpon>
     </Compile>
     <Compile Include="AD\PhuongXa.aspx.cs">
       <DependentUpon>PhuongXa.aspx</DependentUpon>
