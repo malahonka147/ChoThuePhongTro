@@ -10,16 +10,25 @@
 namespace DACSN {
     
     
-    public partial class DangBai {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// dlTTKH control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlTTKH;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// DataList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList DataList1;
         
         /// <summary>
         /// drpTinhThanh control.
@@ -85,13 +94,13 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// txtDiaChiChinhXac control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChiChinhXac;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// drpLoaiNT control.
@@ -112,6 +121,15 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.TextBox txtTieuDe;
         
         /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        
+        /// <summary>
         /// txtMoTa control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,15 @@ namespace DACSN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMoTa;
+        
+        /// <summary>
+        /// RangeValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
         
         /// <summary>
         /// txtThongTinLienHe control.
@@ -139,24 +166,6 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.TextBox txtGiaChoThue;
         
         /// <summary>
-        /// RequiredFieldValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-        
-        /// <summary>
-        /// RangeValidator4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator4;
-        
-        /// <summary>
         /// txtDienTich control.
         /// </summary>
         /// <remarks>
@@ -166,22 +175,13 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.TextBox txtDienTich;
         
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// fuAnhDangBai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
-        /// <summary>
-        /// RangeValidator5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator5;
+        protected global::System.Web.UI.WebControls.FileUpload fuAnhDangBai;
         
         /// <summary>
         /// fuCTNT control.
@@ -202,15 +202,6 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.TextBox txtSoNgay;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
-        /// <summary>
         /// RangeValidator3 control.
         /// </summary>
         /// <remarks>
@@ -218,15 +209,6 @@ namespace DACSN {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator3;
-        
-        /// <summary>
-        /// lbThanhTien control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbThanhTien;
         
         /// <summary>
         /// btnDangBai control.

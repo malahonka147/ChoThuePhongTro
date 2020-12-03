@@ -44,12 +44,12 @@ create table NhaTroChoThue
 
 create table NguoiQuanLi
 (
-	ID_Admin INT IDENTITY(1,1),
+	ID_Admin varchar(10),
 	TenTK nvarchar(50),
 	MatKhau varchar(20),
 	Email_Admin varchar(30),
 	SDT_Admin varchar(12),
-	MaLTK int default 0 not null
+	MaLTK int
 	CONSTRAINT PK_NguoiQuanLi PRIMARY KEY (ID_Admin)
 
 )
@@ -77,12 +77,14 @@ create table HinhAnhChiTietNhaTro
 	HinhAnh nvarchar(50)
 	--drop table HinhAnhChiTietNhaTro
 )
+--drop table TinhThanh
 create table TinhThanh
 (
 	MaTinh int identity(1,1),
 	TenTinh nvarchar(20)
 	constraint PK_MaTinh primary key (MaTinh)
 )
+--drop table QuanHuyen
 create table QuanHuyen
 (
 	MaQH int identity(1,1),
@@ -90,6 +92,7 @@ create table QuanHuyen
 	TenQH nvarchar(20)
 	constraint PK_MaQH primary key (MaQH)
 )
+--drop table PhuongXa
 create table PhuongXa
 (
 	MaPX int identity(1,1),
@@ -127,10 +130,9 @@ INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(8,1,N'Nguyễn Thị Thanh Mai','012345785','nttmai@gmail.com','d123456','nttmai')
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(9,1,N'Nguyễn Thành Danh','012345785','ntdanh@gmail.com','d123456','ntdanh')
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(10,1,N'Phạm Thị Nga','012345785','ptnga@gmail.com','d123456','ptnga')
-INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(11,1,N'Phạm Thị Nga1','0123485','ptnga@gmail.com','d123456','ptnga')
 SET IDENTITY_INSERT [dbo].[KhachHang] OFF
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (1,N'TP.Hồ Chi Minh',N'Quận 1',N'Phường Phạm Ngũ Lão',N'Đường Trần Hưng Đạo',N'Số 120/43/10',N'Số 120/43/10 Đường Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, TP.Hồ Chí Minh',N'Tìm người ở ghép','01223546',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (1,N'TP.Hồ Chí Minh',N'Quận 1',N'Phường Phạm Ngũ Lão',N'Đường Trần Hưng Đạo',N'Số 120/43/10',N'Số 120/43/10 Đường Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, TP.Hồ Chí Minh',N'Tìm người ở ghép','01223546',N'Thông tin mô tả:
 KÍ TÚC XÁ MỚI CHO CÁC CÔ NÀNG MỘNG MƠ ĐÂY NÈ
 ĐẶC BIỆT NHẤT NÈ : GIÁ 1tr5 MIỄN PHÍ ĐIỆN , NƯỚC , WIFI ????
 TỪNG NGÓC NGÁCH TRONG NHÀ ĐỀU ĐƯỢC DECOR TẬN TÂM VÀ XINH XĨU
@@ -139,7 +141,7 @@ Rất gần các trường đại học thuận tiện cho việc di chuyển. B
 Phòng full nội thất,được nấu ăn, view sân thượng xịn lắm .!
 Đặc biệt phòng không chung chủ, giờ giấc tự do. Camera xịn xò hơn con mắt của mấy bà hàng xóm luôn á nhaaaa.',1500000,30,'TNOG-1.jpg','01/23/2021','01/30/2021',N'Nhà trọ cho thuê mới xây')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (2,N'TP.Hồ Chi Minh',N'quận Tân Bình',N'',N'Đường Trường Chinh',N'Số 45',N'Số 45,Đường Trường Chinh,quận Tân Bình,TP.Hồ Chi Minh',N'Tìm người ở ghép','01298725',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (2,N'TP.Hồ Chí Minh',N'quận Tân Bình',N'',N'Đường Trường Chinh',N'Số 45',N'Số 45,Đường Trường Chinh,quận Tân Bình,TP.Hồ Chí Minh',N'Tìm người ở ghép','01298725',N'Thông tin mô tả:
 Xin chào !
 - Mình muốn tìm một nữ ở ghép. Vì đi làm cũng nhiều, ít ở phòng. Nên muốn tìm một bạn vừa san sẻ tiền phòng. Vừa ở cùng bầu bạn cho vui ạ !
 - Phòng kiểu căn hộ, đầy đủ nội thất, tiện nghi, chỉ cần dọn vào ở là xong ạ. Phòng tách bạch góc bếp và giường ngủ, nhà tắm riêng, rộng. Phòng có tủ lạnh, điều hoà, máy giặt, máy nóng lạnh, bàn ăn, bàn trang điểm, giường nệm, tủ quần áo, kệ sách, kệ giày, bếp, lò nướng, ...
@@ -152,8 +154,8 @@ Các bạn xem hình và đến xem trực tiếp nha.
 - Phòng gần Vincom, trung tâm nên di chuyển rất dễ dàng. Xung quanh tạp hoá, quán xá, cafe. Phòng gần biển nên tiện đi bộ, chạy bộ, ra biển dạo mát nè.
 - Mình thì đọc sách nên có khá nhiều sách. Nên bạn nào cũng yêu sách như mình thì tha hồ đọc nhé.Mình thi thoảng nấu ăn nếu rãnh. Đồ gia dụng gần như đầy đủ .',2200000,45,'TNOG-2.jpg','12/15/2020','12/22/2020',N'Nhà trọ sạch sẽ ở Tân Bình')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (3,N'TP.Hồ Chi Minh',N'quận Bình Thạnh',N'An Lạc A',N'Đường số 2',N'Số 15/25',N'Số 15/25,Đường số 2,phường An Lạc A,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012546846',N'Thông tin mô tả:
-* ĐỊA CHỈ: Số 145,Đường số 11,Phường 13,TP.Hồ Chi Minh
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (3,N'TP.Hồ Chí Minh',N'quận Bình Thạnh',N'An Lạc A',N'Đường số 2',N'Số 15/25',N'Đường số 2,phường An Lạc A,TP.Hồ Chí Minh',N'Phòng trọ cho thuê','012546846',N'Thông tin mô tả:
+* ĐỊA CHỈ: Số 145,Đường số 11,Phường 13,TP.Hồ Chí Minh
 - Gần sân bay
 - Gần Lotte Cộng Hòa
 - Hẻm xe hơi
@@ -171,7 +173,7 @@ INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,D
 - Điện: 3.500 đ/kw - Nước: 100.000 đ/người/tháng
 >> >Nhanh chân để sở hữu căn phòng tiện nghi, giá cả phải chăng nhé!!!',4000000,22,'CTPT-1.jpg','05/02/2021','05/09/2021',N'Nhà trọ gần trường ĐH Công Nghiệp')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (4,N'TP.Hồ Chi Minh',N'Quận 6',N'Phường 13',N'Đường số 11',N'Số 145',N'Số 145,Đường số 11,Phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012947525',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (4,N'TP.Hồ Chí Minh',N'Quận 6',N'Phường 13',N'Đường số 11',N'Số 145',N'Số 145 ,Đường số 11,Phường 13,TP.Hồ Chí Minh',N'Phòng trọ cho thuê','012947525',N'Thông tin mô tả:
 Cho thuê phòng trọ Có gác, giá tốt
 Phòng đầy đủ tiện nghi cao cấp, mới xây hoàn toàn 100%, môi trường ở an ninh, văn minh, sạch sẽ có máy lạnh, thang máy
 Được tận hưởng các tiện ích, dịch vụ cao cấp :
@@ -190,7 +192,7 @@ Chi phí dịch vụ mỗi tháng:
 - Điện: 3.5 nghìn/KWH.
 - Wifi + cáp + Thang máy + máy giặt đầy đủ',3500000,25,'CTPT-2.jpg','12/15/2020','12/22/2020',N'Cho thuê phòng trọ cao cấp,sạch sẽ, an ninh')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (5,N'TP.Hồ Chi Minh',N'Quận Tân Bình',N'Phường 13',N'Đường Cộng Hòa',N'Số 622/10',N'Số 622/10,Đường Cộng Hòa,phường 13,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','098623546',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (5,N'TP.Hồ Chí Minh',N'Quận Tân Bình',N'Phường 13',N'Đường Cộng Hòa',N'Số 622/10',N'Số 622/10,Đường Cộng Hòa,phường 13,TP.Hồ Chí Minh',N'Phòng trọ cho thuê','098623546',N'Thông tin mô tả:
 -Phòng đầy đủ nội thất.
 -Toilet riêng.
 -Từ giấc tự do
@@ -201,7 +203,7 @@ INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,D
 -Có bếp
 -Cửa sổ lớn',4500000,20,'CTPT-3.jpg','12/11/2020','12/18/2020',N'Phòng trọ mới 100%, siêu đẹp')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (6,N'TP.Hồ Chi Minh',N'Quận Phú Nhuận',N'Phường 3',N'Đường Phan Xích Long',N'Số 441/2',N'Số 123,Đường Phan Xích Long,phường 3,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012564546',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (6,N'TP.Hồ Chí Minh',N'Quận Phú Nhuận',N'Phường 3',N'Đường Phan Xích Long',N'Số 441/2',N'Số 123,Đường Phan Xích Long,phường 3,TP.Hồ Chí Minh',N'Phòng trọ cho thuê','012564546',N'Thông tin mô tả:
 - Nhà mặt tiền Quận Tân Bình
 -Có nhu cầu cho Thuê tầng 1 : 2 phòng ngủ và 1 WC thích hợp cho gia đình lớn hoặc nhân viên công sở
 -Khu vực gần sân bay, thuận tiện đi lại
@@ -250,10 +252,10 @@ Căn hộ đầy đủ tiện nghi: tủ lạnh, máy giặt, 2 phòng vệ sinh
 Đi Ngã tư Thủ Đức mất 10 phút, đi trung tâm quận 1 40 phút, đi Sân bay TSN 30 phút, nằm sát đường Phạm Văn Đồng nên đi rất thuận tiện, ít kẹt xe.
 Gía cả thuê có thể thương lượng cho người có thiện chí ở.',2250000,55,'TNOG-6.jpg','12/12/2020','12/19/2020',N'Tìm 1 nữ ở ghép tại chung cư An Bình')
 
-insert into NguoiQuanLi values('admin1','123','admin01@gmail.com','0124584866',0)
-insert into NguoiQuanLi values('admin2','456','admin02@gmail.com','0125445735',0)
-insert into NguoiQuanLi values('admin3','789','admin03@gmail.com','0122891464',0)
-insert into NguoiQuanLi values('admin4','123456','admin04@gmail.com','0943486643',0)
+insert into NguoiQuanLi values('AD01','admin1','123','admin01@gmail.com','0124584866',0)
+insert into NguoiQuanLi values('AD02','admin2','456','admin02@gmail.com','0125445735',0)
+insert into NguoiQuanLi values('AD03','admin3','789','admin03@gmail.com','0122891464',0)
+insert into NguoiQuanLi values('AD04','admin4','123456','admin04@gmail.com','0943486643',0)
 
 
 insert into DanhGia(MaNhaTro,TenKH,DanhGia) values(1,N'Lê Tùng Vân',N'Nhà trọ này thoáng mát')
@@ -314,11 +316,11 @@ insert into HinhAnhChiTietNhaTro values(12,'TNOG-5.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG-5-8.jpg')
 insert into HinhAnhChiTietNhaTro values(12,'TNOG5.jpg')
 
-insert into TinhThanh(TenTinh) values(N'Bình Dương')
-insert into TinhThanh(TenTinh) values(N'Bình Phước')
-insert into TinhThanh(TenTinh) values(N'Đồng Nai')
+insert into TinhThanh(TenTinh) values(N'Tỉnh Bình Dương')
+insert into TinhThanh(TenTinh) values(N'Tỉnh Bình Phước')
+insert into TinhThanh(TenTinh) values(N'Tỉnh Đồng Nai')
 insert into TinhThanh(TenTinh) values(N'TP.Hồ Chí Minh')
-insert into TinhThanh(TenTinh) values(N'Biên Hòa')
+insert into TinhThanh(TenTinh) values(N'TP.Biên Hòa')
 
 insert into QuanHuyen(MaTinh,TenQH) values(1,N'TP.Thủ Dầu Một')
 insert into QuanHuyen(MaTinh,TenQH) values(1,N'Huyện Bến Cát')
@@ -339,7 +341,15 @@ insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 10')
 insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 11')
 insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 12')
 
-insert into PhuongXa(MaQH,TenPhuongXa) values()
+insert into PhuongXa(MaQH,TenPhuongXa) values(1,N'Phường Tân An')
+insert into PhuongXa(MaQH,TenPhuongXa) values(1,N'Phường Hiệp An')
+insert into PhuongXa(MaQH,TenPhuongXa) values(3,N'Phường An Bình')
+insert into PhuongXa(MaQH,TenPhuongXa) values(2,N'Phường Mỹ Phước')
+insert into PhuongXa(MaQH,TenPhuongXa) values(3,N'Phường Bình An')
+insert into PhuongXa(MaQH,TenPhuongXa) values(4,N'Phường Binh Chuẩn')
+insert into PhuongXa(MaQH,TenPhuongXa) values(4,N'Phường An Bình')
+insert into PhuongXa(MaQH,TenPhuongXa) values(4,N'Phường An Phú')
+insert into PhuongXa(MaQH,TenPhuongXa) values(5,N'Phường 13')
 --drop Proc ChiTietNhaTro
 Create Procedure ChiTietNhaTro
 @MaNT varchar(10)
@@ -349,3 +359,6 @@ from KhachHang kh,NhaTroChoThue nt
 where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH
 
 exec ChiTietNhaTro @MaNT=2
+
+Select * from PhuongXa where MaPX=0;
+SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'Bình Dương'

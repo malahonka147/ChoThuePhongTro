@@ -18,6 +18,7 @@ namespace DACSN.UC
                     lbTenDN.Visible = true;
                     lbTenDN.Text = "Xin chào: " + Session["TenTK"].ToString();
                     lbtDangXuat.Visible = true;
+                    btnDangBai.Visible = true;
                 }
                 else
                 {
@@ -26,13 +27,25 @@ namespace DACSN.UC
                     lbtDangXuat.Visible = false;
                     aDangNhap.Visible = true;
                     aDangKy.Visible = true;
-                }  
+                    btnDangBai.Visible = true;
+            }  
         }
 
         protected void lbtDangXuat_Click(object sender, EventArgs e)
         {
             Session["TenTK"] = null;
             Response.Redirect("TrangChu.aspx");
+        }
+
+        protected void btnDangBai_Click(object sender, EventArgs e)
+        {
+            if(Session["TenTK"]==null)
+            {
+                Response.Redirect("~/DangNhap.aspx");
+            }else
+            {
+                Response.Redirect("~/DangBai.aspx");
+            }
         }
     }
 }
