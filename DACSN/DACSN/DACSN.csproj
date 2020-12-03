@@ -120,6 +120,7 @@
     <Content Include="AD\ucAdminLeft.ascx" />
     <Content Include="AD\ucAdminLeft_KhuVucTimKiem.ascx" />
     <Content Include="ChieuTroLuaDao.aspx" />
+    <Content Include="ChinhSuaBaiDang.aspx" />
     <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="DangBai.aspx" />
     <Content Include="HopDongThueNhaTro.aspx" />
@@ -183,6 +184,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="QuanLiBaiDang.aspx" />
     <Content Include="SlideShow.js" />
     <Content Include="Template.Master" />
     <Content Include="Templates2.Master" />
@@ -356,6 +358,13 @@
     <Compile Include="ChieuTroLuaDao.aspx.designer.cs">
       <DependentUpon>ChieuTroLuaDao.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ChinhSuaBaiDang.aspx.cs">
+      <DependentUpon>ChinhSuaBaiDang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaBaiDang.aspx.designer.cs">
+      <DependentUpon>ChinhSuaBaiDang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietPhongTro.aspx.cs">
       <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -383,6 +392,13 @@
     </Compile>
     <Compile Include="KinhNghiemThueNhaTro.aspx.designer.cs">
       <DependentUpon>KinhNghiemThueNhaTro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiBaiDang.aspx.cs">
+      <DependentUpon>QuanLiBaiDang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanLiBaiDang.aspx.designer.cs">
+      <DependentUpon>QuanLiBaiDang.aspx</DependentUpon>
     </Compile>
     <Compile Include="UC\ucFooter.ascx.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>
