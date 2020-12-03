@@ -104,7 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AD\Admin.aspx" />
-    <Content Include="AD\AdminSua.aspx" />
     <Content Include="AD\KhachHang.aspx" />
     <Content Include="AD\PhuongXa.aspx" />
     <Content Include="AD\QuanHuyen.aspx" />
@@ -238,13 +237,6 @@
     </Compile>
     <Compile Include="AD\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="AD\AdminSua.aspx.cs">
-      <DependentUpon>AdminSua.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AD\AdminSua.aspx.designer.cs">
-      <DependentUpon>AdminSua.aspx</DependentUpon>
     </Compile>
     <Compile Include="AD\KhachHang.aspx.cs">
       <DependentUpon>KhachHang.aspx</DependentUpon>
