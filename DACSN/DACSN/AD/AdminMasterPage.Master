@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="DACSN.AD.AdminMasterPage" %>
+
+<%@ Register Src="~/AD/ucAdminHeader.ascx" TagPrefix="uc1" TagName="ucAdminHeader" %>
+<%@ Register Src="~/AD/ucAdminFooter.ascx" TagPrefix="uc1" TagName="ucAdminFooter" %>
+<%@ Register Src="~/AD/ucAdminLeft.ascx" TagPrefix="uc1" TagName="ucAdminLeft" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <uc1:ucAdminHeader runat="server" ID="ucAdminHeader" />
+         <div>
+	        <nav>
+    	        <div id="subnav">
+                    <ul>
+                        <li id="Dau"><a href="../TrangChu.aspx"><b>TRANG CHỦ</b></a></li>
+                        <li><a href="../TimPhongTro.aspx"><b>TÌM PHÒNG TRỌ</b></a></li>
+                        <li><a href="../TimNguoiOGhep.aspx"><b>TÌM NGƯỜI Ở GHÉP</b></a></li>
+                        <li><a href="../HuongDan.aspx"><b>HƯỚNG DẪN</b></a></li>
+                        <li><a href="../BangGiaDichVu.aspx"><b>BẢNG GIÁ DỊCH VỤ</b></a></li>
+                        <li><a href="../GioiThieu.aspx"><b>GIỚI THIỆU</b></a></li>
+                    </ul>
+               </div>
+	        </nav>
+
+	        <div id="body">
+		        <article>
+                    <uc1:ucAdminLeft runat="server" id="ucAdminLeft" />
+			         <section>
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+                     </section>
+		        </article>
+	        </div>
+             <uc1:ucAdminFooter runat="server" id="ucAdminFooter" />
+    </div>
+    </form>
+</body>
+</html>

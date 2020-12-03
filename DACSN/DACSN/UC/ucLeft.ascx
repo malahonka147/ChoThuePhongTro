@@ -17,9 +17,9 @@
                       <div class="auto-style1">
 					        <p>CÓ THỂ BẠN QUAN TÂM</p>
 					        <ul type="square">
-						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink2" runat="server">Mẫu hợp đồng cho thuê phòng trọ</asp:HyperLink></li>
-						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink3" runat="server">Cẩn thận các kiểu lừa đảo khi thuê phòng trọ</asp:HyperLink></li>
-						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink4" runat="server">Kinh nghiệm thuê phòng trọ Sinh Viên</asp:HyperLink></li>
+						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink2" runat="server"><a href="../HopDongThueNhaTro.aspx">Mẫu hợp đồng cho thuê phòng trọ</a></asp:HyperLink></li>
+						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink3" runat="server"><a href="../ChieuTroLuaDao.aspx">Cẩn thận các kiểu lừa đảo khi thuê phòng trọ</a></asp:HyperLink></li>
+						        <li class="aside" style="height: 40px; padding-top: 5px;"><asp:HyperLink ID="HyperLink4" runat="server"><a href="../KinhNghiemThueNhaTro.aspx">Kinh nghiệm thuê phòng trọ Sinh Viên</a></asp:HyperLink></li>
 					        </ul>
                     </div>
 </aside>
