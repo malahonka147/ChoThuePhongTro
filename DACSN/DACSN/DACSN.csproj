@@ -103,6 +103,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AD\Admin.aspx" />
+    <Content Include="AD\AdminSua.aspx" />
+    <Content Include="AD\KhachHang.aspx" />
+    <Content Include="AD\PhuongXa.aspx" />
+    <Content Include="AD\QuanHuyen.aspx" />
+    <Content Include="AD\QuanTriVien.aspx" />
+    <Content Include="AD\ThemKhachHang.aspx" />
+    <Content Include="AD\ThemKhuVuc\ThemQuanHuyen.aspx" />
+    <Content Include="AD\ThemKhuVuc\ThemTinhThanh.aspx" />
+    <Content Include="AD\ThemQuanTriVien.aspx" />
+    <Content Include="AD\TimKiemKhuVuc.aspx" />
+    <Content Include="AD\TinhThanh.aspx" />
+    <Content Include="AD\ucAdminFooter.ascx" />
+    <Content Include="AD\ucAdminHeader.ascx" />
+    <Content Include="AD\ucAdminLeft.ascx" />
+    <Content Include="AD\ucAdminLeft_KhuVucTimKiem.ascx" />
+    <Content Include="ChieuTroLuaDao.aspx" />
     <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="DangBai.aspx" />
     <Content Include="HopDongThueNhaTro.aspx" />
@@ -139,6 +156,8 @@
     <Content Include="Images\CTPT-7-2.jpg" />
     <Content Include="Images\CTPT-7-3.jpg" />
     <Content Include="Images\CTPT-7.jpg" />
+    <Content Include="Images\Delete.jpg" />
+    <Content Include="Images\kinh-nghiem-cho-sinh-vien-khi-di-thue-phong-tro_1567825006.jpg" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\TNOG-3-1.jpg" />
     <Content Include="Images\TNOG-3-2.jpg" />
@@ -158,6 +177,7 @@
     <Content Include="Images\TNOG-5-8.jpg" />
     <Content Include="Images\TNOG-5.jpg" />
     <Content Include="Images\TNOG-6.jpg" />
+    <Content Include="KinhNghiemThueNhaTro.aspx" />
     <Content Include="logo.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -167,6 +187,9 @@
     <Content Include="Template.Master" />
     <Content Include="Templates2.Master" />
     <Content Include="app.config" />
+    <Content Include="AD\AdminMasterPage.Master" />
+    <Content Include="Documment\Mẫu hợp đồng cho thuê phòng trọ.docx" />
+    <Content Include="AD\Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -200,6 +223,139 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AD\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\AdminMasterPage.Master.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\AdminMasterPage.Master.designer.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AD\AdminSua.aspx.cs">
+      <DependentUpon>AdminSua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\AdminSua.aspx.designer.cs">
+      <DependentUpon>AdminSua.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\KhachHang.aspx.cs">
+      <DependentUpon>KhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\KhachHang.aspx.designer.cs">
+      <DependentUpon>KhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\PhuongXa.aspx.cs">
+      <DependentUpon>PhuongXa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\PhuongXa.aspx.designer.cs">
+      <DependentUpon>PhuongXa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\QuanHuyen.aspx.cs">
+      <DependentUpon>QuanHuyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\QuanHuyen.aspx.designer.cs">
+      <DependentUpon>QuanHuyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\QuanTriVien.aspx.cs">
+      <DependentUpon>QuanTriVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\QuanTriVien.aspx.designer.cs">
+      <DependentUpon>QuanTriVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ThemKhachHang.aspx.cs">
+      <DependentUpon>ThemKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ThemKhachHang.aspx.designer.cs">
+      <DependentUpon>ThemKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ThemKhuVuc\ThemQuanHuyen.aspx.cs">
+      <DependentUpon>ThemQuanHuyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ThemKhuVuc\ThemQuanHuyen.aspx.designer.cs">
+      <DependentUpon>ThemQuanHuyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ThemKhuVuc\ThemTinhThanh.aspx.cs">
+      <DependentUpon>ThemTinhThanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ThemKhuVuc\ThemTinhThanh.aspx.designer.cs">
+      <DependentUpon>ThemTinhThanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ThemQuanTriVien.aspx.cs">
+      <DependentUpon>ThemQuanTriVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ThemQuanTriVien.aspx.designer.cs">
+      <DependentUpon>ThemQuanTriVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\TimKiemKhuVuc.aspx.cs">
+      <DependentUpon>TimKiemKhuVuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\TimKiemKhuVuc.aspx.designer.cs">
+      <DependentUpon>TimKiemKhuVuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\TinhThanh.aspx.cs">
+      <DependentUpon>TinhThanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\TinhThanh.aspx.designer.cs">
+      <DependentUpon>TinhThanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ucAdminFooter.ascx.cs">
+      <DependentUpon>ucAdminFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ucAdminFooter.ascx.designer.cs">
+      <DependentUpon>ucAdminFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ucAdminHeader.ascx.cs">
+      <DependentUpon>ucAdminHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ucAdminHeader.ascx.designer.cs">
+      <DependentUpon>ucAdminHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ucAdminLeft.ascx.cs">
+      <DependentUpon>ucAdminLeft.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ucAdminLeft.ascx.designer.cs">
+      <DependentUpon>ucAdminLeft.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ucAdminLeft_KhuVucTimKiem.ascx.cs">
+      <DependentUpon>ucAdminLeft_KhuVucTimKiem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AD\ucAdminLeft_KhuVucTimKiem.ascx.designer.cs">
+      <DependentUpon>ucAdminLeft_KhuVucTimKiem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ChieuTroLuaDao.aspx.cs">
+      <DependentUpon>ChieuTroLuaDao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChieuTroLuaDao.aspx.designer.cs">
+      <DependentUpon>ChieuTroLuaDao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietPhongTro.aspx.cs">
       <DependentUpon>ChiTietPhongTro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,6 +376,13 @@
     </Compile>
     <Compile Include="HopDongThueNhaTro.aspx.designer.cs">
       <DependentUpon>HopDongThueNhaTro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KinhNghiemThueNhaTro.aspx.cs">
+      <DependentUpon>KinhNghiemThueNhaTro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KinhNghiemThueNhaTro.aspx.designer.cs">
+      <DependentUpon>KinhNghiemThueNhaTro.aspx</DependentUpon>
     </Compile>
     <Compile Include="UC\ucFooter.ascx.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>

@@ -33,9 +33,9 @@ namespace DACSN
                 {
                     if(dt1.Rows.Count>0)
                     {
-                        Session["TenDN"] = txtDangNhap.Text;
+                        Session["TenTK"] = txtDangNhap.Text;
                         Session["LoaiTK"] = 0;
-                        Response.Redirect("~/Admin.aspx");
+                        Response.Redirect("~/AD/Admin.aspx");
                     }
                     else
                     {

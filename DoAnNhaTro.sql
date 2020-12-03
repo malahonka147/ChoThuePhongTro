@@ -44,12 +44,12 @@ create table NhaTroChoThue
 
 create table NguoiQuanLi
 (
-	ID_Admin varchar(10),
+	ID_Admin INT IDENTITY(1,1),
 	TenTK nvarchar(50),
 	MatKhau varchar(20),
 	Email_Admin varchar(30),
 	SDT_Admin varchar(12),
-	MaLTK int
+	MaLTK int default 0 not null
 	CONSTRAINT PK_NguoiQuanLi PRIMARY KEY (ID_Admin)
 
 )
@@ -127,6 +127,7 @@ INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(8,1,N'Nguyễn Thị Thanh Mai','012345785','nttmai@gmail.com','d123456','nttmai')
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(9,1,N'Nguyễn Thành Danh','012345785','ntdanh@gmail.com','d123456','ntdanh')
 INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(10,1,N'Phạm Thị Nga','012345785','ptnga@gmail.com','d123456','ptnga')
+INSERT [dbo].[KhachHang] ([MaKH], [MaLTK], [TenKH], [SDT], [Email], [MatKhau], [TenTK]) values(11,1,N'Phạm Thị Nga1','0123485','ptnga@gmail.com','d123456','ptnga')
 SET IDENTITY_INSERT [dbo].[KhachHang] OFF
 
 INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (1,N'TP.Hồ Chi Minh',N'Quận 1',N'Phường Phạm Ngũ Lão',N'Đường Trần Hưng Đạo',N'Số 120/43/10',N'Số 120/43/10 Đường Trần Hưng Đạo, Phường Phạm Ngũ Lão, Quận 1, TP.Hồ Chí Minh',N'Tìm người ở ghép','01223546',N'Thông tin mô tả:
@@ -151,7 +152,7 @@ Các bạn xem hình và đến xem trực tiếp nha.
 - Phòng gần Vincom, trung tâm nên di chuyển rất dễ dàng. Xung quanh tạp hoá, quán xá, cafe. Phòng gần biển nên tiện đi bộ, chạy bộ, ra biển dạo mát nè.
 - Mình thì đọc sách nên có khá nhiều sách. Nên bạn nào cũng yêu sách như mình thì tha hồ đọc nhé.Mình thi thoảng nấu ăn nếu rãnh. Đồ gia dụng gần như đầy đủ .',2200000,45,'TNOG-2.jpg','12/15/2020','12/22/2020',N'Nhà trọ sạch sẽ ở Tân Bình')
 
-INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (3,N'TP.Hồ Chi Minh',N'quận Bình Thạnh',N'An Lạc A',N'Đường số 2'N'Số 15/25',N'Số 15/25,Đường số 2,phường An Lạc A,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012546846',N'Thông tin mô tả:
+INSERT into NhaTroChoThue(MaKH,TinhThanh, QuanHuyen, PhuongXa, TenDuong, SoNha,DiaChi,LoaiNT,SDTNguoiChoThue,MoTa,GiaChoThue,DienTich,HinhAnh,NgayDang,NgayHetHan,TieuDe) values (3,N'TP.Hồ Chi Minh',N'quận Bình Thạnh',N'An Lạc A',N'Đường số 2',N'Số 15/25',N'Số 15/25,Đường số 2,phường An Lạc A,TP.Hồ Chi Minh',N'Phòng trọ cho thuê','012546846',N'Thông tin mô tả:
 * ĐỊA CHỈ: Số 145,Đường số 11,Phường 13,TP.Hồ Chi Minh
 - Gần sân bay
 - Gần Lotte Cộng Hòa
@@ -249,10 +250,10 @@ Căn hộ đầy đủ tiện nghi: tủ lạnh, máy giặt, 2 phòng vệ sinh
 Đi Ngã tư Thủ Đức mất 10 phút, đi trung tâm quận 1 40 phút, đi Sân bay TSN 30 phút, nằm sát đường Phạm Văn Đồng nên đi rất thuận tiện, ít kẹt xe.
 Gía cả thuê có thể thương lượng cho người có thiện chí ở.',2250000,55,'TNOG-6.jpg','12/12/2020','12/19/2020',N'Tìm 1 nữ ở ghép tại chung cư An Bình')
 
-insert into NguoiQuanLi values('AD01','admin1','123','admin01@gmail.com','0124584866',0)
-insert into NguoiQuanLi values('AD02','admin2','456','admin02@gmail.com','0125445735',0)
-insert into NguoiQuanLi values('AD03','admin3','789','admin03@gmail.com','0122891464',0)
-insert into NguoiQuanLi values('AD04','admin4','123456','admin04@gmail.com','0943486643',0)
+insert into NguoiQuanLi values('admin1','123','admin01@gmail.com','0124584866',0)
+insert into NguoiQuanLi values('admin2','456','admin02@gmail.com','0125445735',0)
+insert into NguoiQuanLi values('admin3','789','admin03@gmail.com','0122891464',0)
+insert into NguoiQuanLi values('admin4','123456','admin04@gmail.com','0943486643',0)
 
 
 insert into DanhGia(MaNhaTro,TenKH,DanhGia) values(1,N'Lê Tùng Vân',N'Nhà trọ này thoáng mát')
@@ -319,24 +320,24 @@ insert into TinhThanh(TenTinh) values(N'Đồng Nai')
 insert into TinhThanh(TenTinh) values(N'TP.Hồ Chí Minh')
 insert into TinhThanh(TenTinh) values(N'Biên Hòa')
 
-insert into QuanHuyen(MaTinh,TenQH) values(1,'TP.Thủ Dầu Một')
-insert into QuanHuyen(MaTinh,TenQH) values(1,'Huyện Bến Cát')
-insert into QuanHuyen(MaTinh,TenQH) values(1,'Huyện Dĩ An')
-insert into QuanHuyen(MaTinh,TenQH) values(1,'Huyện Thuận An')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận Tân Bình')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận Phú Nhuận')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 1')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 2')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 3')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 4')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 5')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 6')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 7')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 8')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 9')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 10')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 11')
-insert into QuanHuyen(MaTinh,TenQH) values(4,'Quận 12')
+insert into QuanHuyen(MaTinh,TenQH) values(1,N'TP.Thủ Dầu Một')
+insert into QuanHuyen(MaTinh,TenQH) values(1,N'Huyện Bến Cát')
+insert into QuanHuyen(MaTinh,TenQH) values(1,N'Huyện Dĩ An')
+insert into QuanHuyen(MaTinh,TenQH) values(1,N'Huyện Thuận An')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận Tân Bình')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận Phú Nhuận')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 1')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 2')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 3')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 4')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 5')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 6')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 7')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 8')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 9')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 10')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 11')
+insert into QuanHuyen(MaTinh,TenQH) values(4,N'Quận 12')
 
 insert into PhuongXa(MaQH,TenPhuongXa) values()
 --drop Proc ChiTietNhaTro
