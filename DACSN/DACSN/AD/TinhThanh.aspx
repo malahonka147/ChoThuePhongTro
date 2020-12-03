@@ -7,13 +7,19 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h3 style="text-align:center; font-size: 50px;">Quản lí thông tin Tỉnh/Thành</h3><br />
     <p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaTinh], [TenTinh] FROM [TinhThanh]"></asp:SqlDataSource>
-        <asp:GridView ID="gvTinhThanh" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaTinh" DataSourceID="SqlDataSource1" OnRowCommand="gvTinhThanh_RowCommand">
+        <asp:GridView ID="gvTinhThanh" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="MaTinh" DataSourceID="SqlDataSource1" OnRowCommand="gvTinhThanh_RowCommand" Width="449px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Height="297px">
             <Columns>
                 <asp:BoundField DataField="MaTinh" HeaderText="Mã Tỉnh" InsertVisible="False" ReadOnly="True" SortExpression="MaTinh" />
                 <asp:BoundField DataField="TenTinh" HeaderText="Tên Tỉnh" SortExpression="TenTinh" />
                 <asp:ButtonField ButtonType="Image" CommandName="Xoa" HeaderText="Xóa" ImageUrl="~/Images/Delete.jpg" />
+                <asp:TemplateField HeaderText="Sữa">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/ADSua/ADSuaTinhThanh.aspx?Ma="+Eval("MaTinh") %>'>Sữa</asp:HyperLink>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#000066" />
             <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -28,8 +34,9 @@
     </p>
     <p>
         &nbsp;</p>
-    <p class="auto-style1">
+    <p style="text-align:center" class="auto-style1">
         <asp:Button ID="btnThem" runat="server" CssClass="btn" OnClick="btnThem_Click" PostBackUrl="~/AD/ThemKhuVuc/ThemTinhThanh.aspx" Text="Thêm" />
+    &nbsp;<asp:Button ID="btnHuy" runat="server" CssClass="btn" Text="Hủy" PostBackUrl="~/AD/TimKiemKhuVuc.aspx" />
     </p>
     <p class="auto-style1">
         <asp:Label ID="lbBaoLoi" runat="server"></asp:Label>

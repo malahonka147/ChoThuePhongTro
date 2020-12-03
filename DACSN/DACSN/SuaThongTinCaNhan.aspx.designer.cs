@@ -7,28 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DACSN.AD.ThemKhuVuc {
+namespace DACSN {
     
     
-    public partial class ThemQuanHuyen {
+    public partial class SuaThongTinCaNhan {
         
         /// <summary>
-        /// txtMaTinh control.
+        /// dlTTKH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaTinh;
+        protected global::System.Web.UI.WebControls.DataList dlTTKH;
         
         /// <summary>
-        /// txtTenQH control.
+        /// txtTenKH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenQH;
+        protected global::System.Web.UI.WebControls.TextBox txtTenKH;
+        
+        /// <summary>
+        /// txtSDT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSDT;
         
         /// <summary>
         /// btnLuu control.

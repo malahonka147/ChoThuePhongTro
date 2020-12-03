@@ -7,37 +7,46 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DACSN.AD.ThemKhuVuc {
+namespace DACSN.AD.ADSua {
     
     
-    public partial class ThemQuanHuyen {
+    public partial class ADSuaQuanTriVien {
         
         /// <summary>
-        /// txtMaTinh control.
+        /// txtTaiKhoanAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaTinh;
+        protected global::System.Web.UI.WebControls.TextBox txtTaiKhoanAD;
         
         /// <summary>
-        /// txtTenQH control.
+        /// txtMatKhauAD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenQH;
+        protected global::System.Web.UI.WebControls.TextBox txtMatKhauAD;
         
         /// <summary>
-        /// btnLuu control.
+        /// txtSDT_AD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLuu;
+        protected global::System.Web.UI.WebControls.TextBox txtSDT_AD;
+        
+        /// <summary>
+        /// btnThem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnThem;
         
         /// <summary>
         /// btnHuy control.

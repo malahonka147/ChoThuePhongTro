@@ -4,12 +4,13 @@
         .auto-style1 {
             text-align: center;
         }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h3 style="text-align:center; font-size: 50px;">Quản lí thông tin quản trị viên</h3><br />
     <p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [ID_Admin], [TenTK], [MatKhau], [SDT_Admin], [Email_Admin] FROM [NguoiQuanLi]"></asp:SqlDataSource>
-        <asp:GridView ID="gvQuanTriVIen" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="ID_Admin" DataSourceID="SqlDataSource1" OnRowCommand="gvQuanTriVIen_RowCommand">
+        <asp:GridView ID="gvQuanTriVIen" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="ID_Admin" DataSourceID="SqlDataSource1" OnRowCommand="gvQuanTriVIen_RowCommand" Width="687px" Height="303px">
             <Columns>
                 <asp:BoundField DataField="ID_Admin" HeaderText="Mã Admin" InsertVisible="False" ReadOnly="True" SortExpression="ID_Admin" />
                 <asp:BoundField DataField="TenTK" HeaderText="Tên TK" SortExpression="TenTK" />
@@ -17,7 +18,11 @@
                 <asp:BoundField DataField="SDT_Admin" HeaderText="Số điện thoại" SortExpression="SDT_Admin" />
                 <asp:BoundField DataField="Email_Admin" HeaderText="Email" SortExpression="Email_Admin" />
                 <asp:ButtonField ButtonType="Image" CommandName="Xoa" HeaderText="Xóa" ImageUrl="~/Images/Delete.jpg" Text="Button" />
-                <asp:CommandField EditText="Sửa" HeaderText="Sửa" ShowEditButton="True" />
+                <asp:TemplateField HeaderText="Sữa">
+                    <ItemTemplate>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/ADSua/ADSuaQuanTriVien.aspx?Ma="+Eval("ID_Admin") %>'>Sữa</asp:HyperLink>
+                    </ItemTemplate>
+                </asp:TemplateField>
             </Columns>
             <FooterStyle BackColor="White" ForeColor="#000066" />
             <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -32,10 +37,9 @@
     </p>
     <p>
         &nbsp;</p>
-    <p class="auto-style1">
+    <p style="text-align:center" class="auto-style1">
         <asp:Button ID="btnThem" runat="server" CssClass="btn" OnClick="btnThem_Click" Text="Thêm" />
-    </p>
-    <p>
+    &nbsp;<asp:Button ID="btnHuy" runat="server" CssClass="btn" OnClick="btnThem_Click" Text="Hủy" PostBackUrl="~/AD/Admin.aspx" />
         <br />
         <asp:Label ID="lbBaoLoi" runat="server"></asp:Label>
     </p>

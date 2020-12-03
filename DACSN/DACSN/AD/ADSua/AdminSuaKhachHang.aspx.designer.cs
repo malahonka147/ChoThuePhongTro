@@ -7,28 +7,55 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DACSN.AD.ThemKhuVuc {
+namespace DACSN.AD {
     
     
-    public partial class ThemQuanHuyen {
+    public partial class AdminThem {
         
         /// <summary>
-        /// txtMaTinh control.
+        /// txtTenKH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaTinh;
+        protected global::System.Web.UI.WebControls.TextBox txtTenKH;
         
         /// <summary>
-        /// txtTenQH control.
+        /// txtSDT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenQH;
+        protected global::System.Web.UI.WebControls.TextBox txtSDT;
+        
+        /// <summary>
+        /// txtEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// txtMatKhau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMatKhau;
+        
+        /// <summary>
+        /// txtTaiKhoan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTaiKhoan;
         
         /// <summary>
         /// btnLuu control.

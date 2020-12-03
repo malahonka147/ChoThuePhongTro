@@ -10,25 +10,25 @@
 namespace DACSN.AD.ThemKhuVuc {
     
     
-    public partial class ThemQuanHuyen {
+    public partial class ThemPhuongXa {
         
         /// <summary>
-        /// txtMaTinh control.
+        /// txtMaQH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaTinh;
+        protected global::System.Web.UI.WebControls.TextBox txtMaQH;
         
         /// <summary>
-        /// txtTenQH control.
+        /// txtTenPX control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenQH;
+        protected global::System.Web.UI.WebControls.TextBox txtTenPX;
         
         /// <summary>
         /// btnLuu control.

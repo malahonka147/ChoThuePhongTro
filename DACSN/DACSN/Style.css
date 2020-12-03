@@ -246,33 +246,11 @@ div#left, div#right {
     color:white;
 	
 }
-table tr th
-{
-	font-size:30px;
-    color:black;
-}
-table input[type=text]
-{
-	height:30px;
-	background-repeat:no-repeat;
-	background-position:10px;
-    border-radius:5px;	
-}
-table input[type=password]
-{
-	height:30px;
-	background-repeat:no-repeat;
-	background-position:10px;	
-    border-radius:5px;	
-}
+
 
 .dn:hover
 {
 	background-color:darkblue;
-}
-table tr td{
-    color:black;
-    font-weight:bold
 }
 .dk
 {
@@ -294,20 +272,7 @@ table tr td{
 .btn:hover{
     background-color:darkblue;
 }
-table input[type=email]
-{
-	height:30px;
-	background-repeat:no-repeat;
-	background-position:10px;
-    border-radius:5px;	
-}
-table input[type=tel]
-{
-	height:30px;
-	background-repeat:no-repeat;
-	background-position:initial;
-    border-radius:5px;	
-}
+
 .diachi
 {
 	height:30px;

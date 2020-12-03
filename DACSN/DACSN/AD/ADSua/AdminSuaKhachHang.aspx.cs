@@ -13,18 +13,22 @@ namespace DACSN.AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.QueryString["Ma"]!=null)
+            if(!IsPostBack)
             {
-                string MaKH = Request.QueryString["Ma"].ToString();
-                Response.Write(MaKH);
-                string sql = "select [TenKH],[SDT],[Email],[MatKhau],[TenTK] from KhachHang where MaKH='" + MaKH + "'";
-                DataTable dt = XLDL.GetData(sql);
-                txtTenKH.Text = dt.Rows[0]["TenKH"].ToString();
-                txtSDT.Text = dt.Rows[0]["SDT"].ToString();
-                txtEmail.Text = dt.Rows[0]["Email"].ToString();
-                txtMatKhau.Text = dt.Rows[0]["MatKhau"].ToString();
-                txtTaiKhoan.Text = dt.Rows[0]["TenTK"].ToString();
+                if (Request.QueryString["Ma"] != null)
+                {
+                    string MaKH = Request.QueryString["Ma"].ToString();
+                    Response.Write(MaKH);
+                    string sql = "select [TenKH],[SDT],[Email],[MatKhau],[TenTK] from KhachHang where MaKH='" + MaKH + "'";
+                    DataTable dt = XLDL.GetData(sql);
+                    txtTenKH.Text = dt.Rows[0]["TenKH"].ToString();
+                    txtSDT.Text = dt.Rows[0]["SDT"].ToString();
+                    txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                    txtMatKhau.Text = dt.Rows[0]["MatKhau"].ToString();
+                    txtTaiKhoan.Text = dt.Rows[0]["TenTK"].ToString();
+                }
             }
+            
             
         }
 
@@ -33,15 +37,10 @@ namespace DACSN.AD
             try
             {
                 string MaKH = Request.QueryString["Ma"].ToString();
-                string TenKH = txtTenKH.Text;
-                string SDT = txtSDT.Text;
-                string Email = txtEmail.Text;
-                string MatKhau = txtMatKhau.Text;
-                string TenTK = txtTaiKhoan.Text;
                 DataTable dt = XLDL.GetData("select  [TenKH],[SDT],[Email],[MatKhau],[TenTK] from KhachHang where  MaKH='" + MaKH + "'");
                 if (dt.Rows.Count > 0)
                 {
-                    XLDL.Excute(@"update KhachHang set TenKH=N'" + TenKH + "',SDT='" + SDT + "',Email='" + Email + "',MatKhau='" + MatKhau + "',TenTK='" + TenTK + "' where  MaKH='" + MaKH + "'");
+                    XLDL.Excute(@"update KhachHang set TenKH=N'" + txtTenKH.Text + "',SDT='" + txtSDT.Text + "',Email='" + txtEmail.Text + "',MatKhau='" + txtMatKhau.Text + "',TenTK='" + txtTaiKhoan.Text + "' where  MaKH='" + MaKH + "'");
                     lbBaoLoi.Text = "Lưu thành công";
                 }
                 else

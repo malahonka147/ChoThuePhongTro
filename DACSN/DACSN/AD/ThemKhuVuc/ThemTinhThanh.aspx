@@ -4,26 +4,34 @@
         .auto-style1 {
             text-align: left;
         }
+        .auto-style3 {
+            width: 148px;
+        }
+        .auto-style4 {
+            text-align: left;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 style="text-align:center">
-        Thêm mới tỉnh thành</h3>
+    <h3 style="text-align:center; font-size: 50px;">
+        Thêm mới tỉnh thành</h3><br />
     <p style="text-align:center">
-        <table style="width: 100%;">
+        <table style="width: 100%;padding-left:280px">
             <tr>
-                <td>Tên Tỉnh thành:</td>
-                <td>
+                <td class="auto-style3">Tên Tỉnh/thành:</td>
+                <td class="auto-style4">
                     <asp:TextBox ID="txtTinhThanh" runat="server"></asp:TextBox>
                 </td>
             </tr>
-            <tr>
-                <td colspan="2">
-                    <asp:Button ID="btnThem" runat="server" CssClass="btn" OnClick="btnThem_Click" Text="Thêm" />
+            </table>
+        <br />
+        <p style="text-align:center">
+            <asp:Button ID="btnThem" runat="server" CssClass="btn" OnClick="btnThem_Click" Text="Thêm" />
+                    &nbsp;<asp:Button ID="btnHuy" runat="server" CssClass="btn" Text="Hủy" PostBackUrl="~/AD/TinhThanh.aspx" />
                     <br />
                     <asp:Label ID="lbBaoLoi" runat="server"></asp:Label>
-                </td>
-            </tr>
-        </table>
+        </p>
+                    
+        
     </p>
 </asp:Content>

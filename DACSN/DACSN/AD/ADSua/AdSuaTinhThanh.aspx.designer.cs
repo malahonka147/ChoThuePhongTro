@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DACSN.AD.ThemKhuVuc {
+namespace DACSN.AD.ADSua {
     
     
-    public partial class ThemQuanHuyen {
+    public partial class AdSuaTinhThanh {
         
         /// <summary>
         /// txtMaTinh control.
@@ -22,13 +22,13 @@ namespace DACSN.AD.ThemKhuVuc {
         protected global::System.Web.UI.WebControls.TextBox txtMaTinh;
         
         /// <summary>
-        /// txtTenQH control.
+        /// txtTenTinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTenQH;
+        protected global::System.Web.UI.WebControls.TextBox txtTenTinh;
         
         /// <summary>
         /// btnLuu control.

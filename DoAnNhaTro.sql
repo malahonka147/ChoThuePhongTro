@@ -362,3 +362,4 @@ exec ChiTietNhaTro @MaNT=2
 
 Select * from PhuongXa where MaPX=0;
 SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'Bình Dương'
+update KhachHang set TenKH=N'NGuyeTruongDuy',SDT='12354654',Email='hjdsgjsg',MatKhau='1234',TenTK='duy' where  MaKH='11'

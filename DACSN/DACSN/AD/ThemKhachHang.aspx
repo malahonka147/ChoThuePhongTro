@@ -10,11 +10,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 style="text-align:center">
+    <h3 style="text-align:center; font-size: 50px;">
         Thêm mới khách hàng
     </h3>
-    <p style="text-align:center">
-        <table style="width:100%;">
+    <br />
+    <p style="text-align:center;">
+        <table style="width:100%;padding-left:150px"">
             <tr>
                 <td class="auto-style1">Tên khách hàng:</td>
                 <td>
@@ -48,6 +49,7 @@
             <tr>
                 <td class="auto-style2" colspan="2">
                     <asp:Button ID="btnLuu" runat="server" CssClass="btn" Text="Lưu" OnClick="btnLuu_Click" />
+                    &nbsp;<asp:Button ID="btnHuy" runat="server" CssClass="btn" Text="Hủy" OnClick="btnLuu_Click" PostBackUrl="~/AD/KhachHang.aspx" />
                     <br />
                     <asp:Label ID="lbThongBaoLoi" runat="server"></asp:Label>
                 </td>
