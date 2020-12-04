@@ -69,7 +69,7 @@
                      </td>
                  </tr>
                  <tr>
-                     <td colspan="2"><strong>Địa chỉ chính xác:&nbsp;</strong></td>
+                     <td colspan="2" style="height: 50px"><strong>Địa chỉ chính xác:&nbsp;</strong></td>
                  </tr>
                  <tr>
                      <td colspan="2">
@@ -79,7 +79,7 @@
              </table>
              </div>
          <div style="height: 29px">
-                 <h3 class="h1">Thông tin mô tả</h3>
+                 <h3 class="h1" style="margin-top: 10px; margin-bottom: 10px;">Thông tin mô tả</h3>
          </div>
         <div>
             

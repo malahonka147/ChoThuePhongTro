@@ -55,7 +55,7 @@ namespace DACSN.UC
 
         protected void btnDangBai_Click(object sender, EventArgs e)
         {
-            if(Session["LoaiTK"].ToString()!="1")
+            if(Session["TenDN"]!=null)
             {
                 Response.Redirect("~/DangNhap.aspx");
             }else
@@ -66,7 +66,7 @@ namespace DACSN.UC
 
         protected void btnQuanTri_Click(object sender, EventArgs e)
         {
-            if (Session["LoaiTK"].ToString() !="0")
+            if (Session["TenDN"] != null)
             {
                 Response.Redirect("~/DangNhap.aspx");
             }
