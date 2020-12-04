@@ -13,45 +13,56 @@ namespace DACSN
         static PagedDataSource p = new PagedDataSource();
 
         public static int intSTT;
-
+        string sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE LoaiNT = N'Tìm Người Ở Ghép'";
         int trang_thu = 0;
         public void load_data()
         {
 
-            if (!IsPostBack)
-            {
-                drpTinhThanh_Load();
-                drpQuanHuyen_Load();
-                drpPhuongXa_Load();
-                string sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE [LoaiNT] = N'Tìm Người Ở Ghép'";
+            
                 p.DataSource = XLDL.GetData(sql).DefaultView;
                 p.PageSize = 10;
                 p.CurrentPageIndex = trang_thu;
                 p.AllowPaging = true;
                 btnTrangDau.Enabled = true; btnTruoc.Enabled = true; btnSau.Enabled = true; btnTrangCuoi.Enabled = true;
-                if (p.IsFirstPage == true)
+                if (p.IsFirstPage == true && p.IsLastPage == true)
                 {
                     btnTrangDau.Enabled = false;
                     btnTruoc.Enabled = false;
-                    btnSau.Enabled = true;
-                    btnTrangCuoi.Enabled = true;
-                }
-                if (p.IsLastPage == true)
-                {
-                    btnTrangDau.Enabled = true;
-                    btnTruoc.Enabled = true;
                     btnSau.Enabled = false;
                     btnTrangCuoi.Enabled = false;
                 }
-                txtTrang.Text = (trang_thu + 1) + " / " + p.PageCount;
+                else
+                {
+                    if (p.IsFirstPage == true)
+                    {
+                        btnTrangDau.Enabled = false;
+                        btnTruoc.Enabled = false;
+                        btnSau.Enabled = true;
+                        btnTrangCuoi.Enabled = true;
+                    }
+                    if (p.IsLastPage == true)
+                    {
+                        btnTrangDau.Enabled = true;
+                        btnTruoc.Enabled = true;
+                        btnSau.Enabled = false;
+                        btnTrangCuoi.Enabled = false;
+                    }
+                }
+                lbTrang.Text = (trang_thu + 1) + " / " + p.PageCount;
                 dlPhongTro.DataSource = p;
                 dlPhongTro.DataBind();
             }
 
-        }
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            load_data();
+            if (!IsPostBack)
+            {
+                drpTinhThanh_Load();
+                drpQuanHuyen_Load();
+                drpPhuongXa_Load();
+                load_data();
+            }
         }
         protected void btnTrangDau_Click(object sender, EventArgs e)
         {
@@ -166,30 +177,18 @@ namespace DACSN
         {
             if (drpQuanHuyen.SelectedItem.Text == "Quận/Huyện" && drpPhuongXa.SelectedItem.Text == "Phường/Xã" && int.Parse(drpTinhThanh.SelectedValue) != 0)
             {
-                string sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'" + drpTinhThanh.SelectedItem.Text + "' and LoaiNT = N'Tìm Người Ở Ghép'";
-                p.DataSource = XLDL.GetData(sql).DefaultView;
-                p.CurrentPageIndex = trang_thu;
-                txtTrang.Text = (trang_thu + 1) + " / " + p.PageCount;
-                dlPhongTro.DataSource = p;
-                dlPhongTro.DataBind();
+                sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'" + drpTinhThanh.SelectedItem.Text + "' and LoaiNT = N'Tìm Người Ở Ghép'";
+                load_data();
             }
             if (drpQuanHuyen.SelectedItem.Text != "Quận/Huyện" && drpPhuongXa.SelectedItem.Text == "Phường/Xã" && int.Parse(drpTinhThanh.SelectedValue) != 0)
             {
-                string sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'" + drpTinhThanh.SelectedItem.Text + "' and QuanHuyen=N'" + drpQuanHuyen.SelectedItem.Text + "' and LoaiNT = N'Tìm Người Ở Ghép'";
-                p.DataSource = XLDL.GetData(sql).DefaultView;
-                p.CurrentPageIndex = trang_thu;
-                txtTrang.Text = (trang_thu + 1) + " / " + p.PageCount;
-                dlPhongTro.DataSource = p;
-                dlPhongTro.DataBind();
+                sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'" + drpTinhThanh.SelectedItem.Text + "' and QuanHuyen=N'" + drpQuanHuyen.SelectedItem.Text + "' and LoaiNT = N'Tìm Người Ở Ghép'";
+                load_data();
             }
             if (drpQuanHuyen.SelectedItem.Text != "Quận/Huyện" && drpPhuongXa.SelectedItem.Text != "Phường/Xã" && int.Parse(drpTinhThanh.SelectedValue) != 0)
             {
-                string sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'" + drpTinhThanh.SelectedItem.Text + "' and PhuongXa=N'" + drpPhuongXa.SelectedItem.Text + "' and LoaiNT = N'Tìm Người Ở Ghép'";
-                p.DataSource = XLDL.GetData(sql).DefaultView;
-                p.CurrentPageIndex = trang_thu;
-                txtTrang.Text = (trang_thu + 1) + " / " + p.PageCount;
-                dlPhongTro.DataSource = p;
-                dlPhongTro.DataBind();
+                sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'" + drpTinhThanh.SelectedItem.Text + "' and PhuongXa=N'" + drpPhuongXa.SelectedItem.Text + "' and LoaiNT = N'Tìm Người Ở Ghép'";
+                load_data();
             }
 
         }

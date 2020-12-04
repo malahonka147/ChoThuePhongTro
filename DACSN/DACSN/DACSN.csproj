@@ -157,11 +157,11 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="CamOn.aspx" />
-    <Content Include="CamOnDanhGia.aspx" />
     <Content Include="ChieuTroLuaDao.aspx" />
     <Content Include="ChinhSuaBaiDang.aspx" />
     <Content Include="ChiTietPhongTro.aspx" />
     <Content Include="DangBai.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="HopDongThueNhaTro.aspx" />
     <Content Include="BangGiaDichVu.aspx" />
     <Content Include="DangKi.aspx" />
@@ -234,7 +234,6 @@
     <Content Include="Images\TNOG8.jpg" />
     <Content Include="Images\TNOG9.jpg" />
     <Content Include="KinhNghiemThueNhaTro.aspx" />
-    <Content Include="logo.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -261,7 +260,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Style.css" />
@@ -456,13 +454,6 @@
     <Compile Include="CamOn.aspx.designer.cs">
       <DependentUpon>CamOn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CamOnDanhGia.aspx.cs">
-      <DependentUpon>CamOnDanhGia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CamOnDanhGia.aspx.designer.cs">
-      <DependentUpon>CamOnDanhGia.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ChieuTroLuaDao.aspx.cs">
       <DependentUpon>ChieuTroLuaDao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -490,6 +481,9 @@
     </Compile>
     <Compile Include="DangBai.aspx.designer.cs">
       <DependentUpon>DangBai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HopDongThueNhaTro.aspx.cs">
       <DependentUpon>HopDongThueNhaTro.aspx</DependentUpon>
@@ -578,9 +572,6 @@
     </Compile>
     <Compile Include="GioiThieu.aspx.designer.cs">
       <DependentUpon>GioiThieu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HuongDan.aspx.cs">
       <DependentUpon>HuongDan.aspx</DependentUpon>

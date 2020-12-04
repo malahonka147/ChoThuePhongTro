@@ -12,7 +12,7 @@
 		        }
 	        }
 	</script>
-         <asp:DataList ID="dlChiTietPhongTro" runat="server" DataSourceID="SqlDataSource1" Width="900px">
+         <asp:DataList ID="dlChiTietPhongTro" runat="server" Width="900px">
           <ItemTemplate>
                     <h3 style="color: #E13427; font-weight: bold; font-size: 24px; margin-bottom: 15px; text-align: left;"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></h3>
                     <div style="margin-top: 15px">
@@ -51,11 +51,6 @@
 
                             </ItemTemplate>
                         </asp:DataList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="ChiTietNhaTro" SelectCommandType="StoredProcedure">
-                            <SelectParameters>
-                                <asp:QueryStringParameter Name="MaNT" QueryStringField="MaNT" Type="String" />
-                            </SelectParameters>
-                     </asp:SqlDataSource>
               
            
         <br />

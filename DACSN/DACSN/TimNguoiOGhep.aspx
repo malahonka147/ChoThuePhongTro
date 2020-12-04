@@ -30,7 +30,7 @@
             <div style="text-align: center; width: 900px;">
                 <asp:Button ID="btnTrangDau" runat="server" Text="Trang Đầu" Height="30px" OnClick="btnTrangDau_Click" Width="100px" />
                 <asp:Button ID="btnTruoc" runat="server" Text="Trước" Height="30px" OnClick="btnTruoc_Click" Width="50px" />
-                <asp:TextBox ID="txtTrang" runat="server" Width="30px" Height="30px" ReadOnly="True"></asp:TextBox>
+                <asp:Label ID="lbTrang" runat="server"></asp:Label>
                 <asp:Button ID="btnSau" runat="server" Text="Sau" Height="30px" OnClick="btnSau_Click" Width="50px" />
                 <asp:Button ID="btnTrangCuoi" runat="server" Text="Trang Cuối" Height="30px" OnClick="btnTrangCuoi_Click" Width="100px" />
             </div>

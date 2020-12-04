@@ -18,6 +18,8 @@ namespace DACSN
             dlHinhChiTietNhaTro.DataBind();
             dlDanhGia.DataSource = XLDL.GetData("SELECT DanhGia, TenKH FROM DanhGia WHERE MaNhaTro='" + MaNT + "'");
             dlDanhGia.DataBind();
+            dlChiTietPhongTro.DataSource = XLDL.GetData("select kh.TenKH,nt.SDTNguoiChoThue,nt.DiaChi,nt.MoTa,nt.GiaChoThue,nt.DienTich,nt.TieuDe from KhachHang kh, NhaTroChoThue nt where nt.MaNhaTro ='"+MaNT+"' and nt.MaKH = kh.MaKH");
+            dlChiTietPhongTro.DataBind();
         }
 
         protected void btnBinhLuan_Click(object sender, EventArgs e)
