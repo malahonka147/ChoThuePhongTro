@@ -15,7 +15,7 @@ namespace DACSN
             
             if (Session["TenTK"]!=null)
             {
-                int MaKH = int.Parse(Request.QueryString["MaKH"]);
+                int MaKH = int.Parse(Session["MaKH"].ToString());
                 DataTable dt = XLDL.GetData("select MaKH,TenKH,SDT from KhachHang where MaKH=" + MaKH);
                 dlTTKH.DataSource = dt;
                 dlTTKH.DataBind();

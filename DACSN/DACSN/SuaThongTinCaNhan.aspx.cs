@@ -16,7 +16,7 @@ namespace DACSN
             {
                 if (Request.QueryString["MaKH"] != null)
                 {
-                    string MaKH = Request.QueryString["Ma"].ToString();
+                    string MaKH = Session["MaKH"].ToString();
                     dlTTKH.DataSource = XLDL.GetData("select MaKH,TenKH,SDT from KhachHang where MaKH='" + MaKH+"'"); ;
                     dlTTKH.DataBind();
                     Response.Write(MaKH);
@@ -32,7 +32,7 @@ namespace DACSN
         {
             try
             {
-                string MaKH = Request.QueryString["Ma"].ToString();
+                string MaKH = Session["MaKH"].ToString();
                 DataTable dt = XLDL.GetData("select  [TenKH],[SDT] from KhachHang where  MaKH='" + MaKH + "'");
                 if (dt.Rows.Count > 0)
                 {

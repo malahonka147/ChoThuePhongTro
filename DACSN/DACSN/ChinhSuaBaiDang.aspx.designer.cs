@@ -121,13 +121,22 @@ namespace DACSN {
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator5;
         
         /// <summary>
-        /// btnDangBai control.
+        /// btnCapNhat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDangBai;
+        protected global::System.Web.UI.WebControls.Button btnCapNhat;
+        
+        /// <summary>
+        /// btnXoaBNai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnXoaBNai;
         
         /// <summary>
         /// lbBaoLoi control.

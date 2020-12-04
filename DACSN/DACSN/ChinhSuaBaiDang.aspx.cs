@@ -46,7 +46,7 @@ namespace DACSN
 
         }
 
-        protected void btnDangBai_Click(object sender, EventArgs e)
+        protected void btnCapNhat_Click(object sender, EventArgs e)
         {
             try
             {
@@ -54,9 +54,26 @@ namespace DACSN
                 DataTable dt = XLDL.GetData("select [TinhThanh],[QuanHuyen],[PhuongXa],[TenDuong],[LoaiNT],[SoNha],[DiaChi],[SDTNguoiChoThue],[MoTa],[GiaChoThue],[DienTich],[TieuDe] from NhaTroChoThue where  MaNhaTro='" + MaNT + "'");
                 if (dt.Rows.Count > 0)
                 {
-                    XLDL.Excute(@"update NhaTroChoThue set DiaChi=N'"+txtDiaChiChinhXac.Text+"',LoaiNT='"+drpLoaiNT.SelectedValue+"',TieuDe=N'"+txtTieuDe.Text+"',MoTa=N'"+txtMoTa.Text+"',SDTNguoiChoThue='"+txtThongTinLienHe.Text+"',GiaChoThue='"+txtGiaChoThue.Text+"',DienTich='"+txtDienTich.Text + "' where  MaNhaTro='" + MaNT + "'");
+                    XLDL.Excute(@"update NhaTroChoThue set DiaChi=N'" + txtDiaChiChinhXac.Text + "',LoaiNT='" + drpLoaiNT.SelectedValue + "',TieuDe=N'" + txtTieuDe.Text + "',MoTa=N'" + txtMoTa.Text + "',SDTNguoiChoThue='" + txtThongTinLienHe.Text + "',GiaChoThue='" + txtGiaChoThue.Text + "',DienTich='" + txtDienTich.Text + "' where  MaNhaTro='" + MaNT + "'");
                     lbBaoLoi.Text = "Lưu thành công";
                 }
+            }
+            catch
+            {
+                lbBaoLoi.Text = "Thất bại";
+            }
+        }
+
+        protected void btnXoaBNai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int MaKH = int.Parse(Session["MaKH"].ToString());
+                int MaNT = int.Parse(Request.QueryString["MaNT"]);
+                XLDL.Excute("Delete HinhAnhChiTietNhaTro from HinhAnhChiTietNhaTro where HinhAnhChiTietNhaTro.MaNhaTro =" + MaNT);
+                XLDL.Excute("Delete DanhGia from DanhGia where DanhGia.MaNhaTro=" + MaNT);
+                XLDL.Excute("Delete NhaTroChoThue from NhaTroChoThue where NhaTroChoThue.MaNhaTro =" + MaNT);
+                Response.Redirect("~/QuangLiBaiDang.aspx?MaKH="+MaKH);
             }
             catch
             {

@@ -14,6 +14,7 @@ namespace DACSN.UC
             if(Session["TenTK"]==null)
             {
                 lbTenDN.Text = "";
+                HyperLink1.Visible = false;
                 lbTenDN.Visible = false;
                 lbtDangXuat.Visible = false;
                 aDangNhap.Visible = true;
@@ -26,7 +27,8 @@ namespace DACSN.UC
                 aDangNhap.Visible = false;
                 aDangKy.Visible = false;
                 lbTenDN.Visible = true;
-                lbTenDN.Text = "Xin chào: " + Session["TenKH"].ToString();
+                lbTenDN.Text = "Xin chào: ";
+                HyperLink1.Text= Session["TenKH"].ToString();
                 lbtDangXuat.Visible = true;
                 btnDangBai.Visible = false;
                 btnQuanTri.Visible = true;
@@ -36,7 +38,8 @@ namespace DACSN.UC
                 aDangNhap.Visible = false;
                 aDangKy.Visible = false;
                 lbTenDN.Visible = true;
-                lbTenDN.Text = "Xin chào: " + Session["TenKH"].ToString();
+                lbTenDN.Text = "Xin chào: ";
+                HyperLink1.Text = Session["TenKH"].ToString();
                 lbtDangXuat.Visible = true;
                 btnDangBai.Visible = true;
                 btnQuanTri.Visible = false;

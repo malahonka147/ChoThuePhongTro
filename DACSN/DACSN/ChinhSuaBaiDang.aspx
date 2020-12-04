@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaKH","~/QuanLiThongTinCaNhan.aspx?MaKH={0}") %>' ForeColor="Black">Sửa thông tin cá nhân</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaKH","~/SuaThongTinCaNhan.aspx?MaKH={0}") %>' ForeColor="Black">Sửa thông tin cá nhân</asp:HyperLink>
                         </td>
                     </tr>
                   
@@ -117,11 +117,14 @@
             
         </div>
         <div class="auto-style5" style="text-align: left">     
-            <asp:Button ID="btnDangBai" class="snip1582" runat="server" Text="Cập nhật" OnClick="btnDangBai_Click" style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" />
+            <asp:Button ID="btnCapNhat" class="snip1582" runat="server" Text="Cập nhật"  style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" OnClick="btnCapNhat_Click" />
+            <asp:Button ID="btnXoaBNai" class="snip1582" runat="server" Text="Xóa Bài"  style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" OnClick="btnXoaBNai_Click" />
             <asp:Label ID="lbBaoLoi" runat="server"></asp:Label>
          </div>
 
         
     </section>
+
+     </span></strong>
 
 </asp:Content>
