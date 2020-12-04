@@ -5,7 +5,7 @@
         <p>Bảng Chức Năng</p>
         <asp:DataList ID="dlTTKH" runat="server">
             <ItemTemplate>
-                <table id="TaiKhoan" style="width:100%;">
+                <table style="width:100%;">
                     <tr>
                         <td><span style="font-size: 16px">Xin Chào </span>
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("TenKH") %>' style="font-size: 16px"></asp:Label>
@@ -38,7 +38,7 @@
             <br />
             <br />
                  <p class="h1">
-                     <table style="width:100%;">
+                     <table  id="TaiKhoan" style="width:100%;">
                          <tr>
                              <td style="text-align:center">&nbsp;</td>
                              <td>

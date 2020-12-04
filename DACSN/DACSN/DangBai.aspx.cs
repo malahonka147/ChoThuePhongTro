@@ -216,7 +216,7 @@ namespace DACSN
                    
             }
             con1.Close();
-            Response.Redirect("~/TrangChu.aspx");
+            Response.Redirect("~/CamOn.aspx");
         }
     }
 }
