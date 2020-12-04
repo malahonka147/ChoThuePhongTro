@@ -11,20 +11,13 @@ namespace DACSN
     public partial class TrangChu : System.Web.UI.Page
     {
         static PagedDataSource p = new PagedDataSource();
-        public static int intTT;
-
-        public static int intSTT;
-
-        public static int trang_thu = 0;
+        int intTT;
+        int trang_thu = 0;
         public void load_data()
         {
                 
-            if(!IsPostBack)
-            {
-                drpTinhThanh_Load();
-                drpQuanHuyen_Load();
-                drpPhuongXa_Load();  
-            }
+            
+           
             string sql = "SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue]";
             p.DataSource = XLDL.GetData(sql).DefaultView;
             p.PageSize = 10;
@@ -48,7 +41,7 @@ namespace DACSN
             txtTrang.Text = (trang_thu + 1) + " / " + p.PageCount;
             dlPhongTro.DataSource = p;
             dlPhongTro.DataBind();
-
+            
         }
         public void XLNgayHetHan()
         {
@@ -68,15 +61,20 @@ namespace DACSN
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            XLNgayHetHan();
-
-            load_data();
+            if (!IsPostBack)
+            {
+                drpTinhThanh_Load();
+                drpQuanHuyen_Load();
+                drpPhuongXa_Load();
+                XLNgayHetHan();
+                load_data();
+            }
+            
         }
 
         protected void btnTrangDau_Click(object sender, EventArgs e)
         {
             trang_thu = 0;
-
             load_data();
         }
 
@@ -84,7 +82,10 @@ namespace DACSN
         {
 
             trang_thu--;
-
+            if (trang_thu < 0)
+            {
+                trang_thu = 0;
+            }
             load_data();
         }
 
@@ -92,7 +93,10 @@ namespace DACSN
         {
 
             trang_thu++;
-
+            if (trang_thu >= p.PageCount - 1)
+            {
+                trang_thu = p.PageCount - 1;
+            }
             load_data();
 
         }
@@ -100,7 +104,6 @@ namespace DACSN
         protected void btnTrangCuoi_Click(object sender, EventArgs e)
         {
             trang_thu = p.PageCount - 1;
-
             load_data();
         }
 

@@ -58,7 +58,7 @@ namespace DACSN
                         }
                         else if (drpPhuongXa.SelectedItem.Text != "Tất cả")
                         {
-                            txtDiaChiChinhXac.Text = txtSoNha.Text + "," + txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
+                            txtDiaChiChinhXac.Text = drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
 
                         }
                     }
@@ -217,6 +217,17 @@ namespace DACSN
             }
             con1.Close();
             Response.Redirect("~/CamOn.aspx");
+        }
+
+        protected void txtDuong_TextChanged(object sender, EventArgs e)
+        {
+            txtDiaChiChinhXac.Text=  txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
+        }
+
+        protected void txtSoNha_TextChanged(object sender, EventArgs e)
+        {
+            txtDiaChiChinhXac.Text = txtSoNha.Text + "," + txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
+
         }
     }
 }

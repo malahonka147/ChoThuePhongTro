@@ -14,7 +14,7 @@ namespace DACSN
 
         public static int intSTT;
 
-        public static int trang_thu = 0;
+        int trang_thu = 0;
         public void load_data()
         {
 
@@ -64,7 +64,10 @@ namespace DACSN
         {
 
             trang_thu--;
-
+            if (trang_thu < 0)
+            {
+                trang_thu = 0;
+            }
             load_data();
         }
 
@@ -72,7 +75,10 @@ namespace DACSN
         {
 
             trang_thu++;
-
+            if (trang_thu >= p.PageCount - 1)
+            {
+                trang_thu = p.PageCount - 1;
+            }
             load_data();
 
         }
