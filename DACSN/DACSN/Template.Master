@@ -13,7 +13,7 @@
     </head>
 <body>
     <form id="form1" runat="server">
-        <UC:DangNhap runat="server"/>
+        <UC:DangNhap runat="server" id="ucHeader" />
          <div>
 	        <nav>
     	        <div id="subnav">

@@ -23,11 +23,6 @@ namespace DACSN
                     dlTTKH.DataSource = dt;
                     dlTTKH.DataBind();
                     DataTable dtNT = XLDL.GetData("select * from NhaTroChoThue where MaNhaTro= " + MaNT);
-                    txtTinhThanh.Text = dtNT.Rows[0]["TinhThanh"].ToString();
-                    txtQuanHuyen.Text = dtNT.Rows[0]["QuanHuyen"].ToString();
-                    txtPhuongXa.Text = dtNT.Rows[0]["PhuongXa"].ToString();
-                    txtSoNha.Text = dtNT.Rows[0]["SoNha"].ToString();
-                    txtDuong.Text = dtNT.Rows[0]["TenDuong"].ToString();
                     txtDiaChiChinhXac.Text = dtNT.Rows[0]["DiaChi"].ToString();
                     if (dtNT.Rows[0]["LoaiNT"].ToString() == "Phòng trọ cho thuê")
                     {
@@ -53,7 +48,20 @@ namespace DACSN
 
         protected void btnDangBai_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int MaNT = int.Parse(Request.QueryString["MaNT"]);
+                DataTable dt = XLDL.GetData("select [TinhThanh],[QuanHuyen],[PhuongXa],[TenDuong],[LoaiNT],[SoNha],[DiaChi],[SDTNguoiChoThue],[MoTa],[GiaChoThue],[DienTich],[TieuDe] from NhaTroChoThue where  MaNhaTro='" + MaNT + "'");
+                if (dt.Rows.Count > 0)
+                {
+                    XLDL.Excute(@"update NhaTroChoThue set DiaChi=N'"+txtDiaChiChinhXac.Text+"',LoaiNT='"+drpLoaiNT.SelectedValue+"',TieuDe=N'"+txtTieuDe.Text+"',MoTa=N'"+txtMoTa.Text+"',SDTNguoiChoThue='"+txtThongTinLienHe.Text+"',GiaChoThue='"+txtGiaChoThue.Text+"',DienTich='"+txtDienTich.Text + "' where  MaNhaTro='" + MaNT + "'");
+                    lbBaoLoi.Text = "Lưu thành công";
+                }
+            }
+            catch
+            {
+                lbBaoLoi.Text = "Thất bại";
+            }
         }
     }
 }

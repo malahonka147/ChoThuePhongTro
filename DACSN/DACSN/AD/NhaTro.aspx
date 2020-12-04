@@ -9,7 +9,7 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaNhaTro], [MaKH], [DiaChi], [SDTNguoiChoThue], [TieuDe] FROM [NhaTroChoThue]"></asp:SqlDataSource>
     </p>
     <p style="text-align:center">
-        <asp:GridView ID="gvNhaTro" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaNhaTro" DataSourceID="SqlDataSource1" OnRowCommand="gvNhaTro_RowCommand" Width="827px">
+        <asp:GridView ID="gvNhaTro" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaNhaTro" DataSourceID="SqlDataSource1" OnRowCommand="gvNhaTro_RowCommand" Width="890px">
             <Columns>
                 <asp:BoundField DataField="MaNhaTro" HeaderText="Mã nhà trọ" InsertVisible="False" ReadOnly="True" SortExpression="MaNhaTro" />
                 <asp:BoundField DataField="MaKH" HeaderText="Mã KH" SortExpression="MaKH" />

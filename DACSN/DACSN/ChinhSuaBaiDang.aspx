@@ -34,44 +34,18 @@
    </aside>
     <section>
        <div class="border-bottom">
-                 <h1 class="h1">
-                     Đăng tin mới</h1>
+                 <h1 class="h1" style="font-size: 50px">
+                     Chỉnh sữa bài đăng</h1>
          </div>
         <div style="text-align: left; height: 65px; vertical-align: middle;">
             <strong><span style="font-size: 16px">
             <br />
-            Tỉnh,Thành Phố:</span><asp:TextBox ID="txtTinhThanh" runat="server" Height="30px" ReadOnly="True" Width="180px"></asp:TextBox>
-            <span style="font-size: 16px">Quận,Huyện:</span><asp:TextBox ID="txtQuanHuyen" runat="server" Height="30px" ReadOnly="True" Width="180px"></asp:TextBox>
-            <span style="font-size: 16px"> Phường,Xã:</span></strong><span style="font-size: 16px">&nbsp;
-            <asp:TextBox ID="txtPhuongXa" runat="server" Height="30px" ReadOnly="True" Width="180px"></asp:TextBox>
-            </span>
-        </div>   
-        <div>
-                 <h3 class="h1">Địa chỉ cho thuê</h3>
-         </div>
-         <div style=" height: 180px; vertical-align: middle;">
-
-             <table style="width:100%;" class="dangbai">
-                 <tr>
-                     <td style="height: 21px; width: 80px"><strong>Đường:</strong></td>
-                     <td style="height: 21px">
-                         <asp:TextBox ID="txtDuong" runat="server" Width="316px" AutoPostBack="True"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDuong" ErrorMessage="Tên đường không được trống" ForeColor="Red"></asp:RequiredFieldValidator>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td style="width: 80px; height: 40px;"><strong>Số Nhà:</strong></td>
-                     <td style="height: 40px">
-                         <asp:TextBox ID="txtSoNha" runat="server" AutoPostBack="True"></asp:TextBox>
-                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSoNha" ErrorMessage="Số nhà không được trống" ForeColor="Red"></asp:RequiredFieldValidator>
-                     </td>
-                 </tr>
                  <tr>
                      <td colspan="2"><strong>Địa chỉ chính xác:&nbsp;</strong></td>
                  </tr>
                  <tr>
                      <td colspan="2">
-                         <asp:TextBox ID="txtDiaChiChinhXac" runat="server" ReadOnly="True" Width="874px"></asp:TextBox>
+                         <asp:TextBox ID="txtDiaChiChinhXac" runat="server" Width="874px" Height="65px" TextMode="MultiLine"></asp:TextBox>
                      </td>
                  </tr>
              </table>
@@ -80,7 +54,7 @@
                  <h3 class="h1">Thông tin mô tả</h3>
          </div>
         <div>
-            
+            <br />
             <table class="dangbai" style="width:100%;">
                 <tr>
                     <td><strong>Loại chuyên mục:</strong></td>
@@ -142,8 +116,9 @@
                 </table>
             
         </div>
-        <div class="auto-style5" style="text-align: center">     
-            <asp:Button ID="btnDangBai" class="snip1582" runat="server" Text="Đăng Bài" OnClick="btnDangBai_Click" style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" />
+        <div class="auto-style5" style="text-align: left">     
+            <asp:Button ID="btnDangBai" class="snip1582" runat="server" Text="Cập nhật" OnClick="btnDangBai_Click" style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" />
+            <asp:Label ID="lbBaoLoi" runat="server"></asp:Label>
          </div>
 
         

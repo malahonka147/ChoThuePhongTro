@@ -12,6 +12,8 @@
         </strong>
         <a>|</a>
         <a id="aDangKy" runat="server" href="~/DangKi.aspx">Đăng ký</a>
-        <asp:LinkButton ID="lbtDangXuat" runat="server" PostBackUrl="~/TrangChu.aspx">Đăng xuất</asp:LinkButton>
+        <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click1">Đăng xuất</asp:LinkButton>
+        <asp:LinkButton ID="btnDangBai" class="snip1582" runat="server">Đăng bài</asp:LinkButton>
+        <asp:LinkButton ID="btnQuanTri" class="snip1582" runat="server" OnClick="btnQuanTri_Click">Quản trị</asp:LinkButton>
 	</div>
 </header>
