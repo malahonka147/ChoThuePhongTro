@@ -14,9 +14,11 @@ namespace DACSN
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["Ma"] != null)
+                if (Request.QueryString["MaKH"] != null)
                 {
                     string MaKH = Request.QueryString["Ma"].ToString();
+                    dlTTKH.DataSource = XLDL.GetData("select MaKH,TenKH,SDT from KhachHang where MaKH='" + MaKH+"'"); ;
+                    dlTTKH.DataBind();
                     Response.Write(MaKH);
                     string sql = "select [TenKH],[SDT] from KhachHang where MaKH='" + MaKH + "'";
                     DataTable dt = XLDL.GetData(sql);

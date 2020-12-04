@@ -53,7 +53,7 @@
          </div>
          <div style=" height: 180px; vertical-align: middle;">
 
-             <table style="width:100%;" class="dangbai">
+             <table style="width:100%;" id="TaiKhoan" class="dangbai">
                  <tr>
                      <td style="height: 21px; width: 80px"><strong>Đường:</strong></td>
                      <td style="height: 21px">
@@ -83,7 +83,7 @@
          </div>
         <div>
             
-            <table class="dangbai" style="width:100%;">
+            <table id="TaiKhoan" class="dangbai" style="width:100%;">
                 <tr>
                     <td><strong>Loại chuyên mục:</strong></td>
                 </tr>
@@ -149,7 +149,7 @@
          </div>
         <div>
                  
-           <table class="dangbai" style="width:100%;">     
+           <table id="TaiKhoan" class="dangbai" style="width:100%;">     
                 <tr>
                     <td>
                         <strong>Chọn hình chi tiết nhà trọ:</strong></td>
@@ -167,7 +167,7 @@
          </div>
           <div>
                 
-            <table style="width:100%;">
+            <table id="TaiKhoan" style="width:100%;">
                 <tr>
                     <td class="auto-style6">Số ngày đăng (2000đ/1):</td>
                 </tr>

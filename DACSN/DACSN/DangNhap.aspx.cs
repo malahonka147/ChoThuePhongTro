@@ -21,11 +21,12 @@ namespace DACSN
         {
             try
             {
-                DataTable dt = XLDL.GetData("select MaKH from KhachHang where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
+                DataTable dt = XLDL.GetData("select TenKH,MaKH from KhachHang where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
                 DataTable dt1 = XLDL.GetData("select * from NguoiQuanLi where TenTK='" + txtDangNhap.Text + "'and MatKhau='" + txtMatKhau.Text + "'");
                 if (dt.Rows.Count>0)
                 {
-                    Session["MaKH"] = dt.Rows[0][0];
+                    Session["TenKH"] = dt.Rows[0]["TenKH"];
+                    Session["MaKH"] = dt.Rows[0]["MaKH"];
                     Session["TenTK"] = txtDangNhap.Text;
                     Session["LoaiTK"] = 1;
                     Response.Redirect("~/TrangChu.aspx");
@@ -36,7 +37,7 @@ namespace DACSN
                     {
                         Session["TenTK"] = txtDangNhap.Text;
                         Session["LoaiTK"] = 0;
-                        Response.Redirect("~/AD/Admin.aspx");
+                        Response.Redirect("~/TrangChu.aspx");
                     }
                     else
                     {
