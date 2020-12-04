@@ -38,7 +38,17 @@
             <br />
             <br />
                  <p class="h1">
-                     <table style="width:100%;">
+                     <table  id="TaiKhoan" style="width:100%;">
+                         <tr>
+                             <td style="text-align:center">&nbsp;</td>
+                             <td>
+                                 &nbsp;</td>
+                         </tr>
+                         <tr>
+                             <td style="text-align:center">&nbsp;</td>
+                             <td>
+                                 &nbsp;</td>
+                         </tr>
                          <tr>
                              <td style="text-align:center">Mã Khách hàng:</td>
                              <td>

@@ -14,16 +14,16 @@ namespace DACSN
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["Ma"] != null)
+                if (Request.QueryString["MaKH"] != null)
                 {
-                    string MaKH = Request.QueryString["Ma"].ToString();
+                    string MaKH = Session["MaKH"].ToString();
+                    dlTTKH.DataSource = XLDL.GetData("select MaKH,TenKH,SDT from KhachHang where MaKH='" + MaKH+"'"); ;
+                    dlTTKH.DataBind();
                     Response.Write(MaKH);
-                    string sql = "select [MaKH],[Email],[TenKH],[SDT],[MatKhau] from KhachHang where MaKH='" + MaKH + "'";
+                    string sql = "select [TenKH],[SDT] from KhachHang where MaKH='" + MaKH + "'";
                     DataTable dt = XLDL.GetData(sql);
-                    txtMaKH.Text = dt.Rows[0]["MaKH"].ToString();
-                    txtSDT.Text = dt.Rows[0]["SDT"].ToString();
                     txtTenKH.Text = dt.Rows[0]["TenKH"].ToString();
-                    txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                    txtSDT.Text = dt.Rows[0]["SDT"].ToString();
                 }
             }
         }
@@ -32,11 +32,11 @@ namespace DACSN
         {
             try
             {
-                string MaKH = Request.QueryString["Ma"].ToString();
-                DataTable dt = XLDL.GetData("select  [TenKH],[Email] from KhachHang where  MaKH='" + MaKH + "'");
+                string MaKH = Session["MaKH"].ToString();
+                DataTable dt = XLDL.GetData("select  [TenKH],[SDT] from KhachHang where  MaKH='" + MaKH + "'");
                 if (dt.Rows.Count > 0)
                 {
-                    XLDL.Excute(@"update KhachHang set TenKH=N'" + txtTenKH.Text + "',Email='" + txtEmail.Text + "' where  MaKH='" + MaKH + "'");
+                    XLDL.Excute(@"update KhachHang set TenKH=N'" + txtTenKH.Text + "',SDT='" + txtSDT.Text + "' where  MaKH='" + MaKH + "'");
                     lbBaoLoi.Text = "Lưu thành công";
                 }
                 else

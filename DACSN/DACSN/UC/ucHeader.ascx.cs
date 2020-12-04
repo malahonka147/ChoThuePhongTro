@@ -11,37 +11,54 @@ namespace DACSN.UC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-                if (Session["TenTK"] != null)
-                {
-                    aDangNhap.Visible = false;
-                    aDangKy.Visible = false;
-                    lbTenDN.Visible = true;
-                    lbTenDN.Text = "Xin chào: " + Session["TenTK"].ToString();
-                    lbtDangXuat.Visible = true;
-                    btnDangBai.Visible = true;
-                    btnQuanTri.Visible = true;
-                }
-                else
-                {
-                    lbTenDN.Text = "";
-                    lbTenDN.Visible = false;
-                    lbtDangXuat.Visible = false;
-                    aDangNhap.Visible = true;
-                    aDangKy.Visible = true;
-                    btnDangBai.Visible = true;
-                    btnQuanTri.Visible = false;
-            }  
+            if(Session["TenTK"]==null)
+            {
+                lbTenDN.Text = "";
+                HyperLink1.Visible = false;
+                lbTenDN.Visible = false;
+                lbtDangXuat.Visible = false;
+                aDangNhap.Visible = true;
+                aDangKy.Visible = true;
+                btnDangBai.Visible = true;
+                btnQuanTri.Visible = false;
+            }
+            else if (Session["TenTK"]!=null&& Session["LoaiTK"].ToString() =="0")
+            {
+                aDangNhap.Visible = false;
+                aDangKy.Visible = false;
+                lbTenDN.Visible = true;
+                lbTenDN.Text = "Xin chào: ";
+                HyperLink1.Text= Session["TenKH"].ToString();
+                lbtDangXuat.Visible = true;
+                btnDangBai.Visible = false;
+                btnQuanTri.Visible = true;
+            }
+            else if (Session["TenTK"] != null && Session["LoaiTK"].ToString() == "1")
+            {
+                aDangNhap.Visible = false;
+                aDangKy.Visible = false;
+                lbTenDN.Visible = true;
+                lbTenDN.Text = "Xin chào: ";
+                HyperLink1.Text = Session["TenKH"].ToString();
+                lbtDangXuat.Visible = true;
+                btnDangBai.Visible = true;
+                btnQuanTri.Visible = false;
+            }
+          
         }
 
         protected void lbtDangXuat_Click(object sender, EventArgs e)
         {
             Session["TenTK"] = null;
+            Session["LoaiTK"] = null;
+            Session["MaKH"] = null;
+            Session["TenKH"] = null;
             Response.Redirect("TrangChu.aspx");
         }
 
         protected void btnDangBai_Click(object sender, EventArgs e)
         {
-            if(Session["TenTK"]==null)
+            if(Session["TenDN"]!=null)
             {
                 Response.Redirect("~/DangNhap.aspx");
             }else
@@ -52,7 +69,7 @@ namespace DACSN.UC
 
         protected void btnQuanTri_Click(object sender, EventArgs e)
         {
-            if (Session["TenTK"] == null)
+            if (Session["TenDN"] != null)
             {
                 Response.Redirect("~/DangNhap.aspx");
             }

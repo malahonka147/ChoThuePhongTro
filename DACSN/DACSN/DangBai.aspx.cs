@@ -194,7 +194,7 @@ namespace DACSN
             cmd.ExecuteNonQuery();
             con.Close();
             DataTable dt = XLDL.GetData("select max(MaNhaTro) from NhaTroChoThue ");
-            int MaNT = int.Parse(dt.Rows[0][0].ToString())+1;
+            int MaNT = int.Parse(dt.Rows[0][0].ToString());
             SqlConnection con1 = new SqlConnection(XLDL.strCon);
             con1.Open();
             SqlCommand cmd1 = new SqlCommand();
@@ -216,7 +216,7 @@ namespace DACSN
                    
             }
             con1.Close();
-            Response.Redirect("~/TrangChu.aspx");
+            Response.Redirect("~/CamOn.aspx");
         }
     }
 }
