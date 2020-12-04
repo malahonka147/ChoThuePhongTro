@@ -1,12 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucHeader.ascx.cs" Inherits="DACSN.UC.ucHeader" %>
 <link href="../Style.css" rel="stylesheet" />
 <style type="text/css">
+    .auto-style1 {
+        height: 32px;
+    }
 </style>
 <header>
 	<div id="logo">
         <img class="hinhlogo" src="Images/logo.png" />
 	</div>
-	<div id="dn">
+	<div id="dn" class="auto-style1">
 		<a id ="aDangNhap" runat="server" href="~/DangNhap.aspx">Đăng nhập</a> 
         <strong>
         <asp:Label ID="lbTenDN" runat="server" Text="Tên đăng nhập" CssClass="lbTenKH"></asp:Label>
