@@ -74,14 +74,16 @@
         </div>
         <br>
         <script src="SlideShow.js"></script>
-   
+    <div><p style="font-size: 18px; font-weight: bold;margin-left:10px;padding-left:145px"> Đánh giá</p></div>
     <div id="DanhGia" style="text-align: left; width: 1009px">
         <asp:DataList ID="dlDanhGia" runat="server" Width="895px" HorizontalAlign="Left" style="margin-left: 0px">
             <ItemTemplate>
                 <div id="formdg">
+                    <strong>
                     <asp:Label ID="lbTenKH" runat="server" CssClass="DGTenKH" Text='<%# Eval("TenKH") %>'></asp:Label>
+                    </strong>
                     <br />
-                    <asp:Label ID="lbDanhGia" runat="server" CssClass="DGcmt" style="font-weight: normal" Text='<%# Eval("DanhGIa") %>'></asp:Label>
+                    <asp:Label ID="lbDanhGia" runat="server" CssClass="DGcmt" Text='<%# Eval("DanhGIa") %>' style="font-weight: normal"></asp:Label>
                 </div>
             </ItemTemplate>
         </asp:DataList>
