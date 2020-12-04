@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
                     <div class="login" style="height: 322px">
                        
-                        <table style="width:100%;">
+                        <table id="TaiKhoan" style="width:100%;">
                             <tr>
                                 <td colspan="2" style="text-align: center">ĐĂNG NHẬP</td>
                             </tr>

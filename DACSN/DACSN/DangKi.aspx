@@ -56,7 +56,7 @@
 	        </script>
         <div class="dk">
          <form action="#" name="dangnhap" method="post">
-        <table id="dangky">
+        <table id="TaiKhoan">
 			        <tr>
 				        <th colspan="2">ĐĂNG KÝ THÀNH VIÊN</th>
 			        </tr>
@@ -68,21 +68,21 @@
 							        <tr>
 								        <td>Họ và tên:</td>
 								        <td>
-                                            <asp:TextBox ID="txtHoTen" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtHoTen" runat="server" Width="200px"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfvHoTen" runat="server" ControlToValidate="txtHoTen" ErrorMessage="Họ và tên không hợp lệ!">*</asp:RequiredFieldValidator>
                                         </td>
 							        </tr>
 							        <tr>
 								        <td>Điện thoại:</td>
 								        <td>
-                                            <asp:TextBox ID="txtDienthoai" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtDienthoai" runat="server" Width="200px"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfvDienThoai" runat="server" ControlToValidate="txtDienthoai" ErrorMessage="Số điện thoại không hợp lệ!">*</asp:RequiredFieldValidator>
                                         </td>
 							        </tr>
 							        <tr>
 								        <td>Email:</td>
 								        <td>
-                                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtEmail" runat="server" Width="200px"></asp:TextBox>
                                             <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email không hợp lệ!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                                         </td>
 							        </tr>
@@ -97,21 +97,21 @@
 							        <tr>
 								        <td>Tên đăng nhập:</td>
 								        <td style="width: 228px">
-                                            <asp:TextBox ID="txtTenTK" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtTenTK" runat="server" Width="200px"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfvTenDN" runat="server" ControlToValidate="txtTenTK" ErrorMessage="Tên tài khoản không hợp lệ!">*</asp:RequiredFieldValidator>
                                         </td>
 							        </tr>
 							        <tr>
 								        <td>Mật khẩu:</td>
 								        <td style="width: 228px">
-                                            <asp:TextBox ID="txtMatKhau" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:TextBox ID="txtMatKhau" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
                                             <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ControlToValidate="txtMatKhau" ErrorMessage="Mật khâu không hợp lệ!">*</asp:RequiredFieldValidator>
                                         </td>
 							        </tr>
 							        <tr>
 								        <td>Nhập lại mật khẩu:</td>
 								        <td style="width: 228px">
-                                            <asp:TextBox ID="txtNhapLaiMatKhau" runat="server" TextMode="Password"></asp:TextBox>
+                                            <asp:TextBox ID="txtNhapLaiMatKhau" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
                                             <asp:CompareValidator ID="cvNhapLaiMatKhau" runat="server" ControlToCompare="txtMatKhau" ControlToValidate="txtNhapLaiMatKhau" ErrorMessage="Mật khẩu nhập lại không khớp!">*</asp:CompareValidator>
                                         </td>
 							        </tr>

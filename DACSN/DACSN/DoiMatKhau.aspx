@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="DoiMatKhau.aspx.cs" Inherits="DACSN.DoiMatKhau" %>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
-     <table>
+     <table id="TaiKhoan">
               <tbody><tr>
                 <th colspan="2">ĐỔI MẬT KHẨU</th>
               </tr>
