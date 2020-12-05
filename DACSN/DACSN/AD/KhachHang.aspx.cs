@@ -13,14 +13,9 @@ namespace DACSN.AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void load_data()
-        {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT[MaKH], [TenKH], [SDT], [Email], [MatKhau], [TenTK] FROM[KhachHang]", XLDL.strCon);
+            SqlDataAdapter da = new SqlDataAdapter("select MaKH,TenKH,SDT,Email,MatKhau,TenTK from KhachHang", XLDL.strCon);
             DataTable dt = new DataTable();
-            da.Fill(dt);gvThongTinKH.DataSourceID = null;
+            da.Fill(dt);
             gvThongTinKH.DataSource = dt;
             gvThongTinKH.DataBind();
         }
@@ -51,13 +46,6 @@ namespace DACSN.AD
                     //Response.Write("<script>alert('Xóa Thất Bại!!!');</script>");
                 }
             }
-        }
-
-        protected void gvThongTinKH_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            gvThongTinKH.EditIndex = e.NewEditIndex;
-            //Response.Redirect("~/AD/KhachHang.aspx");
-            load_data();
         }
 
         protected void btnThem_Click(object sender, EventArgs e)

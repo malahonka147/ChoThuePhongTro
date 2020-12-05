@@ -3,12 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3 style="text-align:center; font-size: 50px;">
-        Quản lí quận huyện</h3><br />
+        Quản lí quận huyện</h3>
     <p style="text-align:center">
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaQH], [TenQH] FROM [QuanHuyen]"></asp:SqlDataSource>
-    </p>
+        &nbsp;</p>
     <p style="text-align:center">
-        <asp:GridView ID="gvQuanHuyen" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaQH" DataSourceID="SqlDataSource1" OnRowCommand="gvQuanHuyen_RowCommand" Width="537px" Height="324px">
+        <asp:GridView ID="gvQuanHuyen" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaQH"  OnRowCommand="gvQuanHuyen_RowCommand" Width="537px" Height="324px">
             <Columns>
                 <asp:BoundField DataField="MaQH" HeaderText="Mã Quận Huyện" InsertVisible="False" ReadOnly="True" SortExpression="MaQH" />
                 <asp:BoundField DataField="TenQH" HeaderText="Tên Quận Huyện" SortExpression="TenQH" />

@@ -7,10 +7,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 style="text-align:center; font-size: 50px;">Quản lí thông tin Tỉnh/Thành</h3><br />
+    <h3 style="text-align:center; font-size: 50px;">Quản lí thông tin Tỉnh/Thành</h3>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [MaTinh], [TenTinh] FROM [TinhThanh]"></asp:SqlDataSource>
-        <asp:GridView ID="gvTinhThanh" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="MaTinh" DataSourceID="SqlDataSource1" OnRowCommand="gvTinhThanh_RowCommand" Width="449px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Height="297px">
+        <asp:GridView ID="gvTinhThanh" runat="server" AutoGenerateColumns="False" CellPadding="3" DataKeyNames="MaTinh" OnRowCommand="gvTinhThanh_RowCommand" Width="449px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Height="297px">
             <Columns>
                 <asp:BoundField DataField="MaTinh" HeaderText="Mã Tỉnh" InsertVisible="False" ReadOnly="True" SortExpression="MaTinh" />
                 <asp:BoundField DataField="TenTinh" HeaderText="Tên Tỉnh" SortExpression="TenTinh" />

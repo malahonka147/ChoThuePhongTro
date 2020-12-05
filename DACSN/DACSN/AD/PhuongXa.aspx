@@ -5,10 +5,7 @@
     <h3 style="text-align:center; font-size: 50px;">
         Quản lí phường/xã</h3><br />
     <p style="text-align:center">
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT * FROM [PhuongXa]"></asp:SqlDataSource>
-    </p>
-    <p style="text-align:center">
-        <asp:GridView ID="gvPhuongXa" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="MaPX" DataSourceID="SqlDataSource1" OnRowCommand="gvPhuongXa_RowCommand" Width="674px">
+        <asp:GridView ID="gvPhuongXa" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False" DataKeyNames="MaPX" OnRowCommand="gvPhuongXa_RowCommand" Width="674px">
             <Columns>
                 <asp:BoundField DataField="MaPX" HeaderText="Mã phường/xã" InsertVisible="False" ReadOnly="True" SortExpression="MaPX" />
                 <asp:BoundField DataField="MaQH" HeaderText="Mã quận/huyện" SortExpression="MaQH" />

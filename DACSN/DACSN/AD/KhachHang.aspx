@@ -15,8 +15,7 @@
         <tr>
             <td class="auto-style1">
     
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT MaKH, TenKH, SDT, Email, MatKhau, TenTK FROM KhachHang"></asp:SqlDataSource>
-                <asp:GridView ID="gvThongTinKH" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaKH"  OnRowCommand="gvThongTinKH_RowCommand" OnRowEditing="gvThongTinKH_RowEditing"  Width="720px" DataSourceID="SqlDataSource2">
+                <asp:GridView ID="gvThongTinKH" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaKH"  OnRowCommand="gvThongTinKH_RowCommand"   Width="720px">
                     <Columns>
                         <asp:BoundField DataField="MaKH" HeaderText="Mã KH" InsertVisible="False" ReadOnly="True" SortExpression="MaKH" />
                         <asp:BoundField DataField="TenKH" HeaderText="Tên KH" SortExpression="TenKH" />

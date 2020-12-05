@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,7 +13,11 @@ namespace DACSN.AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlDataAdapter da = new SqlDataAdapter("select MaPX,MaQH,TenPhuongXa from PhuongXa", XLDL.strCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gvPhuongXa.DataSource = dt;
+            gvPhuongXa.DataBind();
         }
 
         protected void gvPhuongXa_RowCommand(object sender, GridViewCommandEventArgs e)

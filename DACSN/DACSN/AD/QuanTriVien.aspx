@@ -7,10 +7,9 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 style="text-align:center; font-size: 50px;">Quản lí thông tin quản trị viên</h3><br />
+    <h3 style="text-align:center; font-size: 50px;">Quản lí thông tin quản trị viên</h3>
     <p>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT [ID_Admin], [TenTK], [MatKhau], [SDT_Admin], [Email_Admin] FROM [NguoiQuanLi]"></asp:SqlDataSource>
-        <asp:GridView ID="gvQuanTriVIen" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="ID_Admin" DataSourceID="SqlDataSource1" OnRowCommand="gvQuanTriVIen_RowCommand" Width="687px" Height="303px">
+        <asp:GridView ID="gvQuanTriVIen" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="ID_Admin"  OnRowCommand="gvQuanTriVIen_RowCommand" Width="687px" Height="303px">
             <Columns>
                 <asp:BoundField DataField="ID_Admin" HeaderText="Mã Admin" InsertVisible="False" ReadOnly="True" SortExpression="ID_Admin" />
                 <asp:BoundField DataField="TenTK" HeaderText="Tên TK" SortExpression="TenTK" />

@@ -13,7 +13,11 @@ namespace DACSN.AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlDataAdapter da = new SqlDataAdapter("select ID_Admin,TenTK,MatKhau,SDT_Admin,Email_Admin from NguoiQuanLi", XLDL.strCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gvQuanTriVIen.DataSource = dt;
+            gvQuanTriVIen.DataBind();
         }
         private void load_data()
         {

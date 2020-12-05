@@ -13,7 +13,11 @@ namespace DACSN.AD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlDataAdapter da = new SqlDataAdapter("select MaQH,TenQH from QuanHuyen", XLDL.strCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            gvQuanHuyen.DataSource = dt;
+            gvQuanHuyen.DataBind();
         }
         private void load_data()
         {
