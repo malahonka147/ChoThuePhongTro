@@ -4,7 +4,7 @@
 </style>
 <header>
 	<div id="logo">
-        <img class="hinhlogo" src="../Images/logo.png" />
+        <img src="../Images/logo.png" />
 	</div>
 	<div id="dn">
 		<a id ="aDangNhap" runat="server">Đăng nhập</a> <strong>

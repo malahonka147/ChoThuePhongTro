@@ -16,7 +16,7 @@
                 <asp:ButtonField ButtonType="Image" CommandName="Xoa" HeaderText="Xóa" ImageUrl="~/Images/Delete.jpg" />
                 <asp:TemplateField HeaderText="Sữa">
                     <ItemTemplate>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/ADSua/ADSuaTinhThanh.aspx?Ma="+Eval("MaTinh") %>'>Sữa</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/ADSuaTinhThanh.aspx?Ma="+Eval("MaTinh") %>'>Sữa</asp:HyperLink>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
@@ -34,7 +34,7 @@
     <p>
         &nbsp;</p>
     <p style="text-align:center" class="auto-style1">
-        <asp:Button ID="btnThem" runat="server" CssClass="btn" OnClick="btnThem_Click" PostBackUrl="~/AD/ThemKhuVuc/ThemTinhThanh.aspx" Text="Thêm" />
+        <asp:Button ID="btnThem" runat="server" CssClass="btn" OnClick="btnThem_Click" PostBackUrl="~/AD/ThemTinhThanh.aspx" Text="Thêm" />
     &nbsp;<asp:Button ID="btnHuy" runat="server" CssClass="btn" Text="Hủy" PostBackUrl="~/AD/TimKiemKhuVuc.aspx" />
     </p>
     <p class="auto-style1">
