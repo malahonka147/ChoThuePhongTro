@@ -14,7 +14,7 @@
     <h3 style="text-align:center; font-size: 50px;">
         Thêm mới quận huyên</h3><br />
     <p style="text-align:center">
-        <table style="width:100%;padding-left:280px">
+        <table id="TaiKhoan" style="width:100%;padding-left:280px">
             <tr>
                 <td class="auto-style2">Mã tỉnh:</td>
                 <td class="auto-style3">

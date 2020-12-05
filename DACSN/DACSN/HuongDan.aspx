@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="huongdan">
                     <h2>Hướng dẫn đăng tin</h2>
-                    <p>Chào bạn, sau đây là hướng dẫn sử dụng cho thành viên website phongtro123.com.</p>
+                    <p>Chào bạn, sau đây là hướng dẫn sử dụng cho thành viên website Phongtrosinhvien.com.</p>
                     <p>Nếu bạn chưa có tài khoản, hãy đăng ký tại đây trước khi bắt đầu đăng tin mới.</p>
                     <p>Nếu đã có tài khoản, sau khi đăng nhập vào website, bạn bấm vào nút ĐĂNG TIN để bắt đầu.</p>
                     <p>Khi đăng tin các bạn đọc kỹ mô tả từng bước, nhập đầy đủ và chính xác nội dung cho tin đăng, đặc biệt là mục Giá và Diện tích. Những tin có nội dung hình ảnh rõ ràng, đầy đủ sẽ có tỉ lệ xem cao hơn 50%.</p>
@@ -15,7 +15,7 @@
                     <p>Sau khi "Đăng nhập" quý khách nhấp chọn vào phần Quản lý tài khoản và chọn Nạp Tiền</p>
                     <p>Quý khách có thể chọn các hình thức thanh toán sau:</p>
                     <ul style="padding-left: 20px">
-                        <li>Chuyển khoản trực tiếp vào các số tài khoản tại Phongtro123.com thông qua internet banking hoặc chuyển khoản thông thường.</li>
+                        <li>Chuyển khoản trực tiếp vào các số tài khoản tại Phongtrosinhvien.com thông qua internet banking hoặc chuyển khoản thông thường.</li>
                         <li>Thanh toán bằng thẻ ngân hàng nội địa (Lưu ý, thẻ ngân hàng nội địa phải đăng ký giao dịch online tại ngân hàng phát hành thẻ).</li>
                         <li>Thanh toán bằng thẻ tính dụng quốc tế/Visa.</li>
                         <li>Thanh toán qua ví điện tử Momo cho số điện thoại 0917.686.101.</li>

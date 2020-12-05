@@ -5,7 +5,14 @@
             text-align: center;
         }
         .auto-style2 {
-            width: 170px;
+            width: 550px;
+            text-align: left;
+        }
+        .auto-style3 {
+            width: 487px;
+        }
+        .auto-style4 {
+            width: 65%;
         }
     </style>
 </asp:Content>
@@ -13,34 +20,34 @@
     <h3 style="text-align:center; font-size: 50px;" class="auto-style1">
         Sửa thông tin khách hàng</h3>
     <br />
-    <table style="width:100%;padding-left:150px">
+    <table id="TaiKhoan" style="padding-left:150px" align="center" class="auto-style4">
         <tr>
             <td class="auto-style2">Tên khách hàng:</td>
-            <td>
+            <td class="auto-style3">
                 <asp:TextBox ID="txtTenKH" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Số điện thoại:</td>
-            <td>
+            <td class="auto-style3">
                 <asp:TextBox ID="txtSDT" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Email:</td>
-            <td>
+            <td class="auto-style3">
                 <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Mật khẩu:</td>
-            <td>
+            <td class="auto-style3">
                 <asp:TextBox ID="txtMatKhau" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style2">Tài khoản:</td>
-            <td>
+            <td class="auto-style3">
                 <asp:TextBox ID="txtTaiKhoan" runat="server"></asp:TextBox>
             </td>
         </tr>

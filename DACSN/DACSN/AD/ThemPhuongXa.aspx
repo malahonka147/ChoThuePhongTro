@@ -14,7 +14,7 @@
     <h3 style="text-align:center; font-size: 50px;">
         Thêm mới phường xã</h3><br />
     <p style="text-align:center">
-        <table style="width:100%;padding-left:280px">
+        <table id="TaiKhoan" style="width:100%;padding-left:280px">
             <tr>
                 <td class="auto-style2">Mã quận/huyện:</td>
                 <td class="auto-style3">

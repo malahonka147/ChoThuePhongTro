@@ -17,7 +17,7 @@
     <h3 style="text-align:center">
         <strong style="font-size: 50px">Thêm mới quản trị viên</strong></h3><br />
     <h3 style="text-align:center">
-        <table style="width:100%;padding-left:150px">
+        <table id="TaiKhoan" style="width:100%;padding-left:150px">
             <tr>
                 <td class="auto-style2">Tên tài khoản:</td>
                 <td class="auto-style3">
