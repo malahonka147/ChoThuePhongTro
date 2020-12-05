@@ -7,6 +7,16 @@
         .auto-style2 {
             text-align: center;
         }
+        .auto-style3 {
+            text-align: left;
+            width: 218px;
+        }
+        .auto-style4 {
+            width: 57%;
+        }
+        .auto-style5 {
+            text-align: left;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -15,34 +25,34 @@
     </h3>
     <br />
     <p style="text-align:center;">
-        <table style="width:100%;padding-left:150px"">
+        <table id="TaiKhoan" class="auto-style4">
             <tr>
-                <td class="auto-style1">Tên khách hàng:</td>
-                <td>
+                <td class="auto-style3">Tên khách hàng:</td>
+                <td class="auto-style5">
                     <asp:TextBox ID="txtTenKH" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Số điện thoại:</td>
-                <td>
+                <td class="auto-style3">Số điện thoại:</td>
+                <td class="auto-style5">
                     <asp:TextBox ID="txtSDT" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Email:</td>
-                <td>
+                <td class="auto-style3">Email:</td>
+                <td class="auto-style5">
                     <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Mật khẩu</td>
-                <td>
+                <td class="auto-style3">Mật khẩu</td>
+                <td class="auto-style5">
                     <asp:TextBox ID="txtMatKhau" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style1">Tài khoản</td>
-                <td>
+                <td class="auto-style3">Tài khoản</td>
+                <td class="auto-style5">
                     <asp:TextBox ID="txtTenTK" runat="server"></asp:TextBox>
                 </td>
             </tr>

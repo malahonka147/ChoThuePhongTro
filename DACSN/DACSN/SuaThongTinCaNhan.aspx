@@ -38,48 +38,38 @@
             <br />
             <br />
                  <p class="h1">
-                     <table  id="TaiKhoan" style="width:100%;">
+                     <table  id="TaiKhoan" style="width:50%;" align="center">
                          <tr>
-                             <td style="text-align:center">&nbsp;</td>
-                             <td>
-                                 &nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td style="text-align:center">&nbsp;</td>
-                             <td>
-                                 &nbsp;</td>
-                         </tr>
-                         <tr>
-                             <td style="text-align:center">Mã Khách hàng:</td>
+                             <td style="width: 181px;">Mã Khách hàng:</td>
                              <td>
                                  <asp:TextBox ID="txtMaKH" runat="server" ReadOnly="True"></asp:TextBox>
                              </td>
                          </tr>
                          <tr>
-                             <td style="text-align:center">Số điện thoại:</td>
+                             <td style="width: 181px;">Số điện thoại:</td>
                              <td>
                                  <asp:TextBox ID="txtSDT" runat="server" ReadOnly="True"></asp:TextBox>
                              </td>
                          </tr>
                          <tr>
-                             <td style="text-align:center">&nbsp;</td>
+                             <td style="width: 181px;">&nbsp;</td>
                              <td>
                                  &nbsp;</td>
                          </tr>
                          <tr>
-                             <td style="text-align:center">Tên khách hàng:</td>
+                             <td style="width: 181px;">Tên khách hàng:</td>
                              <td>
                                  <asp:TextBox ID="txtTenKH" runat="server"></asp:TextBox>
                              </td>
                          </tr>
                          <tr>
-                             <td style="text-align:center">Email:</td>
+                             <td style="width: 181px;">Email:</td>
                              <td>
                                  <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
                              </td>
                          </tr>
                          <tr>
-                             <td style="text-align:center">Mật khẩu:</td>
+                             <td style="width: 181px;">Mật khẩu:</td>
                              <td>
                                  <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/DoiMatKhau.aspx">Đổi mật khẩu</asp:HyperLink>
                              </td>

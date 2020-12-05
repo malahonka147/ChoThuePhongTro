@@ -14,7 +14,7 @@
                 <asp:BoundField DataField="SDTNguoiChoThue" HeaderText="SDT" SortExpression="SDTNguoiChoThue" />
                 <asp:BoundField DataField="TieuDe" HeaderText="Tiêu đề" SortExpression="TieuDe" />
                 <asp:ButtonField ButtonType="Image" CommandName="Xoa" HeaderText="Xóa" ImageUrl="~/Images/Delete.jpg" />
-                <asp:TemplateField HeaderText="Sữa">
+                <asp:TemplateField HeaderText="Sửa">
                     <ItemTemplate>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/ADSuaNhaTro.aspx?Ma="+Eval("MaNhaTro") %>'>Sửa</asp:HyperLink>
                     </ItemTemplate>
