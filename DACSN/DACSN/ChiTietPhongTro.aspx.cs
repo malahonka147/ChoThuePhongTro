@@ -24,7 +24,7 @@ namespace DACSN
 
         protected void btnBinhLuan_Click(object sender, EventArgs e)
         {
-            if(txtTenKH.Text!="")
+            if(txtTenKH.Text!=""&&txtDanhGia.Text!="")
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace DACSN
                 }
             }else
             {
-                lbThongBaoLoi.Text = "Vui lòng nhập tên khách hàng trước khi đánh giá";
+                lbThongBaoLoi.Text = "Vui lòng nhập tên khách hàng hoặc nội dung trước khi đánh giá";
             }
             
         }

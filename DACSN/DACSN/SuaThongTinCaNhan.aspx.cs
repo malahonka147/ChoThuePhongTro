@@ -38,6 +38,7 @@ namespace DACSN
                 if (dt.Rows.Count > 0)
                 {
                     XLDL.Excute(@"update KhachHang set TenKH=N'" + txtTenKH.Text + "',Email='" + txtEmail.Text + "' where  MaKH='" + MaKH + "'");
+                    Session["TenKH"] = txtTenKH.Text;
                     lbBaoLoi.Text = "Lưu thành công";
                 }
                 else

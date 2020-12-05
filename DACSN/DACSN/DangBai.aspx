@@ -145,24 +145,7 @@
                 </table>
             
         </div>
-         <div>
-                 <h3 class="h1">Hình ảnh</h3>
-         </div>
-        <div>
-                 
-           <table id="TaiKhoan" class="dangbai" style="width:100%;">     
-                <tr>
-                    <td>
-                        <strong>Chọn hình chi tiết nhà trọ:</strong></td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:FileUpload ID="fuCTNT" runat="server" Width="444px" AllowMultiple="True" />
-                    </td>
-                </tr>
-            </table>
-                 
-         </div>
+         
         <div>
                  <h3 class="h1">Chọn hình thức đăng tin:</h3>
          </div>
@@ -187,6 +170,24 @@
                 </tr>
             </table>
                 
+         </div>
+        <div>
+                 <h3 class="h1">Hình ảnh</h3>
+         </div>
+        <div>
+                 
+           <table id="TaiKhoan" class="dangbai" style="width:100%;">     
+                <tr>
+                    <td>
+                        <strong>Chọn hình chi tiết nhà trọ:</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:FileUpload ID="fuCTNT" runat="server" Width="444px" AllowMultiple="True" />
+                    </td>
+                </tr>
+            </table>
+                 
          </div>
         <div>
             <div>

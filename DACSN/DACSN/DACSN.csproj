@@ -265,7 +265,7 @@
     <Content Include="Style.css" />
     <Content Include="TimNguoiOGhep.aspx" />
     <Content Include="TimPhongTro.aspx" />
-    <Content Include="TrangChu.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="UC\ucFooter.ascx" />
     <Content Include="UC\ucHeader.ascx" />
     <Content Include="UC\ucLeft.ascx" />
@@ -609,12 +609,12 @@
     <Compile Include="TimPhongTro.aspx.designer.cs">
       <DependentUpon>TimPhongTro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TrangChu.aspx.cs">
-      <DependentUpon>TrangChu.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TrangChu.aspx.designer.cs">
-      <DependentUpon>TrangChu.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

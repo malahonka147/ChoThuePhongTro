@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="TrangChu.aspx.cs" Inherits="DACSN.TrangChu" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DACSN.TrangChu" %>
         <asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
             <div id="TimKiem">
             <strong>Tỉnh,Thành Phố:</strong><asp:DropDownList ID="drpTinhThanh" runat="server" CssClass="drop" Height="25px" Width="120px" AutoPostBack="True" OnSelectedIndexChanged="drpTinhThanh_SelectedIndexChanged">

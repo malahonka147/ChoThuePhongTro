@@ -64,6 +64,8 @@ namespace DACSN
                     }
 
                 }
+                txtDuong_TextChanged(sender,e);
+                txtSoNha_TextChanged(sender, e);
 
 
             }
@@ -209,7 +211,8 @@ namespace DACSN
                 HttpPostedFile _HttpPostedFile = _HttpFileCollection[i];
                 if (_HttpPostedFile.ContentLength > 0)
                 {
-                    _HttpPostedFile.SaveAs(MapPath("Images/" + Path.GetFileName(_HttpPostedFile.FileName)));
+                    string filepath = MapPath("Images/" + Path.GetFileName(_HttpPostedFile.FileName));
+                    _HttpPostedFile.SaveAs(filepath);
                     cmd1.Parameters["@HinhAnh"].Value = _HttpPostedFile.FileName.ToString();
                     cmd1.ExecuteNonQuery();
                 }

@@ -18,7 +18,7 @@
 	        <nav>
     	        <div id="subnav">
                     <ul>
-                        <li id="Dau"><a href="TrangChu.aspx"><b>TRANG CHỦ</b></a></li>
+                        <li id="Dau"><a href="Default.aspx"><b>TRANG CHỦ</b></a></li>
                         <li><a href="TimPhongTro.aspx"><b>TÌM PHÒNG TRỌ</b></a></li>
                         <li><a href="TimNguoiOGhep.aspx"><b>TÌM NGƯỜI Ở GHÉP</b></a></li>
                         <li><a href="HuongDan.aspx"><b>HƯỚNG DẪN</b></a></li>

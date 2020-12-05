@@ -36,8 +36,9 @@ namespace DACSN.AD
                     }
                     else
                     {
-                        string str = "delete from NhaTroChoThue where MaNhaTro='" + ma + "'";
-                        XLDL.Excute(str);
+                        XLDL.Excute("Delete HinhAnhChiTietNhaTro from HinhAnhChiTietNhaTro where HinhAnhChiTietNhaTro.MaNhaTro =" + ma);
+                        XLDL.Excute("Delete DanhGia from DanhGia where DanhGia.MaNhaTro=" + ma);
+                        XLDL.Excute("Delete NhaTroChoThue from NhaTroChoThue where NhaTroChoThue.MaNhaTro =" + ma);
                         Response.Redirect("~/AD/NhaTro.aspx");
                     }
                 }

@@ -29,7 +29,7 @@ namespace DACSN
                     Session["MaKH"] = dt.Rows[0]["MaKH"];
                     Session["TenTK"] = txtDangNhap.Text;
                     Session["LoaiTK"] = 1;
-                    Response.Redirect("~/TrangChu.aspx");
+                    Response.Redirect("~/Default.aspx");
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace DACSN
                     {
                         Session["TenTK"] = txtDangNhap.Text;
                         Session["LoaiTK"] = 0;
-                        Response.Redirect("~/TrangChu.aspx");
+                        Response.Redirect("~/Default.aspx");
                     }
                     else
                     {

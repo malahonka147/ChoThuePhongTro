@@ -40,13 +40,13 @@ namespace DACSN.AD {
         protected global::DACSN.AD.ucAdminHeader ucAdminHeader;
         
         /// <summary>
-        /// ucAdminLeft_KhuVucTimKiem control.
+        /// ucAdminLeft control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DACSN.AD.ucAdminLeft_KhuVucTimKiem ucAdminLeft_KhuVucTimKiem;
+        protected global::DACSN.AD.ucAdminLeft ucAdminLeft;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

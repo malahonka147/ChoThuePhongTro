@@ -53,7 +53,7 @@ namespace DACSN.UC
             Session["LoaiTK"] = null;
             Session["MaKH"] = null;
             Session["TenKH"] = null;
-            Response.Redirect("TrangChu.aspx");
+            Response.Redirect("~/Default.aspx");
         }
 
         protected void btnDangBai_Click(object sender, EventArgs e)

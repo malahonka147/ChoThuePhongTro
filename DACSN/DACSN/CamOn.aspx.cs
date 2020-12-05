@@ -16,7 +16,7 @@ namespace DACSN
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/TrangChu.aspx");
+            Response.Redirect("~/Default.aspx");
         }
     }
 }
