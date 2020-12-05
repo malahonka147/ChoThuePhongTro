@@ -35,7 +35,7 @@
     <section>
        <div class="border-bottom">
                  <h1 class="h1" style="font-size: 50px">
-                     Chỉnh sữa bài đăng</h1>
+                     Chỉnh sửa bài đăng</h1>
          </div>
          <div style="text-align: left; height: 65px; vertical-align: middle;">
             <strong><span style="font-size: 16px">

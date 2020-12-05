@@ -12,7 +12,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3 style="text-align:center; font-size: 50px;">
-        Sữa thông tin nhà trọ</h3>
+        Sửa thông tin nhà trọ</h3>
     <br />
     <p style="text-align:center">
         <table style="width:100%;">

@@ -17,7 +17,6 @@ namespace DACSN.AD.ADSua
                 if (Request.QueryString["Ma"] != null)
                 {
                     string MaTinh = Request.QueryString["Ma"].ToString();
-                    Response.Write(MaTinh);
                     string sql = "select [MaTinh],[TenTinh] from TinhThanh where MaTinh='" + MaTinh + "'";
                     DataTable dt = XLDL.GetData(sql);
                     txtMaTinh.Text = dt.Rows[0]["MaTinh"].ToString();

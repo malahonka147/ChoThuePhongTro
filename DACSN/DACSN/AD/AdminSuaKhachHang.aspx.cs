@@ -18,7 +18,6 @@ namespace DACSN.AD
                 if (Request.QueryString["Ma"] != null)
                 {
                     string MaKH = Request.QueryString["Ma"].ToString();
-                    Response.Write(MaKH);
                     string sql = "select [TenKH],[SDT],[Email],[MatKhau],[TenTK] from KhachHang where MaKH='" + MaKH + "'";
                     DataTable dt = XLDL.GetData(sql);
                     txtTenKH.Text = dt.Rows[0]["TenKH"].ToString();

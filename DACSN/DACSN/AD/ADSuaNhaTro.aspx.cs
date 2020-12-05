@@ -17,7 +17,6 @@ namespace DACSN.AD.ADSua
                 if (Request.QueryString["Ma"] != null)
                 {
                     string MaNT = Request.QueryString["Ma"].ToString();
-                    Response.Write(MaNT);
                     string sql = "select [MaKH],[TinhThanh],[QuanHuyen],[PhuongXa],[SoNha],[DiaChi],[SDTNguoiChoThue],[MoTa],[GiaChoThue],[DienTich],[TieuDe] from NhaTroChoThue where MaNhaTro='" + MaNT + "'";
                     DataTable dt = XLDL.GetData(sql);
                     txtMaKH.Text = dt.Rows[0]["MaKH"].ToString();

@@ -19,7 +19,6 @@ namespace DACSN
                     string MaKH = Session["MaKH"].ToString();
                     dlTTKH.DataSource = XLDL.GetData("select MaKH,TenKH,SDT,Email from KhachHang where MaKH='" + MaKH+"'"); ;
                     dlTTKH.DataBind();
-                    Response.Write(MaKH);
                     string sql = "select [MaKH],[TenKH],[SDT],[Email] from KhachHang where MaKH='" + MaKH + "'";
                     DataTable dt = XLDL.GetData(sql);
                     txtMaKH.Text = dt.Rows[0]["MaKH"].ToString();
