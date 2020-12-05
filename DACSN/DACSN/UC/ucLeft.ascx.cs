@@ -11,6 +11,8 @@ namespace DACSN.UC
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            dlTinMoi.DataSource = XLDL.GetData("SELECT top 5 [TieuDe], [MaNhaTro] FROM [NhaTroChoThue] ORDER BY [MaNhaTro] DESC");
+            dlTinMoi.DataBind();
 
         }
     }

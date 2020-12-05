@@ -22,7 +22,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "~/SuaThongTinCaNhan.aspx?Ma="+Eval("MaKH") %>' ForeColor="Black">Sửa thông tin cá nhân</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# Eval("MaKH","~/SuaThongTinCaNhan.aspx?MaKH={0}") %>' ForeColor="Black">Sửa thông tin cá nhân</asp:HyperLink>
                         </td>
                     </tr>
                   
@@ -57,14 +57,14 @@
                  <tr>
                      <td style="height: 21px; width: 80px"><strong>Đường:</strong></td>
                      <td style="height: 21px">
-                         <asp:TextBox ID="txtDuong" runat="server" Width="316px" AutoPostBack="True"></asp:TextBox>
+                         <asp:TextBox ID="txtDuong" runat="server" Width="316px" AutoPostBack="True" OnTextChanged="txtDuong_TextChanged"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDuong" ErrorMessage="Tên đường không được trống" ForeColor="Red"></asp:RequiredFieldValidator>
                      </td>
                  </tr>
                  <tr>
                      <td style="width: 80px; height: 40px;"><strong>Số Nhà:</strong></td>
                      <td style="height: 40px">
-                         <asp:TextBox ID="txtSoNha" runat="server" AutoPostBack="True"></asp:TextBox>
+                         <asp:TextBox ID="txtSoNha" runat="server" AutoPostBack="True" OnTextChanged="txtSoNha_TextChanged"></asp:TextBox>
                          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSoNha" ErrorMessage="Số nhà không được trống" ForeColor="Red"></asp:RequiredFieldValidator>
                      </td>
                  </tr>
@@ -78,6 +78,7 @@
                  </tr>
              </table>
              </div>
+        <br />
          <div style="height: 29px">
                  <h3 class="h1" style="margin-top: 10px; margin-bottom: 10px;">Thông tin mô tả</h3>
          </div>

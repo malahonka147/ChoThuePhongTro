@@ -12,7 +12,7 @@
 		        }
 	        }
 	</script>
-         <asp:DataList ID="dlChiTietPhongTro" runat="server" DataSourceID="SqlDataSource1" Width="900px">
+         <asp:DataList ID="dlChiTietPhongTro" runat="server" Width="900px">
           <ItemTemplate>
                     <h3 style="color: #E13427; font-weight: bold; font-size: 24px; margin-bottom: 15px; text-align: left;"><asp:Label ID="TieuDeLabel" runat="server" Text='<%# Eval("TieuDe") %>' /></h3>
                     <div style="margin-top: 15px">
@@ -51,11 +51,6 @@
 
                             </ItemTemplate>
                         </asp:DataList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="ChiTietNhaTro" SelectCommandType="StoredProcedure">
-                            <SelectParameters>
-                                <asp:QueryStringParameter Name="MaNT" QueryStringField="MaNT" Type="String" />
-                            </SelectParameters>
-                     </asp:SqlDataSource>
               
            
         <br />
@@ -79,14 +74,16 @@
         </div>
         <br>
         <script src="SlideShow.js"></script>
-   
+    <div><p style="font-size: 18px; font-weight: bold;margin-left:10px;padding-left:145px"> Đánh giá</p></div>
     <div id="DanhGia" style="text-align: left; width: 1009px">
         <asp:DataList ID="dlDanhGia" runat="server" Width="895px" HorizontalAlign="Left" style="margin-left: 0px">
             <ItemTemplate>
                 <div id="formdg">
+                    <strong>
                     <asp:Label ID="lbTenKH" runat="server" CssClass="DGTenKH" Text='<%# Eval("TenKH") %>'></asp:Label>
+                    </strong>
                     <br />
-                    <asp:Label ID="lbDanhGia" runat="server" CssClass="DGcmt" style="font-weight: normal" Text='<%# Eval("DanhGIa") %>'></asp:Label>
+                    <asp:Label ID="lbDanhGia" runat="server" CssClass="DGcmt" Text='<%# Eval("DanhGIa") %>' style="font-weight: normal"></asp:Label>
                 </div>
             </ItemTemplate>
         </asp:DataList>

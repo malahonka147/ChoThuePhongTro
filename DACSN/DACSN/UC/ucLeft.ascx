@@ -4,14 +4,13 @@
 					   <div>
                            <p>TIN MỚI ĐĂNG</p>
                             <ul type="square">
-					        <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" Height="30px">
+					        <asp:DataList ID="dlTinMoi" runat="server" Height="30px">
                                     <ItemTemplate>
 						                        <li class="aside">
                                                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("MaNhaTro", "~/ChiTietPhongTro.aspx?MaNT={0}") %>' Text='<%# Eval("TieuDe") %>'></asp:HyperLink>
                                                 </li>
                                     </ItemTemplate>
                                     </asp:DataList>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QLNhaTroConnectionString %>" SelectCommand="SELECT top 5 [TieuDe], [MaNhaTro] FROM [NhaTroChoThue] ORDER BY [MaNhaTro] DESC"></asp:SqlDataSource>
                           </ul>          
 					   </div>  
                       <div class="auto-style1">

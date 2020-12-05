@@ -37,25 +37,51 @@
                  <h1 class="h1" style="font-size: 50px">
                      Chỉnh sữa bài đăng</h1>
          </div>
-        <div style="text-align: left; height: 65px; vertical-align: middle;">
+         <div style="text-align: left; height: 65px; vertical-align: middle;">
             <strong><span style="font-size: 16px">
             <br />
+            Tỉnh,Thành Phố:<asp:TextBox ID="txtTinhThanh" runat="server" Height="30px" Width="180px" ReadOnly="True" CssClass="drop"></asp:TextBox>
+             Quận,Huyện:<asp:TextBox ID="txtQuanHuyen" runat="server" Height="30px" Width="180px" ReadOnly="True" CssClass="drop"></asp:TextBox>
+             Phường,Xã:<asp:TextBox ID="txtPhuongXa" runat="server" Height="30px" Width="180px" ReadOnly="True" CssClass="drop"></asp:TextBox>
+             </span></strong>
+            <span style="font-size: 16px">&nbsp;
+            </span>
+        </div>   
+     <div style=" height: 180px; vertical-align: middle;">
+
+             <table style="width:100%;" id="TaiKhoan" class="dangbai">
                  <tr>
-                     <td colspan="2"><strong>Địa chỉ chính xác:&nbsp;</strong></td>
+                     <td style="height: 21px; width: 80px"><strong>Đường:</strong></td>
+                     <td style="height: 21px">
+                         <asp:TextBox ID="txtDuong" runat="server" Width="316px" AutoPostBack="True" OnTextChanged="txtDuong_TextChanged"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDuong" ErrorMessage="Tên đường không được trống" ForeColor="Red"></asp:RequiredFieldValidator>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td style="width: 80px; height: 40px;"><strong>Số Nhà:</strong></td>
+                     <td style="height: 40px">
+                         <asp:TextBox ID="txtSoNha" runat="server" AutoPostBack="True" OnTextChanged="txtSoNha_TextChanged"></asp:TextBox>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSoNha" ErrorMessage="Số nhà không được trống" ForeColor="Red"></asp:RequiredFieldValidator>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2" style="height: 50px"><strong>Địa chỉ chính xác:&nbsp;</strong></td>
                  </tr>
                  <tr>
                      <td colspan="2">
-                         <asp:TextBox ID="txtDiaChiChinhXac" runat="server" Width="874px" Height="65px" TextMode="MultiLine"></asp:TextBox>
+                         <asp:TextBox ID="txtDiaChiChinhXac" runat="server" ReadOnly="True" Width="874px"></asp:TextBox>
                      </td>
                  </tr>
              </table>
-             </div>
-         <div style="height: 29px">
-                 <h3 class="h1">Thông tin mô tả</h3>
          </div>
+              <br />
+             <br />
+         <div style="height: 29px">
+                 <h2 class="h1">Thông tin mô tả</h2>
+         </div>
+     
         <div>
-            <br />
-            <table class="dangbai" style="width:100%;">
+            <table id="TaiKhoan" class="dangbai" style="width:100%;">
                 <tr>
                     <td><strong>Loại chuyên mục:</strong></td>
                 </tr>
@@ -116,15 +142,14 @@
                 </table>
             
         </div>
-        <div class="auto-style5" style="text-align: left">     
+        <div style="text-align: center">     
             <asp:Button ID="btnCapNhat" class="snip1582" runat="server" Text="Cập nhật"  style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" OnClick="btnCapNhat_Click" />
             <asp:Button ID="btnXoaBNai" class="snip1582" runat="server" Text="Xóa Bài"  style="left: 13px; top: 0px; height: 38px; width: 168px; font-size: 16px" OnClick="btnXoaBNai_Click" />
+            <br />
             <asp:Label ID="lbBaoLoi" runat="server"></asp:Label>
          </div>
 
         
     </section>
-
-     </span></strong>
 
 </asp:Content>

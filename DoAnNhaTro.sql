@@ -350,16 +350,3 @@ insert into PhuongXa(MaQH,TenPhuongXa) values(4,N'Phường Binh Chuẩn')
 insert into PhuongXa(MaQH,TenPhuongXa) values(4,N'Phường An Bình')
 insert into PhuongXa(MaQH,TenPhuongXa) values(4,N'Phường An Phú')
 insert into PhuongXa(MaQH,TenPhuongXa) values(5,N'Phường 13')
---drop Proc ChiTietNhaTro
-Create Procedure ChiTietNhaTro
-@MaNT varchar(10)
-as 
-select kh.TenKH,nt.SDTNguoiChoThue,nt.DiaChi,nt.MoTa,nt.GiaChoThue,nt.DienTich,nt.TieuDe
-from KhachHang kh,NhaTroChoThue nt
-where nt.MaNhaTro=@MaNT and nt.MaKH=kh.MaKH
-
-exec ChiTietNhaTro @MaNT=2
-
-Select * from PhuongXa where MaPX=0;
-SELECT[TieuDe], [DiaChi], [DienTich], [GiaChoThue], [HinhAnh], [MaNhaTro] FROM [NhaTroChoThue] WHERE TinhThanh=N'Bình Dương'
-select max(MaNhaTro) from NhaTroChoThue 
