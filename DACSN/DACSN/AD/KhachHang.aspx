@@ -26,7 +26,7 @@
                         <asp:ButtonField ButtonType="Image" CommandName="Xoa" ImageUrl="~/Images/Delete.jpg" HeaderText="Xóa" />
                         <asp:TemplateField HeaderText="Sửa">
                             <ItemTemplate>
-                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/ADSua/AdminSuaKhachHang.aspx?Ma="+Eval("MaKH") %>'>Sửa</asp:HyperLink>
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/AD/AdminSuaKhachHang.aspx?Ma="+Eval("MaKH") %>'>Sửa</asp:HyperLink>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
