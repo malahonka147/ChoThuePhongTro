@@ -5,6 +5,9 @@
         .auto-style1 {
             text-align: center;
         }
+        .auto-style2 {
+            margin-top: 0px;
+        }
         </style>
 
 </asp:Content>
@@ -15,7 +18,7 @@
         <tr>
             <td class="auto-style1">
     
-                <asp:GridView ID="gvThongTinKH" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaKH"  OnRowCommand="gvThongTinKH_RowCommand"   Width="720px">
+                <asp:GridView ID="gvThongTinKH" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="MaKH"  OnRowCommand="gvThongTinKH_RowCommand"   Width="720px" CssClass="auto-style2">
                     <Columns>
                         <asp:BoundField DataField="MaKH" HeaderText="Mã KH" InsertVisible="False" ReadOnly="True" SortExpression="MaKH" />
                         <asp:BoundField DataField="TenKH" HeaderText="Tên KH" SortExpression="TenKH" />

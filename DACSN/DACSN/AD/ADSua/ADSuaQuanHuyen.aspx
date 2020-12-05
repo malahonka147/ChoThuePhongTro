@@ -14,7 +14,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3 style="font-size: 50px"; class="auto-style2">Sữa thông tin Quận huyện</h3><br />
-    <table style="width:100%;padding-left:280px">
+    <table id="TaiKhoan" style="width:100%;padding-left:280px">
         <tr>
             <td class="auto-style3">Mã tỉnh:</td>
             <td class="auto-style4">

@@ -27,8 +27,8 @@ namespace DACSN.UC
                 aDangNhap.Visible = false;
                 aDangKy.Visible = false;
                 lbTenDN.Visible = true;
-                lbTenDN.Text = "Xin chào: ";
-                HyperLink1.Text= Session["TenTK"].ToString();
+                lbTenDN.Text = "Xin chào: " + Session["TenTK"].ToString() ;
+                HyperLink1.Visible = false;
                 lbtDangXuat.Visible = true;
                 btnDangBai.Visible = false;
                 btnQuanTri.Visible = true;

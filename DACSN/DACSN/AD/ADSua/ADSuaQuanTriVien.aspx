@@ -11,7 +11,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <h3 style="font-size: 50px;padding-left:-150px" class="auto-style3">Sữa thông tin Admin</h3><br />
-    <table style="width:100%;padding-left:250px">
+    <table id="TaiKhoan" style="width:100%;padding-left:250px">
         
         <tr>
             <td class="auto-style2">Tên tài khoản Admin:</td>

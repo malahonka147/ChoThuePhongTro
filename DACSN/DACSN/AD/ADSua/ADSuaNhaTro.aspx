@@ -15,7 +15,7 @@
         Sữa thông tin nhà trọ</h3>
     <br />
     <p style="text-align:center">
-        <table style="width:100%;">
+        <table id="TaiKhoan" style="width:100%;">
             <tr>
                 <td class="auto-style2">Mã khách hàng:</td>
                 <td>
