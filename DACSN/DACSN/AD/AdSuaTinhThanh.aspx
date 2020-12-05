@@ -7,7 +7,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h3 style="font-size: 50px;text-align:center">Sữa thông tin Tỉnh thành</h3><br />
+    <h3 style="font-size: 50px;text-align:center">Sửa thông tin Tỉnh thành</h3><br />
     <table id="TaiKhoan" style="width:100%;padding-left:280px">
         
         <tr>
