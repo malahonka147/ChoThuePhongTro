@@ -224,12 +224,14 @@ namespace DACSN
 
         protected void txtDuong_TextChanged(object sender, EventArgs e)
         {
-            txtDiaChiChinhXac.Text=  txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
+            if(txtDuong.Text!="")
+                txtDiaChiChinhXac.Text=  txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
         }
 
         protected void txtSoNha_TextChanged(object sender, EventArgs e)
         {
-            txtDiaChiChinhXac.Text = txtSoNha.Text + "," + txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
+            if(txtSoNha.Text!="")
+                txtDiaChiChinhXac.Text = txtSoNha.Text + "," + txtDuong.Text + "," + drpPhuongXa.SelectedItem.Text + "," + drpQuanHuyen.SelectedItem.Text + "," + drpTinhThanh.SelectedItem.Text;
 
         }
     }

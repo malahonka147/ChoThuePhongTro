@@ -158,8 +158,10 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="txtSoNgay" runat="server" AutoPostBack="True"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSoNgay" Display="Dynamic" ErrorMessage="Số ngày không được để trống" ForeColor="Red" style="font-weight: normal"></asp:RequiredFieldValidator>
-                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtSoNgay" ErrorMessage="Số ngày phải là số nguyên &gt;0" ForeColor="Red" Type="Integer" MaximumValue="999" MinimumValue="0" style="font-weight: normal"></asp:RangeValidator>
+                        <strong>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSoNgay" Display="Dynamic" ErrorMessage="Số ngày không được để trống" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </strong>
+                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtSoNgay" ErrorMessage="Số ngày phải là số nguyên &gt;0" ForeColor="Red" Type="Integer" MaximumValue="999" MinimumValue="0"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -191,7 +193,7 @@
          </div>
         <div>
             <div>
-                <input id="rbOnePay" runat="server" type="radio" name="rbHinhThucThanhToan" /><label for="rbOnePay"> Thanh toán bằng ATM</label>
+                <input id="rbOnePay" runat="server" type="radio" name="rbHinhThucThanhToan" /><label for="rbOnePay"><strong> Thanh toán bằng ATM</strong></label>
             </div>
             
         </div>
